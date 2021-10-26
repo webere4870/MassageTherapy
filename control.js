@@ -12,50 +12,31 @@ window.addEventListener("DOMContentLoaded", function(e) {
 
   }, false);
 
-/*
+
+// Leaflet.js map resize tiles
 setInterval(()=>
 {
-    console.log(counter);
-    if(counter === slideShow.length -1)
-    {
-        counter =0;
-    }
-    else
-    {
-        counter++;
-    }
+    $(window).trigger('resize');
+},100);
 
-    if(counter === 0)
-    {
-        slideShow[slideShow.length -1].style.zIndex = '0'
-    }
-    else
-    {
-        slideShow[counter -1].style.zIndex = '1';
-    }
 
-    slideShow[counter].style.zIndex = '4';
-    if(counter === slideShow.length -1)
-    {
-        slideShow[0].style.zIndex = '3';
-    }
-    else
-    {
-        slideShow[counter + 1].style.zIndex = '3';
-    }
+// Leaflet.js map initialization and display
+let latitude = 41.0355953;
+let longitude = -83.646441;
+let mymap = L.map('mapid').setView([latitude, longitude], 13);
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Open Street Map</a> contributors';
+const tileURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+const tiles = L.tileLayer(tileURL, {attribution});
+tiles.addTo(mymap);
+var marker = L.marker([latitude, longitude]).addTo(mymap);
+marker.bindPopup("Central Church of Christ<br>307 E Hardin St, Findlay, OH 45840<br>");
+mymap.invalidateSize();
 
-    slideShow[counter].style.animationPlayState = 'running';
-    if(counter === slideShow.length -1)
-    {
-        slideShow[0].style.animationPlayState = 'paused';
-    }
-    else
-    {
-        slideShow[counter + 1].style.animationPlayState = 'paused';
-    }
-    
-},3000)
-*/
+
+
+
+
+
 
 function openItem(item)
 {

@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheet.css">
-    <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+
+<style>
+    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
+    margin: 20px 0;}
+    #mapClose
+    {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+        z-index: 3000;
+    }
+
+</style>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+<script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
     <div class="mainPage">
         <div class="navigationBar">
             <a href="#" style="margin-right: auto; justify-self: flex-start;">Logo</a>
@@ -49,7 +77,30 @@
         </div>
     </div>
     <div class="footer">
-
+        <form action="" id="form">
+            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
+            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
+            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
+        </form>
+        <div id="mapid">
+            
+        </div>
+        <div class="iconRow">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-snapchat-square"></i></a>
+        </div>
+        <div class="linkRow">
+            <a>&copy; 2021 Massage Therapy LLC</a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Yoga</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact Us</a>
+        </div>
     </div>
     <script src="./control.js">
 

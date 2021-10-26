@@ -90,9 +90,88 @@ a
     font-size: 25px;
 }
 
+.footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: blue;
+    flex-wrap: wrap;
+}
+
+form
+{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea, form button
+{
+    margin: 5px 0;
+}
+
+input:focus
+{
+    color: white;
+}
+
+input
+{
+    width: 300px;
+    height: 35px;
+    background-color: blue;
+    border: 2px solid white;
+    color: white;
+}
+
+textarea
+{
+    width: 300px;
+    background: blue;
+    border: 2px solid white;
+    color: white;
+}
+
 i:hover
 {
     cursor: pointer;
+}
+
+.linkRow
+{
+    color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+.linkRow a
+{
+    padding: 0 10px;
+    color: white;
+}
+
+.iconRow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconRow a
+{
+    padding: 10px 20px;
+}
+
+i
+{
+    color: white;
+    font-size: 40px;
 }
 
 
