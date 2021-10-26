@@ -1,0 +1,370 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html
+{
+    overflow-x: hidden;
+}
+
+:root
+{
+    --mainColor: blue;
+}
+
+.mainPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: purple;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.navigationBar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    background-color: blue;
+    z-index: 5;
+}
+
+.navigationBar a
+{
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.fa-bars
+{
+    font-size: 25px;
+}
+
+#hamburger
+{
+    display: none;
+}
+
+.mobileNavigationBar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    z-index: 1;
+    display: none;
+}
+
+.mobileNavigationBar a
+{
+    padding: 15px 0;
+}
+
+.mobileNavigationBar .fa-times
+{
+    color: white;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 25px;
+}
+
+i:hover
+{
+    cursor: pointer;
+}
+
+
+#animationBox
+{
+    display: none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    animation-name: bigBox;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes bigBox
+{
+    0%
+    {
+
+    }
+    33%
+    {
+        transform: rotate(360deg);
+    }
+    66%
+    {
+        transform: rotate(-360deg);
+    }
+    100%
+    {
+        transform: rotate(1080deg);
+    }
+}
+
+.animationSmallBox
+{
+    height: 18px;
+    width: 18px;
+    background: blue;
+    position: absolute;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+#box1
+{
+    top: 0;
+    left: 0;
+    animation-name: smallBox1;
+}
+
+@keyframes smallBox1
+{
+    0%
+    {
+
+    }
+    50%
+    {
+        top: calc(50% - 9px);
+        left: calc(50% - 9px);
+    }
+    100%
+    {
+        top: 0;
+        left: 0;
+    }
+}
+
+#box2
+{
+    animation-name: smallBox2;
+    top: 0;
+    right: 0;
+}
+@keyframes smallBox2
+{
+    0%
+    {
+
+    }
+    50%
+    {
+        top: calc(50% - 9px);
+        right: calc(50% - 9px);
+    }
+    100%
+    {
+        top: 0;
+        right: 0;
+    }
+}
+
+#box3
+{
+    bottom: 0;
+    left: 0;
+    animation-name: smallBox3;
+}
+
+@keyframes smallBox3
+{
+    0%
+    {
+
+    }
+    50%
+    {
+        bottom: calc(50% - 9px);
+        left: calc(50% - 9px);
+    }
+    100%
+    {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+#box4
+{
+    bottom: 0;
+    right: 0;
+    animation-name: smallBox4;
+}
+
+@keyframes smallBox4
+{
+    0%
+    {
+
+    }
+    50%
+    {
+        bottom: calc(50% - 9px);
+        right: calc(50% - 9px);
+    }
+    100%
+    {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+#stage
+{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.homeSlide
+{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slide1
+{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+#slide2
+{
+
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/bg2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#slide3
+{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#slide4
+{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/bg2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#stage div:nth-of-type(1) {
+    animation-name: fadeOut;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    z-index: 4;
+  }
+  #stage div:nth-of-type(2) {
+    z-index: 3;
+  }
+  #stage div:nth-of-type(n+3) {
+    display: none;
+  }
+
+@keyframes zoomIn
+{
+    0%
+    {
+        background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/bg1.jpg');
+    }
+    100%
+    {
+        background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/bg2.jpg');
+    }
+}
+
+@keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+    #hamburger
+    {
+        display: inherit;
+    }
+    .navigationBar a:nth-of-type(2), .navigationBar a:nth-of-type(3),
+    .navigationBar a:nth-of-type(4), .navigationBar a:nth-of-type(5)
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+
+}
+
+@media screen and (max-width: 480px)
+{
+
+}
+
+@media screen and (max-width: 400px)
+{
+
+}
+

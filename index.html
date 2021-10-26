@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="mainPage">
+        <div class="navigationBar">
+            <a href="#" style="margin-right: auto; justify-self: flex-start;">Logo</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact</a>
+            <a href="#" id="hamburger" onclick="openItem('mobileNavigationBar')"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="mobileNavigationBar">
+            <i class="fas fa-times" onclick="closeItem('mobileNavigationBar')"></i>
+            <a href="#">Logo</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact</a>
+        </div>
+        <div id="stage">
+            <div class="homeSlide" id="slide1">
+
+            </div>
+            <div class="homeSlide" id="slide2">
+                
+            </div>
+            <div class="homeSlide" id="slide3">
+                
+            </div>
+            <div class="homeSlide" id="slide4">
+                
+            </div>
+        </div>
+        <div id="animationBox">
+            <div class="animationSmallBox" id="box1"></div>
+            <div class="animationSmallBox" id="box2"></div>
+            <div class="animationSmallBox" id="box3"></div>
+            <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+    <script src="./control.js">
+
+    </script>
+</body>
+</html>
