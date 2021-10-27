@@ -12,6 +12,9 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -41,7 +44,9 @@ crossorigin=""></script>
     <div class="mainPage">
         <div class="navigationBar">
             <a href="#" style="margin-right: auto; justify-self: flex-start;">Logo</a>
-            <a href="#">Home</a>
+            <a href="#" style="text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-color: var(--accentColor);">Home</a>
             <a href="#">About</a>
             <a href="#">Schedule</a>
             <a href="#">Contact</a>
@@ -74,6 +79,45 @@ crossorigin=""></script>
             <div class="animationSmallBox" id="box2"></div>
             <div class="animationSmallBox" id="box3"></div>
             <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
+    <div id="splitScreen">
+        <div id="leftScreen">
+
+        </div>
+        <div id="rightScreen">
+            <div id="topScreen">
+
+            </div>
+            <div id="bottomScreen">
+
+            </div>
+        </div>
+    </div>
+    <div id="eggSplit">
+        <div class="wholeBubble">
+            <div class="iconBubble" onclick="updateSlide('#content1')">
+                <i class="fas fa-cross"></i>
+            </div>
+            <h2>Mission Statement</h2>
+        </div>
+        <div class="wholeBubble">
+            <div class="iconBubble" onclick="updateSlide('#content2')">
+                <i class="fas fa-book"></i>
+            </div>
+            <h2>Statement of Faith</h2>
+        </div>
+        <div class="wholeBubble">
+            <div class="iconBubble" onclick="updateSlide('#content3')">
+                <i class="far fa-calendar-check"></i>
+            </div>
+            <h2>Curriculum</h2>
+        </div>
+        <div class="wholeBubble">
+            <div class="iconBubble" onclick="updateSlide('#content4')">
+                <i class="fas fa-users"></i>
+            </div>
+            <h2>What is a community?</h2>
         </div>
     </div>
     <div class="footer">
