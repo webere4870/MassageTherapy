@@ -17,6 +17,13 @@ for(let counter =0; counter < cardFlip.length; counter++)
     cardFlip[counter].addEventListener("click",()=>
     {
         cardFlip[counter].style.animationName = "cardFade";
+        for(let icounter = 0; icounter < cardFlip.length; icounter++)
+        {
+            if(icounter !== counter)
+            {
+                cardFlip[icounter].style.animationName = "fadeDown";     
+            }
+        }
     });
 }
 
