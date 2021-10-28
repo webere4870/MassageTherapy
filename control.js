@@ -1,6 +1,3 @@
-let slideShow = document.querySelectorAll('.homeSS > *');
-let counter = 0;
-
 window.addEventListener("DOMContentLoaded", function(e) {
 
     var stage = document.getElementById("stage");
@@ -10,7 +7,18 @@ window.addEventListener("DOMContentLoaded", function(e) {
       arr[i].addEventListener("animationend", fadeComplete, false);
     }
 
-  }, false);
+}, false);
+
+
+let cardFlip = document.querySelectorAll('.card');
+
+for(let counter =0; counter < cardFlip.length; counter++)
+{
+    cardFlip[counter].addEventListener("click",()=>
+    {
+        cardFlip[counter].style.animationName = "cardFade";
+    });
+}
 
 
 // Leaflet.js map resize tiles

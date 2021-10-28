@@ -15,8 +15,9 @@ body,html
 {
     --mainColor: #0F1626;
     --accentColor: #FF533D;
-    --leather: #bbb6ad;
+    --leather: #c9c5be;
     --eggshell: #e2e2e2;
+    --offWhite: #f2f2f2;
     --mainFont: 'Abel', sans-serif;
 }
 
@@ -112,6 +113,12 @@ a
     justify-content: space-evenly;
     background: var(--mainColor);
     flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.footer a
+{
+    font-family: var(--mainFont);
 }
 
 form
@@ -137,7 +144,7 @@ input
 {
     width: 300px;
     height: 35px;
-    background: rgb(15, 15, 15);
+    background: #05070c;
     border: 1px solid white;
     color: white;
     padding: 5px;
@@ -146,7 +153,7 @@ input
 textarea
 {
     width: 300px;
-    background: black;
+    background: #05070c;
     border: 1px solid white;
     color: white;
     padding: 5px;
@@ -235,11 +242,69 @@ i
     height: 50%;
 }
 
+#meetTheTeam
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    min-height: 50vh;
+    width: 100vw;
+    background: var(--offWhite);
+}
+
+.card
+{
+    height:300px;
+    width: 250px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 10px 5px 5px gray;
+    background: linear-gradient(rgba(9, 10, 39, 0.6), rgba(9, 10, 39, 0.6)), url('./images/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: var(--mainFont);
+    font-size: 40px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.underCard
+{
+
+}
+
+@keyframes cardFade{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+.card:hover
+{
+    box-shadow: 15px 10px 10px gray;
+    cursor: pointer;
+}
+
 #eggSplit
 {
     min-height: 300px;
     width: 100vw;
-    background: var(--leather);
+    background: var(--offWhite);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
