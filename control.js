@@ -9,6 +9,23 @@ window.addEventListener("DOMContentLoaded", function(e) {
 
 }, false);
 
+let arrFloater = document.getElementsByClassName('floaterBox');
+for(let counter = 0; counter < arrFloater.length; counter++)
+{
+    arrFloater[counter].addEventListener("click", ()=>
+    {
+        if(counter !== arrFloater.length -1 )
+        {
+            arrFloater[counter + 1].style.zIndex = 0;
+        }
+        for(let i = 0; i < arrFloater.length; i++)
+        {
+            arrFloater[i].style.animationName = "unfloater";
+        }
+        arrFloater[counter].style.animationName = "floater";
+    })
+}
+
 
 let cardFlip = document.querySelectorAll('.card');
 
@@ -29,10 +46,7 @@ for(let counter =0; counter < cardFlip.length; counter++)
 
 
 // Leaflet.js map resize tiles
-setInterval(()=>
-{
-    $(window).trigger('resize');
-},100);
+
 
 
 // Leaflet.js map initialization and display
