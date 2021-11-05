@@ -72,6 +72,17 @@ a
     font-size: 25px;
 }
 
+#testHomePage
+{
+    max-height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #gridContainer
 {
     display: grid;
@@ -288,6 +299,11 @@ i
 
 }
 
+#floaterRow:hover
+{
+    cursor: pointer;
+}
+
 .floaterBox
 {
     width: 20%;
@@ -302,6 +318,11 @@ i
     align-items: center;
 }
 
+.floaterBox:nth-of-type(1)
+{
+    animation-name: floater;
+}
+
 .bubble{
     height: 90%;
     width: 90%;
@@ -310,9 +331,25 @@ i
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    color: var(--mainColor);
     font-size: 20px;
     font-family: var(--mainFont);
+    font-weight: bold;
+}
+
+.bubble p:after{
+    background: none repeat scroll 0 0 var(--accentColor);
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 40px;
+ }
+
+
+.bubble i{
+    color: rgb(156, 156, 156);
 }
 
 @keyframes floater

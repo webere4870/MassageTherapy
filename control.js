@@ -10,6 +10,8 @@ window.addEventListener("DOMContentLoaded", function(e) {
 }, false);
 
 let arrFloater = document.getElementsByClassName('floaterBox');
+let bubble = document.querySelectorAll('.bubble p');
+let bubbleI = document.querySelectorAll('.bubble i');
 for(let counter = 0; counter < arrFloater.length; counter++)
 {
     arrFloater[counter].addEventListener("click", ()=>
@@ -21,8 +23,13 @@ for(let counter = 0; counter < arrFloater.length; counter++)
         for(let i = 0; i < arrFloater.length; i++)
         {
             arrFloater[i].style.animationName = "unfloater";
+            bubble[i].style.color = "var(--mainColor)";
+            bubbleI[i].style.color = "rgb(156, 156, 156)";
         }
+        bubble[counter].style.color = 'white';
+        bubbleI[counter].style.color = "white";
         arrFloater[counter].style.animationName = "floater";
+        
     })
 }
 
