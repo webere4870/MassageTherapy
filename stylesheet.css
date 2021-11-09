@@ -97,6 +97,165 @@ a
     flex-direction: column;
 }
 
+#swipePage
+{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.innerSwipe
+{
+    transform: translateX(-25vw);
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: swipeAnimation;
+}
+
+.innerSwipe:nth-of-type(1)
+{
+    
+}
+
+#iSwipe2
+{
+    animation-delay: .3s;
+}
+
+#iSwipe3
+{
+    animation-delay: .6s;
+}
+
+#iSwipe4
+{
+    animation-delay: .9s;
+}
+
+
+@keyframes swipeAnimation
+{
+    0%
+    {
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.swipeDiv
+{
+    height: 100vh;
+    width: 25vw;
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#swipe1
+{
+    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/dave.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+#swipe2
+{
+    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/tom.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+#swipe3
+{
+    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/dave.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+#swipe4
+{
+    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/ted.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+
+.frame{
+    position: relative;
+    padding: 5px 10px;
+}
+.frame::before
+{
+    content: '';
+    height: 2px;
+    width: 30%;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 2px);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+.frame::after
+{
+    content: '';
+    width: 2px;
+    height: 50%;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    right: calc(100% - 2px);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+.swipeDiv:hover .frame::before
+{
+    width: 100%;
+}
+
+.swipeDiv:hover .frame::after
+{
+    height: 0;
+}
+
+.swipeButton
+{
+    background: rgba(0, 0, 0, .4);
+    border: 1px solid white;
+    color: white;
+    margin: 40px 0;
+    width: 100px;
+    height: 30px;
+    font-family: var(--mainFont);
+    font-size: 15px;
+}
+
+.swipeButton:hover
+{
+    cursor: pointer;
+}
+
 .wrapper
 {
     width: 40%;
