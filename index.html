@@ -33,7 +33,11 @@
         font-size: 30px;
         z-index: 3000;
     }
-
+    body,html{overflow-x: hidden;}
+    div
+    {
+        max-width: 100vw;
+    }
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -41,6 +45,44 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="landingPage">
+        <div class="pinkBorder" id="pb4">
+
+            
+            <div id="borderBox">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube-square"></i>
+            </div>
+        </div>
+        <div class="pinkBorder" id="pb1">
+
+        </div>
+        <div class="pinkBorder" id="pb2">
+
+        </div>
+        <div class="pinkBorder" id="pb3">
+
+        </div>
+        <div class="pinkBorder" id="pb5">
+
+        </div>
+        <h1 class="shadowBox">Therapy for the Body <div class="shadow"></div></h1>
+        <!-- <div class="positionLeft">
+
+        </div>
+        <h1 style="z-index: 5;">Therapy for the Body.</h1>
+        <div id="innerCircle">
+
+                <div class="innerCircle2">
+
+                </div>
+                <div class="innerCircle3">
+
+                </div>
+
+        </div> -->
+    </div>
     <div class="mainPage">
         <div class="navigationBar">
             <a href="#" style="margin-right: auto; justify-self: flex-start;">Logo</a>
@@ -79,6 +121,23 @@ crossorigin=""></script>
             <div class="animationSmallBox" id="box2"></div>
             <div class="animationSmallBox" id="box3"></div>
             <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
+    
+    <div id="otherLanding">
+        <div class="teamCard" id="team1">
+            <div class="absoluteCard">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="teamCard" id="team1">
+
+        </div>
+        <div class="teamCard" id="team1">
+
+        </div>
+        <div class="teamCard" id="team1">
+
         </div>
     </div>
     <div id="swipePage">
