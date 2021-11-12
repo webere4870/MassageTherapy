@@ -14,7 +14,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -38,6 +38,21 @@
     {
         max-width: 100vw;
     }
+    #backgroundText
+    {
+        color: rgba(110, 110, 110, 0.6);
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 500px;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -46,6 +61,40 @@ crossorigin=""></script>
 </head>
 <body>
     <div id="landingPage">
+        <div id="slanted">
+            <div style="z-index: 6;">
+                <h1 class="heavy">Therapy for the body</h1>
+                <h1 class="lightFont">and for the soul.</h1>
+                <div class="buttonClass">
+                <button class="pillBtn">Appointment</button>
+                <button class="pillBtn">Contact</button>      
+                </div>
+            </div>
+            <div>
+                <h1 id="backgroundText" style="color: rgba(192, 192, 192, 0.3);font-family: 'Archivo Black', sans-serif; ">AC</h1>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <div id="landingPage">
+        <div style="transform: rotate(90deg); position: absolute; top: calc(50% - 150px);">
+            <img src="./images/blur.png" alt="" style="height: 400px;">
+        </div>
+        <div id="stage">
+            
+            <div class="homeSlide" id="slide1">
+
+            </div>
+            <div class="homeSlide" id="slide2">
+                
+            </div>
+            <div class="homeSlide" id="slide3">
+                
+            </div>
+            <div class="homeSlide" id="slide4">
+                
+            </div>
+        </div>
         <div class="pinkBorder" id="pb4">
 
             
@@ -68,7 +117,7 @@ crossorigin=""></script>
 
         </div>
         <h1 class="shadowBox">Therapy for the Body <div class="shadow"></div></h1>
-        <!-- <div class="positionLeft">
+  <div class="positionLeft">
 
         </div>
         <h1 style="z-index: 5;">Therapy for the Body.</h1>
@@ -82,8 +131,9 @@ crossorigin=""></script>
                 </div>
 
         </div> -->
-    </div>
+
     <div class="mainPage">
+
         <div class="navigationBar">
             <a href="#" style="margin-right: auto; justify-self: flex-start;">Logo</a>
             <a href="#" style="text-decoration: underline;
@@ -102,7 +152,8 @@ crossorigin=""></script>
             <a href="#">Schedule</a>
             <a href="#">Contact</a>
         </div>
-        <div id="stage">
+        <!-- <div id="stage">
+            
             <div class="homeSlide" id="slide1">
 
             </div>
@@ -115,7 +166,7 @@ crossorigin=""></script>
             <div class="homeSlide" id="slide4">
                 
             </div>
-        </div>
+        </div> -->
         <div id="animationBox">
             <div class="animationSmallBox" id="box1"></div>
             <div class="animationSmallBox" id="box2"></div>
