@@ -53,23 +53,75 @@ a
     width: 100vw;
     background: rgba(0,0,0,0);
     z-index: 5;
+
 }
 
-.navigationBar a
+.navigationBar *
 {
-    padding: 15px 25px;
     text-decoration: none;
-    color: var(--eggshell);
+    color: white;
     font-size: 20px;
     font-family: var(--mainFont);
-    text-transform: uppercase;
+    transform: translateY(-70%);
+    padding: 10px 20px;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: .25s;
+    animation-name: navigationLinks;
+}
+
+.navigationBar a:nth-of-type(1)
+{
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+}
+.navigationBar a:nth-of-type(2)
+{
+    animation-delay: .15s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+}
+.navigationBar a:nth-of-type(3)
+{
+    animation-delay: .25s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+}
+.navigationBar a:nth-of-type(4)
+{
+    animation-delay: .35s;
+    animation-duration: .5s;
+}
+.navigationBar a:nth-of-type(5)
+{
+    animation-delay: .45s;
+    animation-duration: .5s;
 }
 
 .navigationBar a:hover
 {
     text-decoration: underline;
     text-underline-offset: 5px;
-    text-decoration-color: var(--accentColor);
+    text-decoration-color: var(--myPink);
+}
+
+@keyframes navigationLinks
+{
+    0%{
+
+    }
+    80%
+    {
+
+    }
+    100%
+    {
+        transform: translateY(0%);
+    }
 }
 
 .fa-bars
@@ -119,6 +171,27 @@ a
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    transform: translateX(-60%);
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: slanted;
+    animation-delay: 1s;
+}
+
+@keyframes slanted
+{
+    0%
+    {
+        
+    }
+    80%
+    {
+
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 #slanted > *
