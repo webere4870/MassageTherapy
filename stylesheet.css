@@ -179,6 +179,65 @@ a
     animation-delay: 1s;
 }
 
+#halfSlant
+{
+    
+    background: #f2f2f2;
+    
+}
+
+#slantDiv
+{
+    max-width: 50%;
+    position: relative;
+}
+
+#slantDiv::after
+{
+    position: absolute;
+    top: 0%;
+    left: -5%;
+    width: 2px;
+    height: 100%;
+    background: white;
+    content: '';
+}
+
+#innerSlant
+{
+    background: var(--myPink);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 30%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+#slantCircle
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url('./images/ted.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+}
+
+#circleWrapper
+{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    border-radius: 50%;
+    z-index: 5;
+}
+
 @keyframes slanted
 {
     0%
@@ -645,6 +704,17 @@ a
     text-align: right;
 }
 
+.squareBtn
+{
+    padding: 10px 40px;
+    border: 1px solid white;
+    background: rgba(0,0,0,0);
+    color: white;
+    margin: 10px 0;
+    font-family: var(--mainFont);
+    font-size: 12px;
+}
+
 .pillBtn
 {
     height: 20px;
@@ -688,6 +758,17 @@ h1, p
 
 h1{
     font-weight: lighter;
+    position: relative;
+}
+
+.afterUnderline
+{
+    position: relative;
+}
+
+.afterUnderline::before
+{
+    
 }
 
 #testimony
