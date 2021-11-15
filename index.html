@@ -12,6 +12,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
@@ -19,9 +20,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-
-
 <style>
+    
     #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
     #mapClose
@@ -60,6 +60,37 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="secondLanding">
+        <h1 class="blockLetters">Go Places. Dream Big.</h1>
+        <div class="buttonClass"><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button></div>
+        <div class="navigationBar">
+            <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+        </div>
+        <div id="secondLandingRow">
+            <div class="secondDiv">
+                <i class="fas fa-user-md"></i>
+                <h2>Epstein</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, ipsa.</p>
+            </div>
+            <div class="secondDiv">
+                <i class="fas fa-running"></i>
+                <h2>Didn't</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, consequatur?</p>
+            </div>
+            <div class="secondDiv">
+                <i class="fas fa-heartbeat"></i>
+                <h2>Kill Himself</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vitae?</p>
+            </div>
+        </div>
+    </div>
+    <div id="secondFollow">
+
+    </div>
     <div id="landingPage">
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
@@ -83,18 +114,7 @@ crossorigin=""></script>
             
         </div>
     </div>
-    <div id="secondLanding">
-        <div class="navigationBar">
-            <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-        </div>
-    </div>
-    <div id="secondFollow">
-
-    </div>
+    
     <!-- <div id="landingPage">
         <div style="transform: rotate(90deg); position: absolute; top: calc(50% - 150px);">
             <img src="./images/blur.png" alt="" style="height: 400px;">
