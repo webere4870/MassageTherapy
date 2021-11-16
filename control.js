@@ -33,6 +33,39 @@ for(let counter = 0; counter < arrFloater.length; counter++)
     })
 }
 
+function uncoverMap()
+{
+    let item1 = document.getElementById('mapOverlay');
+    let item2 = document.getElementById('drawChevron');
+    let item3 = document.getElementById('drawChevron2');
+    item1.style.animationName = "uncoverMap";
+    item2.style.animationName = "uncoverMap";
+    item3.style.animationName = "uncoverMap";
+    let btn = document.getElementsByClassName('xBtn');
+    setTimeout(()=>
+    {
+        for(let counter = 0; counter < btn.length; counter++)
+        {
+            btn[counter].style.display = "inherit";
+        }
+    }, 1000)
+}
+
+function coverMap()
+{
+    let item1 = document.getElementById('mapOverlay');
+    let item2 = document.getElementById('drawChevron');
+    let item3 = document.getElementById('drawChevron2');
+    item1.style.animationName = "coverMap";
+    item2.style.animationName = "coverMap";
+    item3.style.animationName = "coverMap";
+    let btn = document.getElementsByClassName('xBtn');
+        for(let counter = 0; counter < btn.length; counter++)
+        {
+            btn[counter].style.display = "none";
+        }
+
+}
 
 let cardFlip = document.querySelectorAll('.card');
 
