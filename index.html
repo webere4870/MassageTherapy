@@ -21,9 +21,13 @@
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
 <style>
-    
+    :root
+    {
+        --myPink: #FF007F;
+    }
     #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
+    #mapid2 {height: 100%; width: 100%; z-index: 3;}
     #mapClose
     {
         display: none;
@@ -60,6 +64,37 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="contactPage">
+        <div id="mapid2">
+
+        </div>
+        <div id="mapOverlay">
+            <div class="navigationBar">
+                <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+            <h1><span class="bounce">How </span> <span class="bounce">can </span> <span class="bounce">we </span> <span class="bounce" style="color: var(--myPink);">help?</span></h1>
+            <div class="buttonClass">
+                <div class="splitBtn">
+                    <div class="split1">Send a message</div>
+                    <div class="split2"><i class="fas fa-envelope"></i></div>
+                </div>
+                <div class="splitBtn">
+                    <div class="split1">Find us</div>
+                    <div class="split2"><i class="fas fa-map-marker-alt"></i></div>
+                </div>
+            </div>
+            <div id="dropBtn">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+    <div id="contactFollow">
+
+    </div>
     <div id="secondLanding">
         <h1 class="blockLetters">Go Places. Dream Big.</h1>
         <div class="buttonClass"><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button></div>
