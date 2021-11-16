@@ -159,6 +159,30 @@ button:hover
     z-index: 5;
 }
 
+#drawChevron
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--myPink);
+    z-index: 7;
+    clip-path: polygon(0% 0%, 10% 0%, 40% 50%, 10% 100%, 0% 100%, 30% 50%);
+}
+
+#drawChevron2
+{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 50%;
+    height: 100%;
+    background: white;
+    z-index: 7;
+    clip-path: polygon(0% 0%, 10% 0%, 40% 50%, 10% 100%, 0% 100%, 30% 50%);
+}
+
 #contactFollow
 {
     background: #f2f2f2;
