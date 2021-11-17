@@ -75,9 +75,9 @@ crossorigin=""></script>
 
         </div>
         <div id="drawChevron2"></div>
-        <div id="dropBtn">
+        <a id="dropBtn" href="#contactFollow2">
             <i class="fas fa-chevron-down"></i>
-        </div>
+        </a>
         <div id="mapOverlay">
             
             <div class="navigationBar">
@@ -103,6 +103,28 @@ crossorigin=""></script>
     </div>
     <div id="contactFollow">
 
+    </div>
+    <div id="contactFollow2">
+        <ul class='circles'>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        <h1 style="color: var(--myPink);" class="afterUnderline">Get in touch.</h1>
+        <form class="contactDiv">
+            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name">
+            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
+            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <button type="submit" class="pillBtn" style="background: var(--myPink); color: white; padding: 20px 40px;">Submit</button>
+        </form>
     </div>
     <div id="secondLanding">
         <h1 class="blockLetters">Go Places. Dream Big.</h1>
@@ -135,6 +157,7 @@ crossorigin=""></script>
     <div id="secondFollow">
 
     </div>
+    
     <div id="landingPage">
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
@@ -482,7 +505,11 @@ crossorigin=""></script>
         </div>
     </div>
     <script src="./control.js">
-
+        jQuery(document).ready(function () {
+		jQuery(".container-wrap").append(
+			"<ul class='circles'><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>"
+		);
+	}); 
     </script>
 </body>
 </html>
