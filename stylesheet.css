@@ -622,7 +622,7 @@ button:hover
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .buttonStep
@@ -639,6 +639,9 @@ button:hover
     justify-content: center;
     align-items: center;
     position: relative;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
 }
 
 .buttonStep:hover
@@ -666,6 +669,30 @@ button:hover
     position: absolute;
     top: 100%;
     left: 50%;
+}
+
+@keyframes growBall
+{
+    0%
+    {
+
+    }
+    100%
+    {
+        transform: scale(125%, 125%);
+    }
+}
+
+@keyframes shrinkBall
+{
+    0%
+    {
+
+    }
+    100%
+    {
+        transform: scale(100%, 100%);
+    }
 }
 
 #slantCircle
@@ -754,6 +781,11 @@ button:hover
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#td2, #td3
+{
+    display: none;
 }
 
 .blockLetters
