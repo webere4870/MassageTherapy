@@ -36,10 +36,16 @@ for(let counter = 0; counter < arrFloater.length; counter++)
 function growBall(index)
 {
     let balls = document.getElementsByClassName('buttonStep');
+    let div = document.getElementsByClassName('textDiv');
     for(let counter = 0 ; counter < balls.length; counter++)
     {
         balls[counter].style.animationName = "shrinkBall";
+        div[counter].style.display = "none";
+        div[counter].style.transform = "translateY(100px)";
+        div[counter].style.opacity = "0";
     }
+    div[index].style.animationName = "slideIn";
+    div[index].style.display = "flex";
     balls[index].style.animationFillMode = "reverse";
     balls[index].style.animationName = "growBall";
 }
