@@ -20,7 +20,6 @@ body,html
     --leather: #c9c5be;
     --eggshell: #e2e2e2;
     --offWhite: #f2f2f2;
-    --offWhite: rgb(255, 255, 255);
     --mainFont: 'Abel', sans-serif;
     --cursiveFont: 'Archivo Black', sans-serif;
     --myPink: #FF007F;
@@ -597,6 +596,78 @@ button:hover
     z-index: 1;
 }
 
+#pinkPage
+{
+    min-height: 75vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.splitLeft
+{
+    height: 75vh;
+    grid-area: span 1;
+    background: var(--offWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splitMiddle
+{
+    grid-area: span 1;
+    height: 75vh;
+    background: url('./images/jared.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.splitRight
+{
+    grid-area: span 1;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--myPink);
+}
+
+#simpleWhite
+{
+    min-height: 70vh;
+    width: 100vw;
+    background: var(--offWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.triangle
+{
+    height: 100px;
+    width: 100px;
+    background: var(--myPink);
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+}
+
+.triangle:nth-of-type(1)
+{
+    bottom: 0;
+    right: 0;
+    transform: rotate(-90deg);
+}
+.triangle:nth-of-type(2)
+{
+    transform: rotate(90deg);
+    top: 0;
+    left: 0;
+}
+
 #thirdLanding
 {
     display: flex;
@@ -791,6 +862,11 @@ button:hover
     color: var(--myPink);
     font-weight: bold;
     font-family: var(--mainFont);
+}
+
+.paragraphLimit
+{
+    width: 50%;
 }
 
 .textDiv
@@ -1378,6 +1454,11 @@ button:hover
     color: white;
     font-family: var(--mainFont);
     font-size: 15px;
+}
+
+.squareBtn
+{
+
 }
 
 .pillBtn:nth-of-type(2)
