@@ -46,6 +46,7 @@ a
 
 .navigationBar
 {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -63,8 +64,81 @@ button:hover
     cursor: pointer;
 }
 
+.mobileNavigation
+{
+    background: var(--myPink);
+    box-shadow: 0 0 5px gray;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    z-index: 50;
+}
+
+.bigNavigation
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.subNavigation1
+{
+    height: 100vh;
+    width: 75vw;
+    transform: translateX(100vw);
+    background: var(--darkGray2);
+}
+
+.subNavigation2
+{
+    height: 100vh;
+    width: 25vw;
+    background: var(--myPink);
+    transform: translateX(25vw);
+}
+
+.subNav
+{
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.subNav:nth-of-type(1)
+{
+    animation-delay: .4s;
+}
+
+@keyframes navigationSwipe
+{
+    0%
+    {
+
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+
+.mobileNavigation:hover
+{
+    cursor: pointer;
+}
+
  .navigationBar *
 {
+    display: none;
     text-decoration: none;
     color: white;
     font-size: 20px;

@@ -9,6 +9,21 @@ window.addEventListener("DOMContentLoaded", function(e) {
 
 }, false);
 
+function startAnimation(query, animationNames, zInd)
+{
+    let arr = document.getElementsByClassName('bigNavigation');
+        for(let counter = 0; counter < arr.length; counter++)
+        {
+            arr[counter].style.zIndex = zInd;
+        }
+    let grabItem = document.querySelectorAll(query);
+
+    for(let counter =0; counter < grabItem.length; counter++)
+    {
+        grabItem[counter].style.animationName = animationNames;
+    }
+}
+
 let arrFloater = document.getElementsByClassName('floaterBox');
 let bubble = document.querySelectorAll('.bubble p');
 let bubbleI = document.querySelectorAll('.bubble i');
