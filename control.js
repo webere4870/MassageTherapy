@@ -9,6 +9,17 @@ window.addEventListener("DOMContentLoaded", function(e) {
 
 }, false);
 
+function uncoverBlock()
+{
+    let block = document.getElementsByClassName('coverBlock');
+    let twisty = document.getElementsByClassName('twisty');
+    for(let counter = 0; counter < block.length; counter++)
+    {
+        block[counter].style.animationName = "removeBlock";
+        twisty[counter].style.animationName = "twisty";
+    }
+}
+
 function startAnimation(query, animationNames, zInd)
 {
     let arr = document.getElementsByClassName('bigNavigation');
