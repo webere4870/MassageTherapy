@@ -16,21 +16,50 @@ function uncoverBlock()
     for(let counter = 0; counter < block.length; counter++)
     {
         block[counter].style.animationName = "removeBlock";
-        twisty[counter].style.animationName = "twisty";
     }
 }
 
 function startAnimation(query, animationNames, zInd)
 {
     let arr = document.getElementsByClassName('bigNavigation');
+    let navClose = document.getElementsByClassName('mobileNavigation');
+    let navClose2 = document.getElementsByClassName('closeMobile');
         for(let counter = 0; counter < arr.length; counter++)
         {
             arr[counter].style.zIndex = zInd;
+            setTimeout(()=>{
+                navClose[counter].style.display = 'none';
+                navClose2[counter].style.display = 'flex';
+            }, 0)
+            
         }
     let grabItem = document.querySelectorAll(query);
 
     for(let counter =0; counter < grabItem.length; counter++)
     {
+        grabItem[counter].style.animationName = animationNames;
+    }
+}
+
+function quitAnimation(query, animationNames, zInd)
+{
+    let arr = document.getElementsByClassName('bigNavigation');
+    let navClose = document.getElementsByClassName('mobileNavigation');
+    let navClose2 = document.getElementsByClassName('closeMobile');
+        for(let counter = 0; counter < arr.length; counter++)
+        {
+            arr[counter].style.zIndex = zInd;
+            setTimeout(()=>{
+                navClose[counter].style.display = 'flex';
+                navClose2[counter].style.display = 'none';
+            }, 0)
+            
+        }
+    let grabItem = document.querySelectorAll(query);
+
+    for(let counter =0; counter < grabItem.length; counter++)
+    {
+        grabItem[counter].style.animationName = 'none';
         grabItem[counter].style.animationName = animationNames;
     }
 }

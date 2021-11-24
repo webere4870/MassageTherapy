@@ -75,6 +75,21 @@ button:hover
     cursor: pointer;
 }
 
+.closeMobile{
+    background: var(--myPink);
+    box-shadow: 0 0 5px gray;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    z-index: 50;
+}
+
 .mobileNavigation
 {
     background: var(--myPink);
@@ -116,7 +131,7 @@ button:hover
 .subNavigation2
 {
     height: 100vh;
-    width: 35vw;
+    width: 30vw;
     background: var(--darkGray2);
     transform: translateX(100vw);
     flex-direction: column;
@@ -135,9 +150,9 @@ button:hover
 
 .navIcons i
 {
-    color: var(--darkGray);
+    color: white;
     padding: 5px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .subNav
@@ -148,6 +163,26 @@ button:hover
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.backgroundLetters
+{
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: 0;
+    left: 0;
+    color: var(--darkGray);
+
+}
+
+.bgLetters{
+    color: rgba(54, 54, 54, .5);
+    font-family: var(--cursiveFont);
+    font-size: 80px;
+    text-align: left;
 }
 
 .sideNav
@@ -158,6 +193,7 @@ button:hover
     align-items: flex-start;
     margin: 20px;
     text-align: left;
+    z-index: 52;
 }
 
 .subNav:nth-of-type(1)
@@ -229,13 +265,19 @@ button:hover
     {
 
     }
-    75%
-    {
-        transform: translateX(65vw);
-    }
     100%
     {
-        transform: translateX(69vw);
+        transform: translateX(70vw);
+    }
+}
+
+@keyframes unswipeNavigation
+{
+    0%
+    {
+    }
+    100%{
+        transform: translateX(100vw);
     }
 }
 
@@ -2812,6 +2854,13 @@ i
 @media screen and (max-width: 900px)
 {
 
+}
+
+@media  screen and (max-width: 800px) {
+    .subNavigation2
+    {
+        width: 100vw;
+    }
 }
 
 @media screen and (max-width: 768px)
