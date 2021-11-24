@@ -26,6 +26,7 @@ body,html
     --darkGray: rgb(83, 83, 83);
     --darkGray2:rgb(36, 36, 36);
     --lightGray: rgb(156, 156, 156);
+    --grayGradient: rgba(44, 44, 44, .7);
 }
 
 .mainPage
@@ -1025,6 +1026,86 @@ button:hover
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%); 
 } 
 
+#whiteContent
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#leftWhite, #rightWhite
+{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restrictContent
+{
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.topAndBottom
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#ttt
+{
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(rgba(44, 44, 44, .7), rgba(44, 44, 44, .7)), url('./images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bbb
+{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftWhite
+{
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url('./images/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+#rightWhite
+{
+    background: var(--myPink);
+    position: relative;
+}
+
+#rightWhite img{
+    width: 100%;
+}
+
 #thirdLanding
 {
     display: flex;
@@ -1822,7 +1903,10 @@ p{
 
 .squareBtn
 {
-
+    padding: 8px 40px;
+    color: var(--myPink);
+    font-size: 15px;
+    border: 2px solid var(--myPink);
 }
 
 .pillBtn:nth-of-type(2)
@@ -1852,6 +1936,18 @@ h1, p
 h1{
     font-weight: lighter;
     position: relative;
+}
+
+.pinkH1
+{
+    color: var(--myPink);
+    font-size: 50px;
+}
+
+.whiteH1
+{
+    color: white;
+    font-size: 50px;
 }
 
 .afterUnderline
@@ -2861,6 +2957,27 @@ i
     {
         width: 100vw;
     }
+
+    #leftWhite, #rightWhite
+    {
+        width: 100vw;
+        height: 100vh;
+    }
+    #whiteContent
+    {
+        flex-direction: column;
+    }
+
+    .topAndBottom
+    {
+        
+    }
+
+    #bbb,#ttt
+    {
+        height: 100vh;
+    }
+
 }
 
 @media screen and (max-width: 768px)
