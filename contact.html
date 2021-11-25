@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+<style>
+    :root
+    {
+        --myPink: #FF007F;
+        --myPink: #FF007F;
+        --darkGray: rgb(83, 83, 83);
+        --darkGray2:rgb(36, 36, 36);
+        --lightGray: rgb(156, 156, 156);
+        --grayGradient: rgba(44, 44, 44, .7);
+    }
+    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
+    margin: 20px 0;}
+    #mapid2 {height: 100%; width: 100%; z-index: 3;}
+    #mapClose
+    {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+        z-index: 3000;
+    }
+    body,html{overflow-x: hidden;}
+    div
+    {
+        max-width: 100vw;
+    }
+    #backgroundText
+    {
+        color: rgba(110, 110, 110, 0.6);
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 500px;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+<script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- <div id="whiteSquare">
+        <div id="underPicture"></div>
+        <div id="underGray"></div>
+        <div id="underPink"></div>
+        
+        <div class="text"> It's who we are.</div>
+    </div> -->
+    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 6)">
+        <i class="fas fa-bars bars" style="font-size: 20px;"></i>
+    </div>
+    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
+        <i class="fas fa-times times" style="font-size: 20px;"></i>
+    </div>
+    <div class="bigNavigation">
+        <div class="subNavigation2 subNav">
+            <div class="backgroundLetters">
+                <p class="bgLetters">Therapy done right. Healing the body and the mind</p>
+            </div>
+            <div class="sideNav">
+                
+                <h1 style="color: var(--myPink);">Learn More</h1>
+                <a href="./index.html">Home</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./about.html">About</a>
+                <a href="#">Home</a>
+                <a href="#" class="hiddenBig" onclick="uncoverBlock()">Home</a>
+                
+                <div class="navIcons">
+                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
+                    <div>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contactPage">
+        <div id="mapid2">
+
+        </div>
+        <div class="xBtn" onclick="coverMap()">
+            <button style="width: 60px; height: 25px;" class="xBtn">Exit</button>
+        </div>
+        <div id="drawChevron">
+
+        </div>
+        <div id="drawChevron2"></div>
+        <a id="dropBtn" href="#contactFollow2">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+        <div id="mapOverlay">
+            
+            <div class="navigationBar">
+                <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+            <h1><span class="bounce">How </span> <span class="bounce">can </span> <span class="bounce">we </span> <span class="bounce" style="color: var(--myPink);">help?</span></h1>
+            <div class="buttonClass">
+                <div class="splitBtn">
+                    <div class="split1">Send a message</div>
+                    <div class="split2"><i class="fas fa-envelope"></i></div>
+                </div>
+                <div class="splitBtn" onclick="uncoverMap()">
+                    <div class="split1">Find us</div>
+                    <div class="split2"><i class="fas fa-map-marker-alt"></i></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="contactFollow">
+
+    </div>
+    <div id="contactFollow2">
+        <ul class='circles'>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        <h1 style="color: var(--myPink);" class="afterUnderline">Get in touch.</h1>
+        <form class="contactDiv">
+            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name">
+            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
+            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <button type="submit" class="pillBtn" style="background: var(--myPink); color: white; padding: 20px 40px;">Submit</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <form action="" id="form">
+            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
+            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
+            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
+        </form>
+        <div id="mapid">
+            
+        </div>
+        <div class="iconRow">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-snapchat-square"></i></a>
+        </div>
+        <div class="linkRow">
+            <a>&copy; 2021 Massage Therapy LLC</a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Yoga</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <script src="./control.js">
+        jQuery(document).ready(function () {
+		jQuery(".container-wrap").append(
+			"<ul class='circles'><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>"
+		);
+	}); 
+    </script>
+</body>
+</html>
