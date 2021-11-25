@@ -28,6 +28,7 @@ body,html
     --lightGray: rgb(156, 156, 156);
     --grayGradient: rgba(44, 44, 44, .7);
     --grayGradient2: rgba(44, 44, 44, .8);
+    --pinkGradient: rgba(255, 0, 127, 0.7);
 }
 
 .mainPage
@@ -769,6 +770,8 @@ button:hover
 #slanted
 {
     position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
     clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
@@ -797,6 +800,10 @@ button:hover
     max-width: 50%;
     position: relative;
     margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
 }
 
 #slantDiv::after
@@ -925,19 +932,20 @@ button:hover
 {
     min-height: 70vh;
     width: 100vw;
-    background: var(--offWhite);
+    background: var(--myPink);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    color: white;
 }
 
 .triangle
 {
-    height: 100px;
-    width: 100px;
-    background: var(--myPink);
+    height: 200px;
+    width: 200px;
+    background: var(--eggshell);
     clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
     position: absolute;
 }
@@ -945,14 +953,14 @@ button:hover
 .triangle:nth-of-type(1)
 {
     bottom: 0;
-    right: 0;
-    transform: rotate(-90deg);
+    left: 0;
+    transform: rotate(0deg);
 }
 .triangle:nth-of-type(2)
 {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     top: 0;
-    left: 0;
+    right: 0;
 }
 
 #whiteSquare
@@ -1111,7 +1119,7 @@ button:hover
 #thirdLanding
 {
     display: flex;
-    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url('./images/bg1.jpg');
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('./images/bg1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1122,6 +1130,7 @@ button:hover
     position: relative;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 #buttonSteps
@@ -1441,7 +1450,7 @@ p{
     align-items: center;
     position: relative;
     
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('./images/bg1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('./images/bg2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1701,8 +1710,9 @@ p{
 {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .innerSwipe
@@ -1750,7 +1760,7 @@ p{
 {
     height: 100vh;
     width: 25vw;
-    border: 1px solid black;
+    border: 1px solid white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1762,7 +1772,7 @@ p{
 
 #swipe1
 {
-    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/dave.jpg');
+    background: linear-gradient(to top, var(--pinkGradient), rgba(0,0,0,.3)), url('./images/dave.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1771,7 +1781,7 @@ p{
 
 #swipe2
 {
-    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/tom.jpeg');
+    background: linear-gradient(to top, var(--pinkGradient), rgba(0,0,0,.3)), url('./images/tom.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1780,7 +1790,7 @@ p{
 
 #swipe3
 {
-    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/dave.jpg');
+    background: linear-gradient(to top, var(--pinkGradient), rgba(0,0,0,.3)), url('./images/dave.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1789,7 +1799,7 @@ p{
 
 #swipe4
 {
-    background: linear-gradient(to right bottom, rgba(199, 0, 149, 0.6), rgba(0,0,0,.9)), url('./images/ted.jpeg');
+    background: linear-gradient(to top, var(--pinkGradient), rgba(0,0,0,.3)), url('./images/ted.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1968,6 +1978,22 @@ h1{
     background: var(--myPink);
 }
 
+.afterUnderline2
+{
+    position: relative;
+}
+
+.afterUnderline2::before
+{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 100%;
+    left: 20%;
+    background: white;
+}
+
 #testimony
 {
     min-height: 60vh;
@@ -2017,9 +2043,13 @@ h1{
 #svgFollow
 {
     position: relative;
-    height: 100vh;
+    min-height: 50vh;
     width: 100vw;
     background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
 }
 
 #svgFollow svg
@@ -2172,7 +2202,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: var(--mainColor);
+    background: var(--darkGray2);
     flex-wrap: wrap;
     padding: 30px 0;
 }
@@ -2951,10 +2981,21 @@ i
 
 @media screen and (max-width: 900px)
 {
-
+    #swipePage
+    {
+        flex-wrap: wrap;
+    }
+    .swipeDiv{
+        width: 50vw;
+    }
 }
 
 @media  screen and (max-width: 800px) {
+    .triangle
+    {
+        height: 100px;
+        width: 100px;
+    }
     .subNavigation2
     {
         width: 100vw;
@@ -3026,6 +3067,10 @@ i
 
 @media screen and (max-width: 630px)
 {
+    .swipeDiv
+    {
+        width: 100vw;
+    }
     #buttonSteps
     {
         position: absolute;

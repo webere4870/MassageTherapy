@@ -183,6 +183,15 @@ var marker2 = L.marker([latitude, longitude]).addTo(mymap2);
 marker2.bindPopup("Central Church of Christ<br>307 E Hardin St, Findlay, OH 45840<br>");
 mymap2.invalidateSize();
 
+let mymap3 = L.map('mapid3').setView([latitude, longitude], 13);
+const attribution3 = '&copy; <a href="https://www.openstreetmap.org/copyright">Open Street Map</a> contributors';
+const tileURL3 = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+const tiles3 = L.tileLayer(tileURL3, {attribution3});
+tiles2.addTo(mymap3);
+var marker3 = L.marker([latitude, longitude]).addTo(mymap3);
+marker3.bindPopup("Central Church of Christ<br>307 E Hardin St, Findlay, OH 45840<br>");
+mymap3.invalidateSize();
+
 
 
 

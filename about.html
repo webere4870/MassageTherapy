@@ -30,7 +30,9 @@
         --lightGray: rgb(156, 156, 156);
         --grayGradient: rgba(44, 44, 44, .7);
     }
-    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
+    #mapid {height: 300px; width: 80vw; z-index: 100;top: 0; left: 0;
+    margin: 20px 0;}
+    #mapid3 {height: 300px; width: 80vw; z-index: 4;top: 0; left: 0;
     margin: 20px 0;}
     #mapid2 {height: 100%; width: 100%; z-index: 3;}
     #mapClose
@@ -69,7 +71,7 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)">
+    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 6)">
         <i class="fas fa-bars bars" style="font-size: 20px;"></i>
     </div>
     <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
@@ -81,13 +83,12 @@ crossorigin=""></script>
                 <p class="bgLetters">Therapy done right. Healing the body and the mind</p>
             </div>
             <div class="sideNav">
+                
                 <h1 style="color: var(--myPink);">Learn More</h1>
                 <a href="./index.html">Home</a>
-                <a href="./contact.html">Contact</a>
                 <a href="./about.html">About</a>
-                <a href="#">Home</a>
-                <a href="#" class="hiddenBig" onclick="uncoverBlock()">Home</a>
-                
+                <a href="./therapy.html">Therapy</a>
+                <a href="./contact.html">Contact</a>
                 <div class="navIcons">
                     <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
                     <div>
@@ -99,6 +100,7 @@ crossorigin=""></script>
             </div>
         </div>
     </div>
+    
     <div id="svgBackground">
         <div class="wrapper">
             <h1 class="afterUnderline">Innovation that Excites</h1>
@@ -113,6 +115,7 @@ crossorigin=""></script>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#f2f2f2" fill-opacity="1" d="M0,160L34.3,176C68.6,192,137,224,206,234.7C274.3,245,343,235,411,197.3C480,160,549,96,617,101.3C685.7,107,754,181,823,213.3C891.4,245,960,235,1029,224C1097.1,213,1166,203,1234,218.7C1302.9,235,1371,277,1406,298.7L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
           </svg>
+          <h1 style="color: var(--myPink); margin: 20px;" class="afterUnderline">Put Some Content</h1>
     </div>
     <div id="halfSlant">
         <div id="innerSlant">
@@ -124,12 +127,64 @@ crossorigin=""></script>
             </div>
             <div id="slantDiv">
                 <h1 style="color: white; font-size: 40px;" class="afterUnderline">Go Places. <br>Challenge the Status.</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit sapiente perspiciatis adipisci inventore assumenda voluptatum accusamus, illum ut libero ipsam possimus laboriosam. Incidunt labore, odit ea soluta dicta at!</p>
-            <button class="squareBtn">Something</button>
+            <p style="text-align: left; padding-left: 0;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit sapiente perspiciatis adipisci inventore assumenda voluptatum accusamus, illum ut libero ipsam possimus laboriosam. Incidunt labore, odit ea soluta dicta at!</p>
             </div>
             
         </div>
     </div>
+    <div id="swipePage">
+        <div class="swipeDiv" id="swipe1">
+            <div class="innerSwipe" id="iSwipe1">
+                <h1 class="frame">Jeff</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+        <div class="swipeDiv" id="swipe2">
+            <div class="innerSwipe" id="iSwipe2">
+                <h1 class="frame">John</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+        <div class="swipeDiv" id="swipe3">
+            <div class="innerSwipe" id="iSwipe3">
+                <h1 class="frame">Doe</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+        <div class="swipeDiv" id="swipe4">
+            <div class="innerSwipe" id="iSwipe4">
+                <h1 class="frame">Steve</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <!-- <form action="" id="form">
+            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
+            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
+            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
+        </form> -->
+        <div id="mapid">
+            
+        </div>
+        <div class="iconRow">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-snapchat-square"></i></a>
+        </div>
+        <div class="linkRow">
+            <a>&copy; 2021 Massage Therapy LLC</a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Yoga</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div> 
     <script src="./control.js">
 
     </script>

@@ -30,7 +30,7 @@
         --lightGray: rgb(156, 156, 156);
         --grayGradient: rgba(44, 44, 44, .7);
     }
-    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
+    #mapid {height: 300px; width: 80vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
     #mapid2 {height: 100%; width: 100%; z-index: 3;}
     #mapClose
@@ -69,36 +69,6 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)">
-        <i class="fas fa-bars bars" style="font-size: 20px;"></i>
-    </div>
-    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
-        <i class="fas fa-times times" style="font-size: 20px;"></i>
-    </div>
-    <div class="bigNavigation">
-        <div class="subNavigation2 subNav">
-            <div class="backgroundLetters">
-                <p class="bgLetters">Therapy done right. Healing the body and the mind</p>
-            </div>
-            <div class="sideNav">
-                <h1 style="color: var(--myPink);">Learn More</h1>
-                <a href="./index.html">Home</a>
-                <a href="./contact.html">Contact</a>
-                <a href="./about.html">About</a>
-                <a href="#">Home</a>
-                <a href="#" class="hiddenBig" onclick="uncoverBlock()">Home</a>
-                
-                <div class="navIcons">
-                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
-                    <div>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="thirdLanding">
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
@@ -131,26 +101,93 @@ crossorigin=""></script>
             <div class="buttonStep" onclick="growBall(2)"><h1>3</h1></div>
         </div>
     </div>
-    <div id="whiteContent">
-        <div id="leftWhite">
-            <div class="restrictContent">
-                <h1 class="pinkH1 afterUnderline">Mission</h1>
-            <p style="text-align: left; color: black; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
-            <button class="squareBtn">Learn</button>
+    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)" style="z-index: 57;">
+        <i class="fas fa-bars bars" style="font-size: 20px;"></i>
+    </div>
+    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
+        <i class="fas fa-times times" style="font-size: 20px;"></i>
+    </div>
+    <div class="bigNavigation">
+        <div class="subNavigation2 subNav">
+            <div class="backgroundLetters">
+                <p class="bgLetters">Therapy done right. Healing the body and the mind</p>
             </div>
-        </div>
-        <div id="rightWhite">
-            <div class="topAndBottom">
-                <div id="ttt"><h1>Slideshow</h1></div>
-                <div id="bbb">
-                    <div class="restrictContent" style="padding-left: 10px; border-left: 2px solid white; ">
-                        <h1 class="whiteH1 afterUnderline" >Mission</h1>
-                    <p style="text-align: left; color: white; padding-left: 0; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
+            <div class="sideNav">
+                <h1 style="color: var(--myPink);">Learn More</h1>
+                <a href="./index.html">Home</a>
+                
+                <a href="./about.html">About</a>
+                <a href="./therapy.html">Therapy</a>
+                <a href="./contact.html">Contact</a>
+                <div class="navIcons">
+                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
+                    <div>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fas fa-envelope"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="secondLanding">
+        <h1 class="blockLetters">Go Places. Dream Big.</h1>
+        <div class="buttonClass"><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button></div>
+        <div class="navigationBar">
+            <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+        </div>
+        <div id="secondLandingRow">
+            <div class="secondDiv">
+                <i class="fas fa-user-md"></i>
+                <h2>Lorem</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, ipsa.</p>
+            </div>
+            <div class="secondDiv">
+                <i class="fas fa-running"></i>
+                <h2>Stuff</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, consequatur?</p>
+            </div>
+            <div class="secondDiv">
+                <i class="fas fa-heartbeat"></i>
+                <h2>Test</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vitae?</p>
+            </div>
+        </div>
+    </div>
+    <div id="secondFollow">
+
+    </div>
+    
+    <div class="footer">
+        <!-- <form action="" id="form">
+            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
+            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
+            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
+        </form> -->
+        <div id="mapid">
+            
+        </div>
+        <div class="iconRow">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-snapchat-square"></i></a>
+        </div>
+        <div class="linkRow">
+            <a>&copy; 2021 Massage Therapy LLC</a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Yoga</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div> 
     <script src="./control.js">
 
     </script>

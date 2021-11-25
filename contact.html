@@ -30,8 +30,10 @@
         --lightGray: rgb(156, 156, 156);
         --grayGradient: rgba(44, 44, 44, .7);
     }
-    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
+    #mapid {height: 300px; width: 80vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
+    #mapid3 {height: 300px; width: 80vw; z-index: 100;top: 0; left: 0;
+    margin: 20px 0; z-index: 3;}
     #mapid2 {height: 100%; width: 100%; z-index: 3;}
     #mapClose
     {
@@ -91,11 +93,9 @@ crossorigin=""></script>
                 
                 <h1 style="color: var(--myPink);">Learn More</h1>
                 <a href="./index.html">Home</a>
-                <a href="./contact.html">Contact</a>
                 <a href="./about.html">About</a>
-                <a href="#">Home</a>
-                <a href="#" class="hiddenBig" onclick="uncoverBlock()">Home</a>
-                
+                <a href="./therapy.html">Therapy</a>
+                <a href="./contact.html">Contact</a>
                 <div class="navIcons">
                     <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
                     <div>
@@ -172,13 +172,13 @@ crossorigin=""></script>
     </div>
     
     <div class="footer">
-        <form action="" id="form">
+        <!-- <form action="" id="form">
             <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
             <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
             <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
             <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
             <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
-        </form>
+        </form> -->
         <div id="mapid">
             
         </div>
@@ -196,7 +196,8 @@ crossorigin=""></script>
             <a href="#">Schedule</a>
             <a href="#">Contact Us</a>
         </div>
-    </div>
+    </div> 
+    
     <script src="./control.js">
         jQuery(document).ready(function () {
 		jQuery(".container-wrap").append(
