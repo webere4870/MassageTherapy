@@ -28,6 +28,7 @@ body,html
     --lightGray: rgb(156, 156, 156);
     --grayGradient: rgba(44, 44, 44, .7);
     --grayGradient2: rgba(44, 44, 44, .8);
+    --grayGradient2: rgba(44, 44, 44, .9);
     --pinkGradient: rgba(255, 0, 127, 0.7);
 }
 
@@ -1036,6 +1037,34 @@ button:hover
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%); 
 } 
 
+#pictureBackground
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./images/massage1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cornerDiv
+{
+    width: 50vw;
+    height: 300px;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8));
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #whiteContent
 {
     display: flex;
@@ -1407,7 +1436,7 @@ button:hover
 }
 
 p{
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -1886,6 +1915,7 @@ p{
     margin: 10px 0;
     font-family: var(--mainFont);
     font-size: 12px;
+    z-index: 10;
 }
 
 .hexBtn
@@ -3025,6 +3055,13 @@ i
 
 @media screen and (max-width: 768px)
 {
+    #cornerDiv
+    {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
     #hamburger
     {
         display: inherit;
