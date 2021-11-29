@@ -30,6 +30,7 @@ body,html
     --grayGradient2: rgba(44, 44, 44, .8);
     --grayGradient2: rgba(44, 44, 44, .9);
     --pinkGradient: rgba(255, 0, 127, 0.7);
+    --blackGradient: rgba(0,0,0,.7);
 }
 
 .mainPage
@@ -2028,15 +2029,143 @@ h1{
 {
     min-height: 60vh;
     width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "header header header"
-    "left middle right";
+    display: flex;
+    position: relative;
     justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--blackGradient), var(--blackGradient)), url('./images/bg2.jpg');
+}
 
-    background: linear-gradient(rgba(9, 10, 39, 0.8), rgba(9, 10, 39, 0.8)), url('./images/bg2.jpg');
+.jsArrow
+{
+    position: absolute;
+    height: 80px;
+    width: 40px;
+    background: rgba(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.jsArrow:hover{
+    cursor: pointer;
+    background: var(--myPink);
+}
+
+
+.jsArrow:nth-of-type(1)
+{
+    left: 3%;
+    top: calc(50% - 50px);
+}
+
+.jsArrow:nth-of-type(2)
+{
+    top: calc(50% - 50px);
+    right: 3%;
+}
+
+#bubbleRow
+{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divBubble
+{
+    height: 20px;
+    width: 20px;
+    background: var(--offWhite);
+    border-radius: 50%;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.divBubble:hover
+{
+    cursor: pointer;
+}
+
+.innerBubble
+{
+    height: 65%;
+    width: 65%;
+    background: var(--myPink);
+    border-radius: 50%;
+    display: none;
+}
+
+.tSlide
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-name: floatIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    display: none;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.tSlide:nth-of-type(1)
+{
+    animation-name: floatIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.quote
+{
+    position: relative;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.quote::before
+{
+    color: var(--myPink);
+    content: '"';
+    font-size: 150px;
+    font-family: var(--mainFont);
+    position: absolute;
+    top: calc(50% - 75px);
+    left: -30px;
+}
+
+.quote::after
+{
+    color: var(--myPink);
+    content: '"';
+    font-size: 150px;
+    font-family: var(--mainFont);
+    position: absolute;
+    top: calc(50% - 75px);
+    right: -30px;
+}
+
+@keyframes floatIn
+{
+    0%{
+
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #tH1
@@ -2056,19 +2185,9 @@ h1{
     position: relative;
 }
 
-#testimony p::before
-{
-    content: open-quote open-quote;
-    position: absolute;
-    bottom: 100%;
-}
 
-#testimony p::after
-{
-    content: open-quote open-quote;
-    position: absolute;
-    top: 100%;
-}
+
+
 
 #svgFollow
 {

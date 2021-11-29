@@ -88,6 +88,61 @@ for(let counter = 0; counter < arrFloater.length; counter++)
     })
 }
 
+let slides = document.getElementsByClassName('tSlide');
+let circles = document.getElementsByClassName('innerBubble');
+
+function intermediate(pOrM)
+{
+    let index = 0;
+    for(let counter = 0; counter < slides.length; counter++)
+    {
+        if(slides[counter].style.display === "flex")
+        {
+            console.log(counter);
+            index = counter;
+        }
+    }
+    console.log(index);
+    if(pOrM === "plus")
+    {
+        
+        if(index === slides.length -1)
+        {
+            console.log("her");
+            index = 0;
+        }
+        else{
+            index += 1;
+        }
+    }
+    else
+    {
+        if(index === 0)
+        {
+            index = slides.length -1;
+        }
+        else
+        {
+            index--;
+        }
+    }
+
+    floatIn(index);
+}
+
+function floatIn(slideNumber)
+{
+    for(let counter = 0; counter < slides.length; counter++)
+    {
+        slides[counter].style.display = "none";
+        circles[counter].style.display = "none";
+        slides[counter].style.opacity = "0";
+        slides[counter].style.transform = "translateY(100px)";
+    }
+    slides[slideNumber].style.display = "flex";
+    circles[slideNumber].style.display = "flex";
+}
+
 function growBall(index)
 {
     let balls = document.getElementsByClassName('buttonStep');
