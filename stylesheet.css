@@ -1790,7 +1790,6 @@ p{
 {
     height: 100vh;
     width: 25vw;
-    border: 1px solid white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2030,6 +2029,7 @@ h1{
     min-height: 60vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -2132,9 +2132,21 @@ h1{
     position: relative;
     padding: 20px;
     font-size: 20px;
+    font-style: italic;
 }
 
-.quote::before
+.nameQuote
+{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+/* .quote::before
 {
     color: var(--myPink);
     content: '"';
@@ -2154,7 +2166,7 @@ h1{
     position: absolute;
     top: calc(50% - 75px);
     right: -30px;
-}
+} */
 
 @keyframes floatIn
 {
@@ -2346,6 +2358,71 @@ h1{
     font-size: 25px;
 }
 
+.bottomFooter
+{
+    width: 100vw;
+    min-height: 70vh;
+    background-color:#282d32;
+    color:#f0f9ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--mainFont);
+    z-index: 10;
+}
+
+.footerCategory
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.innerFooter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 12;
+    max-width: 300px;
+}
+
+.innerFooter a{
+    padding: 10px 0;
+    margin: 0;
+}
+
+.innerFooter a, .innerFooter p{
+    opacity: .6;
+    text-decoration: none;
+}
+
+.innerFooter a:hover
+{
+    opacity: 1;
+    color: var(--myPink);
+}
+
+.pinkDrop
+{
+    min-height: 70vh;
+    width: 100vw;
+    background: var(--myPink);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.iconRow a:hover{
+    text-decoration: none;
+    background: var(--myPink);
+}
+
 .footer
 {
     display: flex;
@@ -2353,7 +2430,7 @@ h1{
     justify-content: space-evenly;
     background: var(--darkGray2);
     flex-wrap: wrap;
-    padding: 30px 0;
+
 }
 
 .footer a
@@ -2438,6 +2515,32 @@ textarea
     color: var(--myPink);
 }
 
+.footerForm
+{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerForm input, .footerForm textarea
+{
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: #1d2024;
+    opacity: .6;
+}
+
+.footerForm input::placeholder, .footerForm textarea::placeholder
+{
+    color: white;
+    font-family: var(--mainFont);
+    font-size: 1em;
+    padding: 5px;
+}
+
 i:hover
 {
     cursor: pointer;
@@ -2464,11 +2567,25 @@ i:hover
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
+
+
 
 .iconRow a
 {
-    padding: 10px 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(240, 249, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.iconRow a i{
+    font-size: 20px;
 }
 
 i

@@ -30,7 +30,7 @@
         --lightGray: rgb(156, 156, 156);
         --grayGradient: rgba(44, 44, 44, .7);
     }
-    #mapid {height: 300px; width: 80vw; z-index: 100;top: 0; left: 0;
+    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
     #mapid2 {height: 100%; width: 100%; z-index: 3;}
     #mapClose
@@ -99,28 +99,32 @@ crossorigin=""></script>
             <button class="squareBtn" style="color: white;">Stuff</button>
         </div>
     </div>
-
     <div id="testimony">
+        <h1 class="afterUnderline">Testimonials</h1>
         <div class="jsArrow" onclick="intermediate('minus')"><i class="fas fa-chevron-left" style="color: black;"></i></div>
         <div class="jsArrow" onclick="intermediate('plus')"><i class="fas fa-chevron-right" style="color: black;"></i></div>
         <div class="tSlide paragraphLimit" style="display: flex;">
             <p class="quote">
                 Lorem1 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                <br><span class="nameQuote">- Eli Weber</span> 
             </p>
         </div>
         <div class="tSlide paragraphLimit">
             <p class="quote">
                 Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                <br><span class="nameQuote">- Eli Weber</span> 
             </p>
         </div>
         <div class="tSlide paragraphLimit">
             <p class="quote">
                 Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                <br><span class="nameQuote">- Eli Weber</span> 
             </p>
         </div>
         <div class="tSlide paragraphLimit">
             <p class="quote">
                 Lorem4 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                <br><span class="nameQuote">- Eli Weber</span> 
             </p>
         </div>
         <div id="bubbleRow">
@@ -130,27 +134,36 @@ crossorigin=""></script>
             <div class="divBubble" onclick="floatIn(3)"><div class="innerBubble"></div></div>
         </div>
     </div>
+    <!-- <div id="swipePage">
+        <div class="swipeDiv" id="swipe1">
+            <div class="innerSwipe" id="iSwipe1">
+                <h1 class="frame">Jeff</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+        <div class="swipeDiv" id="swipe2">
+            <div class="innerSwipe" id="iSwipe2">
+                <h1 class="frame">John</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+        <div class="swipeDiv" id="swipe3">
+            <div class="innerSwipe" id="iSwipe3">
+                <h1 class="frame">Doe</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+        <div class="swipeDiv" id="swipe4">
+            <div class="innerSwipe" id="iSwipe4">
+                <h1 class="frame">Steve</h1>
+                <button class="swipeButton">Read More</button>
+            </div>
+        </div>
+    </div> -->
+    
+    
 
-    <div id="whiteContent">
-        <div id="leftWhite">
-            <div class="restrictContent">
-                <h1 class="pinkH1 afterUnderline">Mission</h1>
-            <p style="text-align: left; color: black; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
-            <button class="squareBtn">Learn</button>
-            </div>
-        </div>
-        <div id="rightWhite">
-            <div class="topAndBottom">
-                <div id="ttt"><h1>Slideshow</h1></div>
-                <div id="bbb">
-                    <div class="restrictContent" style="padding-left: 10px; border-left: 2px solid white; ">
-                        <h1 class="whiteH1 afterUnderline2" >Mission</h1>
-                    <p style="text-align: left; color: white; padding-left: 0; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     
     <!-- <div id="simpleWhite" class="paragraphLimit">
@@ -379,17 +392,48 @@ crossorigin=""></script>
     </div> -->
     
     <div class="footer">
-        <!-- <form action="" id="form">
+        <div class="pinkDrop">
+            <form action="" id="form" class="footerForm">
             <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
             <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
             <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
             <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
-            <button type="submit" id="cButton" style="z-index: 5;">Submit</button>
-        </form> -->
-        <div id="mapid">
-            
+            <button type="submit" id="cButton" style="z-index: 5; width: 20%; padding: 10px; background: white; border: 1px solid white;color: var(--myPink);">Submit</button>
+            </form> 
+            <div id="mapid">
+                        
+            </div>
         </div>
-        <div class="iconRow">
+        <div class="bottomFooter">
+            <div class="footerCategory">
+                <div class="innerFooter">
+                    <h3>Home</h3>
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About</a>
+                    <a href="./therapy.html">Therapy</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div class="innerFooter">
+                    <h3>Schedule</h3>
+                    <a href="#">Ryan</a>
+                    <a href="#">Nick</a>
+                    <a href="#">Rick</a>
+                </div>
+                <div class="innerFooter">
+                    <h3>Company</h3>
+                    <p style="text-align: left; padding: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo, odio porro rerum vero, cupiditate deleniti expedita quia atque ab, corporis omnis quibusdam voluptates eaque recusandae perspiciatis? Blanditiis, saepe alias.</p>
+                </div>
+                
+            </div>
+            <div class="iconRow">
+                <a class="iconDiv"><i class="fab fa-facebook-f"></i></a>
+                <a class="iconDiv"><i class="fab fa-youtube"></i></a>
+                <a class="iconDiv"><i class="fab fa-snapchat-ghost"></i></a>
+            </div>
+            <p>&copy; 2021 Massage Therapy LLC</p>
+        </div>
+        
+        <!-- <div class="iconRow">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
             <a href="#"><i class="fab fa-youtube-square"></i></a>
             <a href="#"><i class="fab fa-instagram-square"></i></a>
@@ -402,7 +446,7 @@ crossorigin=""></script>
             <a href="#">Yoga</a>
             <a href="#">Schedule</a>
             <a href="#">Contact Us</a>
-        </div>
+        </div> -->
     </div> 
     <script src="./control.js">
         jQuery(document).ready(function () {
