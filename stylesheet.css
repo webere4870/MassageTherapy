@@ -265,6 +265,50 @@ button:hover
     }
 }
 
+.swipeInDude
+{
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    transform: translate(600px, 600px) scale(5%);
+}
+
+.swipeInDude:nth-of-type(1)
+{
+    animation-delay: .25s;
+}
+.swipeInDude:nth-of-type(2)
+{
+    animation-delay: .40s;
+}
+.swipeInDude:nth-of-type(3)
+{
+    animation-delay: .55s;
+}
+.swipeInDude:nth-of-type(4)
+{
+    animation-delay: .70s;
+}
+.swipeInDude:nth-of-type(5)
+{
+    animation-delay: .85s;
+}
+
+@keyframes flyingLink
+{
+    0%
+    {
+
+    }
+    90%
+    {
+        
+    }
+    100%{
+        transform: translate(0px, 0) scale(100%);
+    }
+}
+
 @keyframes navigationSwipe
 {
     0%
@@ -3257,6 +3301,31 @@ i
 }
 
 @media  screen and (max-width: 800px) {
+    .subNavigation2
+    {
+        width: 80vw;
+    }
+    @keyframes navigationSwipe
+{
+    0%
+    {
+
+    }
+    100%
+    {
+        transform: translateX(20vw);
+    }
+}
+
+@keyframes unswipeNavigation
+{
+    0%
+    {
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
     .triangle
     {
         height: 100px;

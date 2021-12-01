@@ -24,8 +24,15 @@ function startAnimation(query, animationNames, zInd)
     let arr = document.getElementsByClassName('bigNavigation');
     let navClose = document.getElementsByClassName('mobileNavigation');
     let navClose2 = document.getElementsByClassName('closeMobile');
+    let animationLinks = document.getElementsByClassName('swipeInDude');
+
+    for(let counter =0; counter < animationLinks.length; counter++)
+    {
+        animationLinks[counter].style.animationName = "flyingLink";
+    }
         for(let counter = 0; counter < arr.length; counter++)
         {
+            
             arr[counter].style.zIndex = zInd;
             setTimeout(()=>{
                 navClose[counter].style.display = 'none';
@@ -46,6 +53,12 @@ function quitAnimation(query, animationNames, zInd)
     let arr = document.getElementsByClassName('bigNavigation');
     let navClose = document.getElementsByClassName('mobileNavigation');
     let navClose2 = document.getElementsByClassName('closeMobile');
+    let animationLinks = document.getElementsByClassName('swipeInDude');
+    for(let counter =0; counter < animationLinks.length; counter++)
+    {
+        animationLinks[counter].style.transform=" transform: translate(200px, 400px) scale(5%)";
+        animationLinks[counter].style.animationName="none";
+    }
         for(let counter = 0; counter < arr.length; counter++)
         {
             arr[counter].style.zIndex = zInd;
