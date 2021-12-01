@@ -30,9 +30,7 @@
         --lightGray: rgb(156, 156, 156);
         --grayGradient: rgba(44, 44, 44, .7);
     }
-    #mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
-    margin: 20px 0;}
-    #mapid2 {height: 100%; width: 100%; z-index: 3;}
+
     #mapClose
     {
         display: none;
@@ -61,6 +59,38 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    .onDisplay
+    {
+        display: none;
+    }
+    @media screen and (max-width: 767px)
+    {
+        .footerCategory
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: -10px;
+    }
+    .innerFooter
+    {
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        width: 100vw;
+    }
+    .offDisplay
+    {
+        display: none;
+    }
+    .onDisplay
+    {
+        margin-top: 40px;
+        display: inherit;
+    }
     }
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -392,39 +422,47 @@ crossorigin=""></script>
     </div> -->
     
     <div class="footer">
-        <div class="pinkDrop">
-            <form action="" id="form" class="footerForm">
-            <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
-            <input type="email" placeholder="Email: " required pattern="*@*.*" id="email" name="email">
-            <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
-            <button type="submit" id="cButton" style="z-index: 5; width: 20%; padding: 10px; background: white; border: 1px solid white;color: var(--myPink);">Submit</button>
-            </form> 
-            <div id="mapid">
-                        
-            </div>
-        </div>
+        <!-- <div class="pinkDrop">
+            
+        </div> -->
+
         <div class="bottomFooter">
+            <h1 style="margin-top: 30px; margin-bottom: -20px;" class="afterUnderline">Work with Us.</h1>
+            <div class="keepInline">
+                <form action="" id="form" class="footerForm">
+                    <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
+                    
+                    <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+                    <button type="submit" id="cButton" style="z-index: 5; padding: 10px; background: #1d2024; color: #f0f9ff; border: 2px solid #f0f9ff; opacity: .6; font-family: var(--mainFont);">Submit</button>
+                    </form> 
+                    <h1 class="afterUnderline onDisplay">Find Us.</h1>
+                    <div id="mapid">
+                                
+                    </div>
+            </div>
+            
             <div class="footerCategory">
                 <div class="innerFooter">
-                    <h3>Home</h3>
+                    <h3>Navigate</h3>
                     <a href="./index.html">Home</a>
                     <a href="./about.html">About</a>
                     <a href="./therapy.html">Therapy</a>
                     <a href="./contact.html">Contact</a>
                 </div>
-                <div class="innerFooter">
+                <div class="innerFooter offDisplay">
                     <h3>Schedule</h3>
                     <a href="#">Ryan</a>
                     <a href="#">Nick</a>
                     <a href="#">Rick</a>
                 </div>
-                <div class="innerFooter">
+                <div class="innerFooter offDisplay">
                     <h3>Company</h3>
-                    <p style="text-align: left; padding: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo, odio porro rerum vero, cupiditate deleniti expedita quia atque ab, corporis omnis quibusdam voluptates eaque recusandae perspiciatis? Blanditiis, saepe alias.</p>
+                    <p style="text-align: left; padding: 0; @media screen and (max-width: 767px){text-align: center;}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo, odio porro rerum vero, cupiditate deleniti expedita quia atque ab, corporis omnis quibusdam voluptates eaque recusandae perspiciatis? Blanditiis, saepe alias.</p>
                 </div>
                 
             </div>
+            
             <div class="iconRow">
                 <a class="iconDiv"><i class="fab fa-facebook-f"></i></a>
                 <a class="iconDiv"><i class="fab fa-youtube"></i></a>
