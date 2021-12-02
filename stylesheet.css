@@ -813,7 +813,7 @@ button:hover
 #backgroundText
 {
     position: absolute;
-    
+    color: rgba(192, 192, 192, 0.3);
 }
 
 #slanted
@@ -2096,7 +2096,7 @@ h1{
 {
     height: 80%;
     width: 80%;
-    background: var(--offWhite);
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3385,18 +3385,9 @@ i
     }
 }
 
-@media screen and (max-width: 1000px)
-{
-    .keepInline
-    {
-        flex-direction: column;
-    }
-    .bottomFooter input, .bottomFooter textarea{
-        width: 400px;
-    }
 
-    
-}
+
+
 
 @media screen and (max-width: 900px)
 {

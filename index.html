@@ -92,6 +92,80 @@
         display: inherit;
     }
     }
+    .heavyOne{
+        font-size: 40px;
+    }
+    @media screen and (max-width: 950px)
+{
+    #slanted
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: var(--eggshell);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(-60%);
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: slanted;
+    animation-delay: 1s;
+}
+#backgroundText
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moveBro{
+    font-size: 30px;
+}
+#slanted > *
+{
+    margin-left: 0;
+}
+#slanted{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(255,255,255,.9);
+}
+#landingPage
+{
+    background: url('./images/bg2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#backgroundText{
+    color: rgba(192, 192, 192, 1);
+}
+}
+
+@media screen and (max-width: 1000px)
+{
+    .keepInline
+    {
+        flex-direction: column;
+    }
+    .bottomFooter input, .bottomFooter textarea{
+        width: 400px;
+    }
+    
+}
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -109,8 +183,9 @@ crossorigin=""></script>
         </div>
         <div id="slanted">
             <div style="z-index: 6;">
-                <h1 class="heavy">Therapy for the body</h1>
-                <h1 class="lightFont">and for the soul.</h1>
+                <h1 class="heavyOne moveBro" style="font-family: var(--cursiveFont);
+                color: var(--darkGray);">Therapy for the body</h1>
+                <h1 class="lightFont moveBro">and for the soul.</h1>
                 <div class="buttonClass">
                 <button class="pillBtn">Appointment</button>
                 <button class="pillBtn">Contact</button>      
@@ -132,12 +207,13 @@ crossorigin=""></script>
     <div id="splitLR">
         <div id="splitRightLR">
             <div id="insideBG">
-                <h1 style="color: var(--myPink);" class="afterUnderline">Stuff to Put</h1>
-                <p style="color: var(--myPink);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit suscipit aperiam veniam. Perferendis praesentium et ratione, obcaecati quae vitae dolorum. Quam fugiat libero enim incidunt quos? At, laborum adipisci?</p>
+                <h1 style="color: white;" class="afterUnderline2">Stuff to Put</h1>
+                <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit suscipit aperiam veniam. Perferendis praesentium et ratione, obcaecati quae vitae dolorum. Quam fugiat libero enim incidunt quos? At, laborum adipisci?</p>
+                <button class="squareBtn" style="color: white; border: 2px solid white;">Go Stuff</button>
             </div>
         </div>
         <div id="splitLeftLR">
-            <div id="subLR" style="border-left: 2px solid var(--myPink);">
+            <div id="subLR" >
                 <h1 style="color: var(--myPink); text-align: left;" class="afterUnderline">You Know Something</h1>
             <p style="color: var(--myPink); text-align: left;" class="paragraphLimit">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ut velit quia accusantium sunt quas ullam magnam pariatur minima? Ducimus quaerat distinctio facere, ad placeat ipsum deserunt corrupti expedita dolor dolorem iure perspiciatis magnam vitae earum magni quia amet error.</p>
             <button class="squareBtn">Sup Dude</button>
