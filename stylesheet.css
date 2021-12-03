@@ -33,7 +33,7 @@ body,html
     --blackGradient: rgba(0,0,0,.7);
 }
 
-#mapid {height: 300px; width: 60vw; z-index: 100;top: 0; left: 0;
+#mapid {height: 300px; width: 85vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
 
 .mainPage
@@ -2374,10 +2374,7 @@ h1{
 }
 @media screen and (max-width: 767px)
 {
-   #mapid
-   {
-       width: 85vw;
-   }
+   
     .footerCategory
     {
         flex-direction: row;

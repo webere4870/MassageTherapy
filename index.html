@@ -64,6 +64,10 @@
     {
         display: none;
     }
+    .heavyOne
+    {
+        color: var(--darkGray);
+    }
     @media screen and (max-width: 767px)
     {
         .footerCategory
@@ -94,9 +98,14 @@
     }
     .heavyOne{
         font-size: 40px;
+        
     }
     @media screen and (max-width: 950px)
 {
+    .pillBtn:nth-of-type(1)
+    {
+        color: white;
+    }
     #slanted
 {
     position: absolute;
@@ -116,6 +125,10 @@
     animation-fill-mode: forwards;
     animation-name: slanted;
     animation-delay: 1s;
+}
+.heavyOne
+{
+    color: white;
 }
 #backgroundText
 {
@@ -141,7 +154,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background: rgba(255,255,255,.9);
+    background: rgba(0,0,0,.7);
 }
 #landingPage
 {
@@ -152,7 +165,15 @@
 }
 #backgroundText{
     color: rgba(192, 192, 192, 1);
+    font-size: 400px;
 }
+}
+
+@media screen and (max-width: 500px)
+{
+    #backgroundText{
+        font-size: 300px;
+    }
 }
 
 @media screen and (max-width: 1000px)
@@ -184,7 +205,7 @@ crossorigin=""></script>
         <div id="slanted">
             <div style="z-index: 6;">
                 <h1 class="heavyOne moveBro" style="font-family: var(--cursiveFont);
-                color: var(--darkGray);">Therapy for the body</h1>
+                ">Therapy for the body</h1>
                 <h1 class="lightFont moveBro">and for the soul.</h1>
                 <div class="buttonClass">
                 <button class="pillBtn">Appointment</button>
@@ -197,13 +218,7 @@ crossorigin=""></script>
         </div>
     </div>
     
-    <div id="pictureBackground">
-        <div id="cornerDiv">
-            <h1 class="afterUnderline" style="text-align: center;">We've Got You Covered</h1>
-            <p style="padding: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quod vel pariatur sit quas distinctio animi at voluptatibus iusto sint! Veniam explicabo corporis maiores dolorum eos, illum omnis corrupti quis modi asperiores, quo ea aut!</p>
-            <button class="squareBtn" style="color: white;">Stuff</button>
-        </div>
-    </div>
+    
     <div id="splitLR">
         <div id="splitRightLR">
             <div id="insideBG">
@@ -220,6 +235,13 @@ crossorigin=""></script>
             </div>
         </div>
         
+    </div>
+    <div id="pictureBackground">
+        <div id="cornerDiv">
+            <h1 class="afterUnderline" style="text-align: center;">We've Got You Covered</h1>
+            <p style="padding: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quod vel pariatur sit quas distinctio animi at voluptatibus iusto sint! Veniam explicabo corporis maiores dolorum eos, illum omnis corrupti quis modi asperiores, quo ea aut!</p>
+            <button class="squareBtn" style="color: white;">Stuff</button>
+        </div>
     </div>
     <!-- <div id="testimony">
         <h1 class="afterUnderline">Testimonials</h1>
@@ -521,14 +543,14 @@ crossorigin=""></script>
         <div class="bottomFooter">
             <h1 style="margin-top: 30px; margin-bottom: -20px;" class="afterUnderline">Work with Us.</h1>
             <div class="keepInline">
-                <form action="" id="form" class="footerForm">
+                <!-- <form action="" id="form" class="footerForm">
                     <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
                     
                     <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
                     <button type="submit" id="cButton" style="z-index: 5; padding: 10px; background: #1d2024; color: #f0f9ff; border: 2px solid #f0f9ff; opacity: .6; font-family: var(--mainFont);">Submit</button>
-                    </form> 
-                    <h1 class="afterUnderline onDisplay">Find Us.</h1>
+                    </form>  -->
+                    
                     <div id="mapid">
                                 
                     </div>
