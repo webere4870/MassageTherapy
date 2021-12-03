@@ -2326,9 +2326,51 @@ h1{
     position: relative;
 }
 
+#pinkOverCard
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+.pinkCard
+{
+    width: 300px;
+    height: 350px;
+    background: var(--myPink);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px gray;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.boldLetters{
+    position: absolute;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250px;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(180, 0, 90);
 
 
+}
 
+.pinkCard p{
+    z-index: 10;
+}
 
 #svgFollow
 {
@@ -2338,7 +2380,8 @@ h1{
     background: #f2f2f2;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
 
 }
 

@@ -64,6 +64,34 @@
         align-items: center;
         text-align: center;
     }
+    @media screen and (max-width: 767px)
+    {
+        .footerCategory
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: -10px;
+    }
+    .innerFooter
+    {
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        width: 100vw;
+    }
+    .offDisplay
+    {
+        display: none;
+    }
+    .onDisplay
+    {
+        margin-top: 40px;
+        display: inherit;
+    }
+    }
     @media screen and (max-width: 800px)
     {
         #wrapper{

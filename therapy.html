@@ -62,6 +62,34 @@
         align-items: center;
         text-align: center;
     }
+    @media screen and (max-width: 767px)
+    {
+        .footerCategory
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: -10px;
+    }
+    .innerFooter
+    {
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        width: 100vw;
+    }
+    .offDisplay
+    {
+        display: none;
+    }
+    .onDisplay
+    {
+        margin-top: 40px;
+        display: inherit;
+    }
+    }
 </style>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
