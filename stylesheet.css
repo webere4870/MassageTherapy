@@ -722,7 +722,7 @@ button:hover
 
 #mapOverlay, #drawChevron, #drawChevron2
 {
-    animation-duration: 1s;
+    animation-duration: .75s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
@@ -781,7 +781,7 @@ button:hover
         
     }
     100%{
-        transform: translateX(-100vw);
+        opacity: 0;
     }
 }
 
@@ -835,6 +835,29 @@ button:hover
     animation-fill-mode: forwards;
     animation-name: slanted;
     animation-delay: 1s;
+}
+
+#slantedRight
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    clip-path: polygon(100% 0%, 70% 0%, 55% 85%, 100% 85%);
+    background: var(--pinkGradient);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#slantedRight div
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #halfSlant
@@ -3398,6 +3421,10 @@ i
 }
 
 @media  screen and (max-width: 800px) {
+    .wrapper{
+        align-items: center;
+        width: 100vw;
+    }
     .subNavigation2
     {
         width: 80vw;
@@ -3543,28 +3570,28 @@ i
         margin: 0 20px;
     }
     
-.buttonStep:nth-of-type(1)::after
-{
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: var(--myPink);
-    position: absolute;
-    top: 50%;
-    left: 100%;
-}
+    .buttonStep:nth-of-type(1)::after
+    {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: var(--myPink);
+        position: absolute;
+        top: 50%;
+        left: 100%;
+    }
 
-.buttonStep:nth-of-type(2)::after
-{
+    .buttonStep:nth-of-type(2)::after
+    {
 
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: var(--myPink);
-    position: absolute;
-    top: 50%;
-    left: 100%;
-}
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: var(--myPink);
+        position: absolute;
+        top: 50%;
+        left: 100%;
+    }
 }
 
 @media screen and (max-width: 480px)
