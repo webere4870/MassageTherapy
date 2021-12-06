@@ -9,6 +9,19 @@ window.addEventListener("DOMContentLoaded", function(e) {
 
 }, false);
 
+function pageLoaded()
+{
+    let body = document.body;
+    let html = document.querySelector('html');
+    let loader = document.getElementsByClassName('animationPage');
+    body.style.overflowY="scroll";
+    html.overflowY = "scroll";
+    for(let counter = 0; counter < loader.length; counter++)
+    {
+        loader[counter].style.display = 'none';
+    }
+}
+
 function uncoverBlock()
 {
     let block = document.getElementsByClassName('coverBlock');
@@ -33,7 +46,7 @@ function startAnimation(query, animationNames, zInd)
         for(let counter = 0; counter < arr.length; counter++)
         {
             
-            arr[counter].style.zIndex = zInd;
+            arr[counter].style.zIndex = 100;
             setTimeout(()=>{
                 navClose[counter].style.display = 'none';
                 navClose2[counter].style.display = 'flex';
@@ -178,6 +191,7 @@ function uncoverMap()
     let item1 = document.getElementById('mapOverlay');
     let item2 = document.getElementById('drawChevron');
     let item3 = document.getElementById('drawChevron2');
+    
     item1.style.animationName = "uncoverMap";
     item2.style.animationName = "uncoverMap";
     item3.style.animationName = "uncoverMap";
@@ -188,7 +202,10 @@ function uncoverMap()
         {
             btn[counter].style.display = "inherit";
         }
+        let map = document.querySelector('#mapid2');
+    map.style.zIndex = '6';
     }, 1000)
+    
 }
 
 function coverMap()
@@ -196,6 +213,8 @@ function coverMap()
     let item1 = document.getElementById('mapOverlay');
     let item2 = document.getElementById('drawChevron');
     let item3 = document.getElementById('drawChevron2');
+    let map = document.querySelector('#mapid2');
+    map.style.zIndex = '3';
     item1.style.animationName = "coverMap";
     item2.style.animationName = "coverMap";
     item3.style.animationName = "coverMap";

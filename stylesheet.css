@@ -95,7 +95,7 @@ button:hover
     justify-content: center;
     align-items: center;
     font-size: 10px;
-    z-index: 50;
+    z-index: 101;
 }
 
 .mobileNavigation
@@ -770,7 +770,7 @@ button:hover
         
     }
     100%{
-        transform: translateX(0vw);
+        opacity: 1;
     }
 }
 
@@ -834,7 +834,6 @@ button:hover
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-name: slanted;
-    animation-delay: 1s;
 }
 
 #slantedRight
@@ -850,6 +849,13 @@ button:hover
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    animation-delay: .75s;
+    animation-duration: .75s;
+    transform: translateX(45%);
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: slantedRight;
+    
 }
 
 #slantedRight div
@@ -1365,6 +1371,16 @@ button:hover
     80%
     {
 
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slantedRight
+{
+    0%{
+        
     }
     100%{
         transform: translateX(0%);
@@ -3203,10 +3219,23 @@ i
     cursor: pointer;
 }
 
+.animationPage{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--darkGray2);
+    z-index: 101;
+}
 
-#animationBox
+
+.animationBox
 {
-    display: none;
+    display: inherit;
     height: 50px;
     width: 50px;
     position: absolute;
@@ -3241,7 +3270,8 @@ i
 {
     height: 18px;
     width: 18px;
-    background: blue;
+    background: var(--myPink);
+    box-shadow: 0 0 7px black;
     position: absolute;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -3442,6 +3472,10 @@ i
 
 @media screen and (max-width: 900px)
 {
+    #drawChevron, #drawChevron2
+    {
+        display: none;
+    }
     #swipePage
     {
         flex-wrap: wrap;
@@ -3517,6 +3551,10 @@ i
 
 @media screen and (max-width: 768px)
 {
+    .contactDiv
+    {
+        width: 50%;
+    }
     .blockLetters
     {
         margin: 20px 0;
@@ -3634,9 +3672,12 @@ i
     }
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 500px)
 {
-
+    .contactDiv
+    {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 400px)
