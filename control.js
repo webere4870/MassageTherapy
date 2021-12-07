@@ -12,10 +12,10 @@ window.addEventListener("DOMContentLoaded", function(e) {
 function pageLoaded()
 {
     let body = document.body;
-    let html = document.querySelector('html');
+    let html = document.querySelector('#fakeBoi');
     let loader = document.getElementsByClassName('animationPage');
-    body.style.overflowY="scroll";
-    html.overflowY = "scroll";
+    body.style.overflowY = "inherit";
+    html.style.overflowY = "inherit";
     for(let counter = 0; counter < loader.length; counter++)
     {
         loader[counter].style.display = 'none';

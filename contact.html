@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="fakeBoi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
         font-size: 30px;
         z-index: 3000;
     }
-    body,html{overflow-x: hidden;}
+    body,html{overflow-x: hidden; overflow-y: hidden;}
     div
     {
         max-width: 100vw;
@@ -106,7 +106,16 @@ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0v
 crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="pageLoaded()">
+
+    <div class="animationPage">
+        <div class="animationBox">
+            <div class="animationSmallBox" id="box1"></div>
+            <div class="animationSmallBox" id="box2"></div>
+            <div class="animationSmallBox" id="box3"></div>
+            <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
     <!-- <div id="whiteSquare">
         <div id="underPicture"></div>
         <div id="underGray"></div>
@@ -169,10 +178,11 @@ crossorigin=""></script>
             </div>
             <h1><span class="bounce">How </span> <span class="bounce">can </span> <span class="bounce">we </span> <span class="bounce" style="color: var(--myPink);">help?</span></h1>
             <div class="buttonClass">
-                <div class="splitBtn">
-                    <div class="split1">Send a message</div>
+                <a href="#contactFollow2" style="padding: 0; margin: 0;"><div class="splitBtn">
+                    <div class="split1" style="color: var(--darkGray2)">Send a message</div>
                     <div class="split2"><i class="fas fa-envelope"></i></div>
-                </div>
+                </div></a>
+                
                 <div class="splitBtn" onclick="uncoverMap()">
                     <div class="split1">Find us</div>
                     <div class="split2"><i class="fas fa-map-marker-alt"></i></div>

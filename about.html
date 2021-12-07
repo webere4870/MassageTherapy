@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="fakeBoi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
         font-size: 30px;
         z-index: 3000;
     }
-    body,html{overflow-x: hidden;}
+    body,html{overflow-x: hidden; overflow-y: hidden;}
     div
     {
         max-width: 100vw;
@@ -107,7 +107,16 @@ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0v
 crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="pageLoaded()">
+    
+    <div class="animationPage">
+        <div class="animationBox">
+            <div class="animationSmallBox" id="box1"></div>
+            <div class="animationSmallBox" id="box2"></div>
+            <div class="animationSmallBox" id="box3"></div>
+            <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
     <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 6)">
         <i class="fas fa-bars bars" style="font-size: 20px;"></i>
     </div>
@@ -166,18 +175,7 @@ crossorigin=""></script>
                 <h1 class="boldLetters">03</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam ducimus ipsa rem iure animi deleniti voluptates quis, est omnis at?</p>
               </div>
-              <div class="pinkCard">
-                <h1 class="boldLetters">04</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam ducimus ipsa rem iure animi deleniti voluptates quis, est omnis at?</p>
-              </div>
-              <div class="pinkCard">
-                <h1 class="boldLetters">05</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam ducimus ipsa rem iure animi deleniti voluptates quis, est omnis at?</p>
-              </div>
-              <div class="pinkCard">
-                <h1 class="boldLetters">06</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam ducimus ipsa rem iure animi deleniti voluptates quis, est omnis at?</p>
-              </div>
+              
           </div>
     </div>
     <div id="halfSlant">

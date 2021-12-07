@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="fakeBoi">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
         font-size: 30px;
         z-index: 3000;
     }
-    body,html{overflow-x: hidden;}
+    body,html{overflow-x: hidden; overflow-y: hidden;}
     div
     {
         max-width: 100vw;
@@ -97,7 +97,16 @@ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0v
 crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="pageLoaded()">
+    
+    <div class="animationPage">
+        <div class="animationBox">
+            <div class="animationSmallBox" id="box1"></div>
+            <div class="animationSmallBox" id="box2"></div>
+            <div class="animationSmallBox" id="box3"></div>
+            <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
     <div id="thirdLanding">
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
@@ -132,7 +141,7 @@ crossorigin=""></script>
     </div>
     <div id="whiteContent">
         <div id="leftWhite">
-            <div class="restrictContent">
+            <div class="restrictContent" style="border-left: 2px solid var(--myPink); padding: 30px;">
                 <h1 class="pinkH1 afterUnderline">Mission</h1>
             <p style="text-align: left; color: black; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
             <button class="squareBtn">Learn</button>
@@ -140,13 +149,48 @@ crossorigin=""></script>
         </div>
         <div id="rightWhite">
             <div class="topAndBottom">
-                <div id="ttt"><h1>Slideshow</h1></div>
                 <div id="bbb">
-                    <div class="restrictContent" style="padding-left: 10px; border-left: 2px solid white; ">
-                        <h1 class="whiteH1 afterUnderline2" >Mission</h1>
-                    <p style="text-align: left; color: white; padding-left: 0; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
+                    <div class="jsArrow" onclick="intermediate('minus')"><i class="fas fa-chevron-left" ></i></div>
+                    <div class="jsArrow" onclick="intermediate('plus')"><i class="fas fa-chevron-right" ></i></div>
+                    <div class="tSlide paragraphLimit" style="display: flex;">
+                        <p class="quote">
+                            Lorem1 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                            <br><span class="nameQuote">- Eli Weber</span> 
+                        </p>
+                    </div>
+                    <div class="tSlide paragraphLimit">
+                        <p class="quote">
+                            Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                            <br><span class="nameQuote">- Eli Weber</span> 
+                        </p>
+                    </div>
+                    <div class="tSlide paragraphLimit">
+                        <p class="quote">
+                            Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                            <br><span class="nameQuote">- Eli Weber</span> 
+                        </p>
+                    </div>
+                    <div class="tSlide paragraphLimit">
+                        <p class="quote">
+                            Lorem4 ipsum dolor sit amet consectetur adipisicing elit. Odit iste perspiciatis ipsam numquam earum molestias cum assumenda in sapiente ducimus.
+                            <br><span class="nameQuote">- Eli Weber</span> 
+                        </p>
+                    </div>
+                    <div id="bubbleRow">
+                        <div class="divBubble" onclick="floatIn(0)"><div class="innerBubble" style="display: flex;"></div></div>
+                        <div class="divBubble" onclick="floatIn(1)"><div class="innerBubble"></div></div>
+                        <div class="divBubble" onclick="floatIn(2)"><div class="innerBubble"></div></div>
+                        <div class="divBubble" onclick="floatIn(3)"><div class="innerBubble"></div></div>
                     </div>
                 </div>
+                <div id="ttt">
+                    <div class="restrictContent" style="padding-left: 20px; border-left: 2px solid white; ">
+
+                    <p style="text-align: left; color: white; padding-left: 0; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
+                    <button class="squareBtn" style="color: white; border: 2px solid white;">Stuff</button>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -180,7 +224,8 @@ crossorigin=""></script>
         </div>
     </div>
     <div id="secondLanding">
-        <h1 class="blockLetters">Go Places.</h1>
+        <h1 class="blockLetters onH1" >Go Places.</h1>
+        <h1 class="afterUnderline offH1" style="color: var(--myPink);">Go Places</h1>
         <div class="buttonClass"><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button><button class="pillBtn" style="color: white;border: none; background: rgb(20,20,20);">Follow</button></div>
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
