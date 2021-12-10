@@ -3496,6 +3496,7 @@ i
 
 @media screen and (max-width: 900px)
 {
+
     #drawChevron, #drawChevron2
     {
         display: none;
@@ -3510,6 +3511,9 @@ i
 }
 
 @media  screen and (max-width: 800px) {
+    #svgBackground{
+        height: 90vh;
+    }
     .wrapper{
         align-items: center;
         width: 100vw;
