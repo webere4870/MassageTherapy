@@ -3681,16 +3681,16 @@ i
     }
     #buttonSteps
     {
-        position: absolute;
         height: 0%;
         width: 100%;
-        bottom: 55px;
+        position: inherit;
         left: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         margin-left: 0px;
+        margin-top: 60px;
     }
     .buttonStep
     {
@@ -3698,7 +3698,9 @@ i
         height: 50px;
         margin: 0 20px;
     }
-    
+    .blockLetters2{
+        font-size: 70px;
+    }
     .buttonStep:nth-of-type(1)::after
     {
         content: '';
