@@ -3583,6 +3583,7 @@ i
     .contactDiv
     {
         width: 50%;
+        height: 75%;
     }
     .blockLetters
     {
@@ -3730,6 +3731,10 @@ i
     .contactDiv
     {
         width: 90%;
+    }
+    input, textarea{
+        background: rgba(0,0,0,.07);
+        box-shadow: none;
     }
 }
 
