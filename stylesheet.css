@@ -3669,6 +3669,9 @@ i
 
 @media screen and (max-width: 630px)
 {
+    #svgBackground{
+        height: 70vh;
+    }
     .textDiv{
         width: 80%;
     }
