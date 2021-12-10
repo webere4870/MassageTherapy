@@ -3517,6 +3517,7 @@ i
     .wrapper{
         align-items: center;
         width: 100vw;
+        padding-right: 0;
     }
     .subNavigation2
     {
