@@ -1683,6 +1683,11 @@ p{
     text-align: left;
 }
 
+.innerRight h1{
+    font-size: 40px;
+    margin-bottom: -30px;
+}
+
 .innerRight .iconRow
 {
     margin-left: -20px;
