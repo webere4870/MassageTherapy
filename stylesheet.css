@@ -1671,12 +1671,51 @@ p{
     background: var(--offWhite);
 }
 
+.innerRight
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-left: 2px solid var(--myPink);
+    color: var(--myPink);
+    margin: 0 50px;
+    text-align: left;
+}
+
+.innerRight .iconRow
+{
+    margin-left: -20px;
+}
+
+.innerRight
+{
+    padding: 20px;
+}
+
+.innerRight > *{
+    padding: 10px 0;
+}
+
+.innerRight *
+{
+    color: var(--myPink);
+}
+
 .circleHead
 {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleHead i{
+    font-size: 80px;
+    color: var(--myPink);
 }
 
 #landingPage
@@ -2128,7 +2167,11 @@ p{
     margin: 10px 0;
     font-family: var(--mainFont);
     font-size: 12px;
-    z-index: 10;
+    z-index: 50;
+}
+
+.squareBtn:hover{
+    cursor: pointer;
 }
 
 .hexBtn
@@ -2757,6 +2800,15 @@ h1{
 .iconRow a:hover{
     text-decoration: none;
     background: var(--myPink);
+}
+
+.innerRight .iconRow a:hover{
+    background: var(--myPink);
+    color: white;
+}
+
+.innerRight .iconRow a:hover > i{
+    color: white;
 }
 
 .footer
@@ -3626,6 +3678,10 @@ i
 }
 
 @media  screen and (max-width: 800px) {
+    .offBIO
+    {
+        display: none;
+    }
     .slide{
         flex-direction: column;
     }
@@ -3637,6 +3693,44 @@ i
     {
         width: 100%;
         background: var(--myPink);
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .rightSS .squareBtn{
+        background: white;
+        color: var(--myPink);
+        border: none;
+    }
+    .leftSS{
+
+       justify-content: flex-end;
+       padding-top: 40px;
+    }
+    .innerRight *
+    {
+        color: white;
+    }
+    .innerRight *
+    {
+        margin: 0px;
+    }
+    .innerRight
+    {
+        margin: 0;
+        margin-top: -10px;
+
+    }
+    .innerRight .squareBtn
+    {
+        align-self: center;
+    }
+    .innerRight .iconRow
+{
+    margin-left: 0px;
+}
+    .rightSS p {
+        font-size: 15px;
     }
     #svgBackground{
         height: 90vh;
