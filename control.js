@@ -22,6 +22,25 @@ function pageLoaded()
     }
 }
 
+function slideShow(index, parent, slidesName)
+{
+    let slides = document.querySelectorAll(slidesName);
+    let parentNode = document.querySelector(parent);
+    let tempNode;
+
+
+    if(index === 1)
+    {
+        parentNode.insertBefore(slides[slides.length - 1], slides[0]);
+    }
+    else
+    {
+        tempNode = slides[0];
+        slides[0].remove();
+        parentNode.appendChild(tempNode);
+    }
+}
+
 function uncoverBlock()
 {
     let block = document.getElementsByClassName('coverBlock');

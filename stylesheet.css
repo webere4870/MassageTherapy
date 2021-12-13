@@ -1589,6 +1589,96 @@ p{
     width: 100vw;
 }
 
+#scheduleContainer
+{
+    width: 100vw;
+    height: 100vh;
+    background: #f2f2f2;
+    position: relative;
+}
+
+.slide
+    {
+        width: 60vw;
+        height: 75vh;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-property: all;
+        transition-timing-function: ease;
+        transition-duration: 1s;
+        top: 12.5vh;
+        -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 20px 30px -16px black;
+
+
+    }
+
+
+    .slide:nth-of-type(1)
+    {
+        left: -120vw;
+        z-index: 3;
+    }
+    .slide:nth-of-type(2)
+    {
+        left: -50vw;
+        z-index: 4;
+    }
+    .slide:nth-of-type(3)
+    {
+        left: 20vw;
+        z-index: 5;
+        transform: scale(110%);
+    }
+    .slide:nth-of-type(4)
+    {
+        left: 90vw;
+        z-index: 2;
+        
+    }
+    .slide:nth-of-type(5)
+    {
+        left: 160vw;
+        z-index: 1;
+    }
+
+.leftSS, .rightSS
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSS
+{
+    background: var(--myPink);
+    height: 100%;
+    width: 35%;
+}
+
+.rightSS
+{
+    height: 100%;
+    width: 65%;
+    background: var(--offWhite);
+}
+
+.circleHead
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: white;
+}
+
 #landingPage
 {
     max-width: 100vw;
@@ -3536,6 +3626,18 @@ i
 }
 
 @media  screen and (max-width: 800px) {
+    .slide{
+        flex-direction: column;
+    }
+    .leftSS{
+        width: 100%;
+
+    }
+    .rightSS
+    {
+        width: 100%;
+        background: var(--myPink);
+    }
     #svgBackground{
         height: 90vh;
     }

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" id="fakeBoi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+<style>
+    :root
+    {
+        --myPink: #FF007F;
+        --myPink: #FF007F;
+        --darkGray: rgb(83, 83, 83);
+        --darkGray2:rgb(36, 36, 36);
+        --lightGray: rgb(156, 156, 156);
+        --grayGradient: rgba(44, 44, 44, .7);
+    }
+
+    #mapClose
+    {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+        z-index: 3000;
+    }
+    body,html
+    {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    div
+    {
+        max-width: 100vw;
+    }
+    #backgroundText
+    {
+        color: rgba(110, 110, 110, 0.6);
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 500px;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .onDisplay
+    {
+        display: none;
+    }
+    .heavyOne
+    {
+        color: var(--darkGray);
+    }
+    
+
+    button{
+        position: absolute;
+        
+        z-index: 10;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+    button:nth-of-type(1)
+    {
+        top: 0;
+        left: 0;
+    }
+
+    button:nth-of-type(2)
+    {
+        top: 0;
+        right: 0;
+    }
+    @media screen and (max-width: 767px)
+    {
+        .footerCategory
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: -10px;
+    }
+    .innerFooter
+    {
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        width: 100vw;
+    }
+    .offDisplay
+    {
+        display: none;
+    }
+    .onDisplay
+    {
+        margin-top: 40px;
+        display: inherit;
+    }
+    }
+    .heavyOne{
+        font-size: 40px;
+        
+    }
+    #dropBtn
+    {
+    top: 85%;
+    display: none;
+    }
+    @media screen and (max-width: 950px)
+{
+    #slantedRight
+    {
+        display: none;
+    }
+    #dropBtn
+    {
+        display: flex;
+        top: calc(100% - 180px);
+    }
+    .pillBtn:nth-of-type(1)
+    {
+        color: white;
+    }
+    #slanted
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: var(--eggshell);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(0%);
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: none;
+    animation-delay: 1s;
+    }
+    .heavyOne
+    {
+        color: white;
+    }
+    #backgroundText
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .moveBro{
+        font-size: 30px;
+    }
+    #slanted > *
+    {
+        margin-left: 0;
+    }
+    #slanted{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0,0,0,.7);
+    }
+
+    #slanted > div{
+        margin-bottom: 20px;
+    }
+
+    #landingPage
+    {
+        background: url('./images/bg2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #backgroundText{
+        color: rgba(192, 192, 192, 1);
+        font-size: 400px;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    #backgroundText{
+        font-size: 300px;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .keepInline
+    {
+        flex-direction: column;
+    }
+    .bottomFooter input, .bottomFooter textarea{
+        width: 400px;
+    }
+    
+}
+</style>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+<script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+</head>
+<body onload="pageLoaded()">
+    
+    <div class="animationPage">
+        <div class="animationBox">
+            <div class="animationSmallBox" id="box1"></div>
+            <div class="animationSmallBox" id="box2"></div>
+            <div class="animationSmallBox" id="box3"></div>
+            <div class="animationSmallBox" id="box4"></div>
+        </div>
+    </div>
+    
+    <div id="scheduleContainer">
+        <button onclick="slideShow(1, '#innerContainer', '.slide')">Left</button>
+        <button onclick="slideShow(12, '#innerContainer', '.slide')">Right</button>
+
+            <div id="innerContainer">
+                <div class="slide" id="one">
+
+                </div>
+                <div class="slide" id="two"></div>
+                <div class="slide" id="three">
+                    <div class="leftSS">
+                        <div class="circleHead">
+                            
+                        </div>
+                    </div>
+                    <div class="rightSS"></div>
+                </div>
+                <div class="slide" id="four"></div>
+                <div class="slide" id="five"></div>
+            </div>
+    </div>
+   
+    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)">
+        <i class="fas fa-bars bars" style="font-size: 20px;"></i>
+    </div>
+    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
+        <i class="fas fa-times times" style="font-size: 20px;"></i>
+    </div>
+    <div class="bigNavigation">
+        <div class="subNavigation2 subNav">
+            <div class="backgroundLetters">
+                <p class="bgLetters">Therapy done right. Healing the body and the mind. Health. Fitness. Longevity. Wellness. Always done right.</p>
+            </div>
+            <div class="sideNav">
+                <h1 style="color: var(--myPink);" class="swipeInDude">Learn More</h1>
+                <a href="./index.html" class="swipeInDude">Home</a>
+                <a href="./about.html" class="swipeInDude">About</a>
+                <a href="./therapy.html" class="swipeInDude">Therapy</a>
+                <a href="./contact.html" class="swipeInDude">Contact</a>
+                <div class="navIcons">
+                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
+                    <div>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="footer">
+        <!-- <div class="pinkDrop">
+            
+        </div> -->
+
+        <div class="bottomFooter">
+            <h1 style="margin-top: 30px; margin-bottom: -20px;" class="afterUnderline">Work with Us.</h1>
+            <div class="keepInline">
+                <!-- <form action="" id="form" class="footerForm">
+                    <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name" style="color: white;">
+                    
+                    <input type="phone" placeholder="Phone: " required pattern="*-*-*" id="phone" name="phone">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+                    <button type="submit" id="cButton" style="z-index: 5; padding: 10px; background: #1d2024; color: #f0f9ff; border: 2px solid #f0f9ff; opacity: .6; font-family: var(--mainFont);">Submit</button>
+                    </form>  -->
+                    
+                    <div id="mapid">
+                                
+                    </div>
+            </div>
+            
+            <div class="footerCategory">
+                <div class="innerFooter">
+                    <h3>Navigate</h3>
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">About</a>
+                    <a href="./therapy.html">Therapy</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div class="innerFooter offDisplay">
+                    <h3>Schedule</h3>
+                    <a href="#">Ryan</a>
+                    <a href="#">Nick</a>
+                    <a href="#">Rick</a>
+                </div>
+                <div class="innerFooter offDisplay">
+                    <h3>Company</h3>
+                    <p style="text-align: left; padding: 0; @media screen and (max-width: 767px){text-align: center;}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo, odio porro rerum vero, cupiditate deleniti expedita quia atque ab, corporis omnis quibusdam voluptates eaque recusandae perspiciatis? Blanditiis, saepe alias.</p>
+                </div>
+                
+            </div>
+            
+            <div class="iconRow">
+                <a class="iconDiv"><i class="fab fa-facebook-f"></i></a>
+                <a class="iconDiv"><i class="fab fa-youtube"></i></a>
+                <a class="iconDiv"><i class="fab fa-snapchat-ghost"></i></a>
+            </div>
+            <p>&copy; 2021 Massage Therapy LLC</p>
+        </div>
+        
+        <!-- <div class="iconRow">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-snapchat-square"></i></a>
+        </div>
+        <div class="linkRow">
+            <a>&copy; 2021 Massage Therapy LLC</a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Yoga</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact Us</a>
+        </div> -->
+    </div> 
+    <script src="./control.js">
+        jQuery(document).ready(function () {
+		jQuery(".container-wrap").append(
+			"<ul class='circles'><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>"
+		);
+	}); 
+    </script>
+</body>
+</html>
