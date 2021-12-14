@@ -160,51 +160,114 @@ crossorigin=""></script>
             </div>
         </div>
         <!-- <div id="buttonSteps">
-            <div class="buttonStep" onclick="growBall(0)"><h1>1</h1></div>
-            <div class="buttonStep" onclick="growBall(1)"><h1>2</h1></div>
-            <div class="buttonStep" onclick="growBall(2)"><h1>3</h1></div>
+            
+                <div class="divBubble" onclick="growBall(0)"><div class="innerBubble" style="display: flex;"></div></div>
+                <div class="divBubble" onclick="growBall(1)"><div class="innerBubble"></div></div>
+                <div class="divBubble" onclick="growBall(2)"><div class="innerBubble"></div></div>
+            
         </div> -->
+        <div id="buttonSteps">
+            <div class="buttonStep" onclick="growBall(0)"><div class="innerCircle" style="display: inherit;"></div></div>
+            <div class="buttonStep" onclick="growBall(1)"><div class="innerCircle"></div></div>
+            <div class="buttonStep" onclick="growBall(2)"><div class="innerCircle"></div></div>
+        </div>
+        <div id="weirdLineThing">
+            <i class="fas fa-align-center"></i>
+        </div>
     </div>
     <div id="testimonial2">
 
-        <div class="slideArrows" onclick="slideShow(1, '#testimonial2', '.slideS')">
+        <div class="slideArrows" 
+        onclick="slideShow2(1, '#innerContainer2', '.slider')">
             <i class="fas fa-arrow-left"></i>
         </div>
-        <div class="slideArrows" onclick="slideShow(12, '#testimonial2', '.slideS')">
+        <div class="slideArrows" 
+        onclick="slideShow2(12, '#innerContainer2', '.slider')">
             <i class="fas fa-arrow-right"></i>
         </div>
-        <div class="slideS" id="ss1">
-            
+        <div id="innerContainer2">
+            <div class="slider" id="ss1">
+                <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
+                <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
+                <div style="font-style: italic; ">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="slider" id="ss2">
+                <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
+                <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
+                <h1 style="font-style: italic; ">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </h1>
+            </div>
+            <div class="slider" id="ss3" >
+
+                    <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
+                <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
+                <h1 style="font-style: italic; ">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </h1>
+
+            </div>
+            <div class="slider" id="ss4">
+                <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
+                <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
+                <h1 style="font-style: italic; ">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </h1>
+            </div>
+            <div class="slider" id="ss5">
+                <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
+                <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
+                <h1 style="font-style: italic; ">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </h1>
+            </div>
         </div>
-        <div class="slideS" id="ss2"></div>
-        <div class="slideS" id="ss3" >
-            <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
-            <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
-            <h1 style="font-style: italic; ">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </h1>
-        </div>
-        <div class="slideS" id="ss4"></div>
-        <div class="slideS" id="ss5"></div>
     </div>
     <div id="whiteContent">
         <!-- 
             
          -->
+         <div id="triangleOverlap">
+
+         </div>
         <div id="rightWhite">
+
             <div class="topAndBottom">
                 <div id="bbb">
-                    <div class="restrictContent" style="padding-left: 20px; border-left: 2px solid white; ">
+                    <div id="cornerDiv" style="bottom: 125px;">
+                        <h1 class="afterUnderline" style="text-align: center;">We've Got You Covered</h1>
+                        <p style="padding: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quod vel pariatur sit quas distinctio animi at voluptatibus iusto sint! Veniam explicabo corporis maiores dolorum eos, illum omnis corrupti quis modi asperiores, quo ea aut!</p>
+                        <button class="squareBtn" style="color: white;">Stuff</button>
+                    </div>
+                    <!-- <div class="restrictContent" style="padding-left: 20px; border-left: 2px solid white; ">
 
                     <p style="text-align: left; color: white; padding-left: 0; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
                     <button class="squareBtn" style="color: white; border: 2px solid white;">Stuff</button>
-                    </div>
+                    </div> -->
                 </div>
-                <div id="ttt">
+                <!-- <div id="ttt">
                     <div class="jsArrow" onclick="intermediate('minus')"><i class="fas fa-chevron-left" ></i></div>
                     <div class="jsArrow" onclick="intermediate('plus')"><i class="fas fa-chevron-right" ></i></div>
                     <div class="tSlide paragraphLimit2" style="display: flex;">
@@ -237,15 +300,15 @@ crossorigin=""></script>
                         <div class="divBubble" onclick="floatIn(2)"><div class="innerBubble"></div></div>
                         <div class="divBubble" onclick="floatIn(3)"><div class="innerBubble"></div></div>
                     </div>
-                </div>
+                </div> -->
                 
             </div>
         </div>
         <div id="leftWhite">
-            <div class="restrictContent" style="border-left: 2px solid var(--myPink); padding: 30px;">
-                <h1 class="pinkH1 afterUnderline">Mission</h1>
-            <p style="text-align: left; color: black; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
-            <button class="squareBtn">Learn</button>
+            <div class="restrictContent" style="border-left: 2px solid white; padding: 30px;">
+                <h1 class="whiteH1 afterUnderline2">Mission</h1>
+            <p style="text-align: left; color: white; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
+            <button class="squareBtn" style="color: white; border: 2px solid white;">Learn</button>
             </div>
         </div>
     </div>

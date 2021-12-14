@@ -41,6 +41,26 @@ function slideShow(index, parent, slidesName)
     }
 }
 
+function slideShow2(index, parent, slidesName)
+{
+    let slides = document.querySelectorAll(slidesName);
+    let parentNode = document.querySelector(parent);
+    let tempNode;
+
+
+    if(index === 1)
+    {
+        parentNode.insertBefore(slides[slides.length - 1], slides[0]);
+    }
+    else
+    {
+        tempNode = slides[0];
+        slides[0].remove();
+        parentNode.appendChild(tempNode);
+    }
+}
+
+
 function uncoverBlock()
 {
     let block = document.getElementsByClassName('coverBlock');
@@ -190,19 +210,19 @@ function floatIn(slideNumber)
 
 function growBall(index)
 {
-    let balls = document.getElementsByClassName('buttonStep');
+    let balls = document.getElementsByClassName('innerCircle');
     let div = document.getElementsByClassName('textDiv');
     for(let counter = 0 ; counter < balls.length; counter++)
     {
-        balls[counter].style.animationName = "shrinkBall";
+        balls[counter].style.display = "none";
         div[counter].style.display = "none";
         div[counter].style.transform = "translateY(100px)";
         div[counter].style.opacity = "0";
     }
+    balls[index].style.display = "inherit";
     div[index].style.animationName = "slideIn";
     div[index].style.display = "flex";
-    balls[index].style.animationFillMode = "reverse";
-    balls[index].style.animationName = "growBall";
+    
 }
 
 function uncoverMap()

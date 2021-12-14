@@ -1155,6 +1155,19 @@ button:hover
     align-items: center;
     width: 100vw;
     min-height: 100vh;
+    position: relative;
+}
+
+#triangleOverlap
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--offWhite);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 15%);
+    z-index: 50;
 }
 
 #leftWhite, #rightWhite
@@ -1210,7 +1223,7 @@ button:hover
 
 #bbb
 {
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1225,11 +1238,12 @@ button:hover
 
 #leftWhite
 {
-    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url('./images/bg1.jpg');
+    background: linear-gradient(var(--pinkGradient), var(--pinkGradient)), url('./images/bg1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: left;
+
 }
 
 #rightWhite
@@ -1280,7 +1294,19 @@ button:hover
     
 }
 
-h1 i{
+#thirdLanding::after{
+    content: '';
+    width: 60%;
+    height: 2px;
+    background: var(--myPink);
+    position: absolute;
+    background: gray;
+    bottom: -35px;
+}
+
+
+
+.slider i{
     color: black;
     opacity: .7;
 }
@@ -1319,10 +1345,31 @@ h1 i{
     width: 100vw;
     height: 100vh;
     background: linear-gradient(var(--whiteGradient), var(--whiteGradient)), url('./images/bg2.jpg');
+    background: var(--offWhite);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+}
+
+#weirdLineThing{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: -70px;
+    border-radius: 50%;
+    background: var(--myPink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    z-index: 10;
+    background: var(--offWhite);
+    border: 2px solid gray;
+}
+
+#weirdLineThing i{
+    color: var(--myPink);
 }
 
 /* .triangle10::before {
@@ -1347,6 +1394,10 @@ h1 i{
     filter:url(#round);
   } */
 
+  
+
+
+
 #buttonSteps
 {
     position: absolute;
@@ -1355,62 +1406,40 @@ h1 i{
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-left: 50px;
 }
 
 .buttonStep
 {
-    height: 100px;
-    width: 100px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    background: url('./images/parabolic-pentagon\ \(1\).svg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
+    background: white;
+    margin: 3px 0;
 }
 
-.buttonStep:nth-of-type(1)
-{
-    transform: scale(125%, 125%);
+.innerCircle{
+    background: var(--myPink);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: none;
 }
+
 
 .buttonStep:hover
 {
     cursor: pointer;
 }
 
-.buttonStep:nth-of-type(1)::after
-{
-    content: '';
-    width: 4px;
-    height: 100%;
-    background: var(--myPink);
-    position: absolute;
-    top: 100%;
-    left: 50%;
-}
-
-.buttonStep:nth-of-type(2)::after
-{
-    content: '';
-    width: 4px;
-    height: 100%;
-    background: var(--myPink);
-    position: absolute;
-    top: 100%;
-    left: 50%;
 
 
-}
+
 
 @keyframes slideIn
 {
@@ -1683,13 +1712,13 @@ p{
 
 #scheduleContainer
 {
-    width: 100vw;
+    min-width: 100vw;
     height: 100vh;
     background: #f2f2f2;
     position: relative;
 }
 
-.slideS
+.slider
     {
         width: 100vw;
         height: 100vh;
@@ -1708,35 +1737,38 @@ p{
         text-align: center;
     }
 
-    .slideS p{
+
+
+    .slider p{
         font-style: italic;
     }
 
-    .slideS:nth-of-type(1)
+    .slider:nth-of-type(1)
     {
-        left: 200vw;
+        left: -200vw;
         z-index: 3;
     }
-    .slideS:nth-of-type(2)
+    .slider:nth-of-type(2)
     {
-        left: 100vw;
+        left: -100vw;
         z-index: 4;
     }
-    .slideS:nth-of-type(3)
+    .slider:nth-of-type(3)
     {
         left: 0;
+        top: 0;
         z-index: 5;
 
     }
-    .slideS:nth-of-type(4)
+    .slider:nth-of-type(4)
     {
-        left: -100vw;
+        left: 100vw;
         z-index: 2;
         
     }
-    .slideS:nth-of-type(5)
+    .slider:nth-of-type(5)
     {
-        left: -200vw;
+        left: 200vw;
         z-index: 1;
     }
 
@@ -2806,22 +2838,9 @@ h1{
         width: 100vw;
         height: 100vh;
     }
-    .buttonStep
-    {
-        width: 50px;
-        height: 50px;
-    }
+
 }    
-.buttonStep:nth-of-type(1)::after, .buttonStep:nth-of-type(2)::after
-{
-    content: '';
-    width: 4px;
-    height: 100px;
-    background: var(--myPink);
-    position: absolute;
-    top: 100%;
-    left: 50%;
-}
+
 
 
     #gridContainer
@@ -3930,7 +3949,7 @@ i
     }
     #rightWhite{
         width: 100vw;
-        height: 200vh;
+        height: 100vh;
     }
     #whiteContent
     {
@@ -4039,6 +4058,21 @@ i
 
 @media screen and (max-width: 630px)
 {
+    .slideArrows
+    {
+        top: calc(50% - 20px);
+
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+
+    }
+    .slideArrows i{
+        font-size: 25px;
+    }
+    #buttonSteps{
+        margin-left: 20px;
+    }
     #svgBackground{
         height: 80vh;
     }
@@ -4049,50 +4083,11 @@ i
     {
         width: 100vw;
     }
-    #buttonSteps
-    {
-        height: 0%;
-        width: 100%;
-        position: inherit;
-        left: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-left: 0px;
-        margin-top: 60px;
-    }
-    .buttonStep
-    {
-        width: 50px;
-        height: 50px;
-        margin: 0 20px;
-    }
+
     .blockLetters2{
         font-size: 70px;
     }
-    .buttonStep:nth-of-type(1)::after
-    {
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: var(--myPink);
-        position: absolute;
-        top: 50%;
-        left: 100%;
-    }
 
-    .buttonStep:nth-of-type(2)::after
-    {
-
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: var(--myPink);
-        position: absolute;
-        top: 50%;
-        left: 100%;
-    }
 }
 
 @media screen and (max-width: 500px)
