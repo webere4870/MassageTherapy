@@ -25,6 +25,7 @@ body,html
     --myPink: #FF007F;
     --darkGray: rgb(83, 83, 83);
     --darkGray2:rgb(36, 36, 36);
+    --whiteGradient: rgba(255,255,255,.8);
     --lightGray: rgb(156, 156, 156);
     --grayGradient: rgba(44, 44, 44, .7);
     --grayGradient2: rgba(44, 44, 44, .8);
@@ -1255,6 +1256,97 @@ button:hover
     z-index: 5;
 }
 
+#circleClip
+{
+    background: var(--myPink);
+    z-index: 80;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 600px;
+    top: 400px;
+
+    border-radius: 16px;
+}
+
+.triangle10{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--offWhite);
+    clip-path: polygon(0% 100%, 0% 60%, 50% 80%, 100% 60%, 100% 100%);
+    
+}
+
+h1 i{
+    color: black;
+    opacity: .7;
+}
+
+.slideArrows {
+    top: calc(50% - 30px);
+    position: absolute;
+    color: var(--myPink);
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    opacity: .7;
+    border-radius: 50%;
+}
+
+
+.slideArrows:nth-of-type(1)
+{
+    left: 30px;
+}
+.slideArrows:nth-of-type(2)
+{
+    right: 30px;
+}
+
+.slideArrows :hover{
+    cursor: pointer;
+}
+
+#testimonial2
+{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(var(--whiteGradient), var(--whiteGradient)), url('./images/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+/* .triangle10::before {
+    content:"";
+    display:block;
+    padding-top:86.6%;
+    background: var(--myPink);
+    width: 110vw;
+    height: 110vh;
+   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+   clip-path: polygon(0% 0%, 0% 25%, 50% 50%, 100% 25%, 100% 0%);
+   clip-path: polygon(0% 100%, 0% 50%, 50% 25%, 100% 50%, 100% 100%);
+   
+ }
+
+
+
+.triangle10[class] {
+    display:inline-block;
+    width:150px;
+    color:red;
+    filter:url(#round);
+  } */
+
 #buttonSteps
 {
     position: absolute;
@@ -1596,6 +1688,57 @@ p{
     background: #f2f2f2;
     position: relative;
 }
+
+.slideS
+    {
+        width: 100vw;
+        height: 100vh;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition-property: all;
+        transition-timing-function: ease;
+        transition-duration: 1s;
+        text-align: center;
+    }
+
+    .slideS p{
+        font-style: italic;
+    }
+
+    .slideS:nth-of-type(1)
+    {
+        left: 200vw;
+        z-index: 3;
+    }
+    .slideS:nth-of-type(2)
+    {
+        left: 100vw;
+        z-index: 4;
+    }
+    .slideS:nth-of-type(3)
+    {
+        left: 0;
+        z-index: 5;
+
+    }
+    .slideS:nth-of-type(4)
+    {
+        left: -100vw;
+        z-index: 2;
+        
+    }
+    .slideS:nth-of-type(5)
+    {
+        left: -200vw;
+        z-index: 1;
+    }
 
 .slide
     {

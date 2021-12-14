@@ -62,6 +62,21 @@
         align-items: center;
         text-align: center;
     }
+    #testimonial2 button:nth-of-type(1)
+    {
+        top: 0;
+        left: 0;
+        z-index: 80;
+        position: absolute;
+    }
+
+    #testimonial2 button:nth-of-type(2)
+    {
+        top: 0;
+        right: 0;
+        z-index: 80;
+        position: absolute;
+    }
     @media screen and (max-width: 767px)
     {
         
@@ -108,6 +123,17 @@ crossorigin=""></script>
         </div>
     </div>
     <div id="thirdLanding">
+
+        <div class="triangle10"></div>
+        <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                  <filter id="round">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />    
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                  </filter>
+              </defs>
+          </svg>
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
             <a href="#">Home</a>
@@ -133,21 +159,39 @@ crossorigin=""></script>
         <div class="buttonClass"><button class="pillBtn" style="color: white;">Previous</button>
             </div>
         </div>
-        <div id="buttonSteps">
+        <!-- <div id="buttonSteps">
             <div class="buttonStep" onclick="growBall(0)"><h1>1</h1></div>
             <div class="buttonStep" onclick="growBall(1)"><h1>2</h1></div>
             <div class="buttonStep" onclick="growBall(2)"><h1>3</h1></div>
-        </div>
+        </div> -->
     </div>
-    
-    <div id="whiteContent">
-        <div id="leftWhite">
-            <div class="restrictContent" style="border-left: 2px solid var(--myPink); padding: 30px;">
-                <h1 class="pinkH1 afterUnderline">Mission</h1>
-            <p style="text-align: left; color: black; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
-            <button class="squareBtn">Learn</button>
-            </div>
+    <div id="testimonial2">
+
+        <div class="slideArrows" onclick="slideShow(1, '#testimonial2', '.slideS')">
+            <i class="fas fa-arrow-left"></i>
         </div>
+        <div class="slideArrows" onclick="slideShow(12, '#testimonial2', '.slideS')">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="slideS" id="ss1">
+            
+        </div>
+        <div class="slideS" id="ss2"></div>
+        <div class="slideS" id="ss3" >
+            <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
+            <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
+            <h1 style="font-style: italic; ">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </h1>
+        </div>
+        <div class="slideS" id="ss4"></div>
+        <div class="slideS" id="ss5"></div>
+    </div>
+    <div id="whiteContent">
         <!-- 
             
          -->
@@ -195,6 +239,13 @@ crossorigin=""></script>
                     </div>
                 </div>
                 
+            </div>
+        </div>
+        <div id="leftWhite">
+            <div class="restrictContent" style="border-left: 2px solid var(--myPink); padding: 30px;">
+                <h1 class="pinkH1 afterUnderline">Mission</h1>
+            <p style="text-align: left; color: black; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
+            <button class="squareBtn">Learn</button>
             </div>
         </div>
     </div>
