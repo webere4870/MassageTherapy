@@ -77,6 +77,14 @@
         z-index: 80;
         position: absolute;
     }
+    .slideArrows:nth-of-type(1)
+{
+    left: 30px;
+}
+.slideArrows:nth-of-type(2)
+{
+    right: 30px;
+}
     @media screen and (max-width: 767px)
     {
         
@@ -176,15 +184,18 @@ crossorigin=""></script>
         </div>
     </div>
     <div id="testimonial2">
-
-        <div class="slideArrows" 
-        onclick="slideShow2(1, '#innerContainer2', '.slider')">
-            <i class="fas fa-arrow-left"></i>
+        <div id="weirdLineThing2">
+            <i class="fas fa-align-center"></i>
         </div>
         <div class="slideArrows" 
-        onclick="slideShow2(12, '#innerContainer2', '.slider')">
+        onclick="slideShow2(12, '#innerContainer2', '.slider')" style="right: 30px;">
             <i class="fas fa-arrow-right"></i>
         </div>
+        <div class="slideArrows" 
+        onclick="slideShow2(1, '#innerContainer2', '.slider')" style="left: 30px;">
+        <i class="fas fa-arrow-left"></i>
+        </div>
+        
         <div id="innerContainer2">
             <div class="slider" id="ss1">
                 <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
