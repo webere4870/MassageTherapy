@@ -1740,6 +1740,46 @@ p{
     position: relative;
 }
 
+#overArr{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.arr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.arr i{
+    font-size: 20px;
+}
+
+.arr:hover
+{
+    cursor: pointer;
+}
+
+
+.arr
+{
+    background: black;
+    border: 2px solid black;
+    margin: 0 10px;
+}
+.arr i{
+    color: white;
+}
+
 .slider
     {
         width: 100vw;

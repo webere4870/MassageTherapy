@@ -253,9 +253,11 @@ crossorigin=""></script>
     </div>
     
     <div id="scheduleContainer">
-        <button onclick="slideShow(1, '#innerContainer', '.slide')">Left</button>
-        <button onclick="slideShow(12, '#innerContainer', '.slide')">Right</button>
 
+        <div id="overArr">
+            <div class="arr" onclick="slideShow(1, '#innerContainer', '.slide')"><i class="fas fa-chevron-left"></i></div>
+            <div class="arr" onclick="slideShow(12, '#innerContainer', '.slide')"><i class="fas fa-chevron-right" ></i></div>
+        </div>
             <div id="innerContainer">
                 <div class="slide" id="one">
                     <div class="leftSS">
@@ -377,14 +379,14 @@ crossorigin=""></script>
                 <p class="bgLetters">Therapy. Healing. Mobility. Strength. Remedy. Healing the body and the mind</p>
             </div>
             <div class="sideNav">
-                <h1 style="color: var(--myPink);" class="swipeInDude">Learn More</h1>
+                <h1 style="color: var(--myPink);">Learn More</h1>
                 <a href="./index.html" class="swipeInDude">Home</a>
                 <a href="./schedule.html" class="swipeInDude">Schedule</a>
                 <a href="./about.html" class="swipeInDude">About</a>
                 <a href="./therapy.html" class="swipeInDude">Therapy</a>
                 <a href="./contact.html" class="swipeInDude">Contact</a>
                 <div class="navIcons">
-                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
+
                     <div>
                         <i class="fab fa-facebook-square"></i>
                         <i class="fab fa-instagram"></i>
