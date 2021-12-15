@@ -22,6 +22,8 @@ function pageLoaded()
     }
 }
 
+
+
 function slideShow(index, parent, slidesName)
 {
     let slides = document.querySelectorAll(slidesName);
