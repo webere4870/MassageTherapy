@@ -62,6 +62,7 @@
         align-items: center;
         text-align: center;
     }
+    
     #testimonial2 button:nth-of-type(1)
     {
         top: 0;
@@ -79,11 +80,13 @@
     }
     .slideArrows:nth-of-type(1)
 {
+    position: absolute;
     left: 30px;
 }
 .slideArrows:nth-of-type(2)
 {
     right: 30px;
+    position: absolute;
 }
     @media screen and (max-width: 767px)
     {
@@ -179,25 +182,122 @@ crossorigin=""></script>
             <div class="buttonStep" onclick="growBall(1)"><div class="innerCircle"></div></div>
             <div class="buttonStep" onclick="growBall(2)"><div class="innerCircle"></div></div>
         </div>
-        <div id="weirdLineThing">
-            <i class="fas fa-align-center"></i>
-        </div>
     </div>
-    <div id="testimonial2">
-        <div id="weirdLineThing2">
+    <div id="testimonial2" style="position: relative;">
+        <!-- <div id="weirdLineThing2">
             <i class="fas fa-align-center"></i>
-        </div>
+        </div> -->
         <div class="slideArrows" 
-        onclick="slideShow2(12, '#innerContainer2', '.slider')" style="right: 30px;">
-            <i class="fas fa-arrow-right"></i>
-        </div>
-        <div class="slideArrows" 
-        onclick="slideShow2(1, '#innerContainer2', '.slider')" style="left: 30px;">
+        onclick="slideShow2(1, '#innerContainer2', '.slider')" style="">
         <i class="fas fa-arrow-left"></i>
         </div>
-        
+        <div class="slideArrows" 
+        onclick="slideShow2(12, '#innerContainer2', '.slider')" style="">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+        <h1 class="pinkH1 afterUnderline" style="color: var(--myPink);">Testimonials</h1>
         <div id="innerContainer2">
-            <div class="slider" id="ss1">
+            <div class="slider">
+                <div class="ic">
+                    <div class="iconCircle">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="topSplitter">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus impedit inventore nulla tempore deleniti eos incidunt quia ea qui atque. Eligendi voluptatibus adipisci aut libero magni natus dicta, laboriosam nam!</p><p style="padding-top: 15px;">~My boi</p>
+                    </div>
+                    <div class="bottomSplitter">
+                        
+                            <div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="ic">
+                    <div class="iconCircle">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="topSplitter">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus impedit inventore nulla tempore deleniti eos incidunt quia ea qui atque. Eligendi voluptatibus adipisci aut libero magni natus dicta, laboriosam nam!</p><p style="padding-top: 15px;">~My boi</p>
+                    </div>
+                    <div class="bottomSplitter">
+                        
+                            <div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="ic">
+                    <div class="iconCircle">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="topSplitter">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus impedit inventore nulla tempore deleniti eos incidunt quia ea qui atque. Eligendi voluptatibus adipisci aut libero magni natus dicta, laboriosam nam!</p><p style="padding-top: 15px;">~My boi</p>
+                    </div>
+                    <div class="bottomSplitter">
+                        
+                            <div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="ic">
+                    <div class="iconCircle">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="topSplitter">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus impedit inventore nulla tempore deleniti eos incidunt quia ea qui atque. Eligendi voluptatibus adipisci aut libero magni natus dicta, laboriosam nam!</p><p style="padding-top: 10px;">~My boi</p>
+                    </div>
+                    <div class="bottomSplitter">
+                        
+                            <div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="ic">
+                    <div class="iconCircle">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="topSplitter">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus impedit inventore nulla tempore deleniti eos incidunt quia ea qui atque. Eligendi voluptatibus adipisci aut libero magni natus dicta, laboriosam nam!</p><p style="padding-top: 10px;">~My boi</p>
+                    </div>
+                    <div class="bottomSplitter">
+                        
+                            <div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="slider" id="ss1">
                 <h1 class="afterUnderline" style="color: var(--myPink);">Eli Weber</h1>
                 <p style="width: 60%; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga mollitia ipsa reprehenderit, pariatur voluptatum eos, aliquam voluptatibus, itaque accusantium excepturi quisquam dolorum! Ad ipsum reprehenderit nihil dignissimos error fuga.</p>
                 <div style="font-style: italic; ">
@@ -253,7 +353,7 @@ crossorigin=""></script>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </h1>
-            </div>
+            </div> -->
         </div>
     </div>
     <div id="whiteContent">
