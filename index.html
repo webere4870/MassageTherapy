@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Home</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="manifest" href="/manifest.json">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <style>
     :root
     {
@@ -57,7 +58,7 @@
         font-size: 500px;
         position: absolute;
         top: 0%;
-        left: 0;
+        left: 50px;
         height: 100%;
         width: 50%;
         display: flex;
@@ -83,6 +84,10 @@
         align-items: center;
         width: 100vw;
         margin-top: -10px;
+    }
+    #smallSlant
+    {
+        display: none;
     }
     .innerFooter
     {
@@ -112,86 +117,41 @@
     }
     @media screen and (max-width: 950px)
 {
-    #slantedRight
-    {
-        display: none;
-    }
     #dropBtn
     {
         display: flex;
         top: calc(100% - 180px);
     }
-    .pillBtn:nth-of-type(1)
-    {
-        color: white;
-    }
-    #slanted
-    {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    background: var(--eggshell);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    transform: translateX(0%);
-    animation-duration: .75s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-name: none;
-    animation-delay: 1s;
-    }
-    .heavyOne
-    {
-        color: white;
-    }
-    #backgroundText
-    {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 50px;
-    }
+
+
     .moveBro{
         font-size: 30px;
     }
-    #slanted > *
-    {
-        margin-left: 0;
-    }
-    #slanted{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(0,0,0,.7);
-    }
+
 
     #slanted > div{
         margin-bottom: 20px;
     }
 
-    #landingPage
+
+}
+
+@media screen and (max-width: 600px)
+{
+    #backgroundText
     {
-        background: url('./images/bg2.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        font-size: 300px;
     }
-    #backgroundText{
-        color: rgba(192, 192, 192, 1);
-        font-size: 400px;
+
+    #slanted
+    {
+        clip-path: polygon(0% 0%, 90% 0%, 50% 100%, 0% 100%);
     }
+    #slantedRight
+    {
+        clip-path: polygon(100% 0%, 65% 90%, 100% 90%);
+    }
+    
 }
 
 @media screen and (max-width: 500px)
@@ -218,8 +178,7 @@ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0v
 crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
-<body onload="pageLoaded()">
-    
+<body>
     <div class="animationPage">
         <div class="animationBox">
             <div class="animationSmallBox" id="box1"></div>
@@ -229,9 +188,6 @@ crossorigin=""></script>
         </div>
     </div>
     <div id="landingPage">
-        <a id="dropBtn" href="#splitLR">
-            <i class="fas fa-chevron-down"></i>
-        </a>
         <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: #FF007F; text-underline-offset: 5px; text-decoration-thickness: 2px;">Home</a>
             <a href="#">Home</a>
@@ -242,19 +198,19 @@ crossorigin=""></script>
         <div id="slanted">
             <div style="z-index: 6;">
                 <h1 class="heavyOne moveBro" style="font-family: var(--cursiveFont);
-                ">Therapy for the body</h1>
-                <h1 class="lightFont moveBro">and for the soul.</h1>
+                ">Ryan Debalak</h1>
+                <h1 class="lightFont moveBro">Massage Therapy</h1>
                 <div class="buttonClass">
                 <button class="pillBtn" >Appointment</button>
                 <button class="pillBtn">Contact</button>      
                 </div>
             </div>
             <div>
-                <h1 id="backgroundText" style="color: rgba(192, 192, 192, 0.3);font-family: 'Archivo Black', sans-serif; ">AC</h1>
+                <h1 id="backgroundText" style="color: rgba(192, 192, 192, 0.6);font-family: 'Archivo Black', sans-serif; ">RD</h1>
             </div>
         </div>
         <div id="slantedRight">
-            <div style="border-right: 2px solid white; margin-right: 5%; padding: 20px;">
+            <div class="smallSlant" >
                 <h1>Sup my Dude</h1>
                 <p class="paragraphLimit" style="text-align: right; padding: 0; width: 20%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellat corporis incidunt fuga ipsa illum voluptates quis consequatur ea, voluptate voluptatum similique nemo est facere nisi molestiae culpa magni dignissimos.</p>
                 <button class="squareBtn" style="color: white; border: 2px solid white;">Somewhere</button>
@@ -262,7 +218,7 @@ crossorigin=""></script>
         </div>
     </div>
     
-    
+    <!--
     <div id="splitLR">
         <div id="splitRightLR">
             <div id="insideBG">
@@ -279,7 +235,7 @@ crossorigin=""></script>
             </div>
         </div>
         
-    </div>
+    </div>-->
     <div id="pictureBackground">
         <div id="cornerDiv">
             <h1 class="afterUnderline" style="text-align: center;">We've Got You Covered</h1>
@@ -343,16 +299,13 @@ crossorigin=""></script>
         
         <div class="text"> It's who we are.</div>
     </div> -->
-    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)">
+    <div class="mobileNavigation" onclick="//startAnimation('.subNav', 'navigationSwipe', 5)">
         <i class="fas fa-bars bars" style="font-size: 20px;"></i>
     </div>
-    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
-        <i class="fas fa-times times" style="font-size: 20px;"></i>
-    </div>
     <div class="bigNavigation">
-        <div class="subNavigation2 subNav">
+        <div class="subNavigation2 subNav" id="doesNothing">
             <div class="backgroundLetters">
-                <p class="bgLetters">Therapy. Healing. Mobility. Strength. Remedy. Healing the body and the mind</p>
+                <p class="bgLetters">Therapy. Healing. Mobility. Strength. Recoverability. Kinesiology. Endurance. Longevity. Quality of life. Therapy. Healing. Mobility. Strength. Recovery. Kinesiology. Endurance. Longevity. Quality of life. </p>
             </div>
             <div class="sideNav">
                 <h1 style="color: var(--myPink);" class="swipeInDude">Learn More</h1>
@@ -361,14 +314,12 @@ crossorigin=""></script>
                 <a href="./about.html" class="swipeInDude">About</a>
                 <a href="./therapy.html" class="swipeInDude">Therapy</a>
                 <a href="./contact.html" class="swipeInDude">Contact</a>
-                <div class="navIcons">
-                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
-                    <div>
+                    <div id="iconSpread">
                         <i class="fab fa-facebook-square"></i>
                         <i class="fab fa-instagram"></i>
                         <i class="fas fa-envelope"></i>
                     </div>
-                </div>
+
             </div>
         </div>
     </div>

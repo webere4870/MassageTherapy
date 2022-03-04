@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Home</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
@@ -20,6 +18,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <style>
     :root
     {
@@ -123,7 +122,7 @@ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0v
 crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
-<body onload="pageLoaded()">
+<body>
     
     <div class="animationPage">
         <div class="animationBox">
@@ -155,21 +154,9 @@ crossorigin=""></script>
         <div class="textDiv" id="td1">
             <h1 class="blockLetters2">SCHEDULE</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem debitis minima alias sit ullam molestias quae iure aliquid dicta sint necessitatibus, neque saepe ea minus quo maiores ad maxime suscipit!</p>
-        <div class="buttonClass"><button class="pillBtn" style="color: white; margin-top: 20px; font-weight: lighter;">Previous</button>
-            </div>
         </div>
-        <div class="textDiv" id="td2">
-            <h1 class="blockLetters2">ATTEND</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem debitis minima alias sit ullam molestias quae iure aliquid dicta sint necessitatibus, neque saepe ea minus quo maiores ad maxime suscipit!</p>
-        <div class="buttonClass"><button class="pillBtn" style="color: white;">Previous</button>
-            </div>
-        </div>
-        <div class="textDiv" id="td3">
-            <h1 class="blockLetters2">HEAL</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem debitis minima alias sit ullam molestias quae iure aliquid dicta sint necessitatibus, neque saepe ea minus quo maiores ad maxime suscipit!</p>
-        <div class="buttonClass"><button class="pillBtn" style="color: white;">Previous</button>
-            </div>
-        </div>
+
+
         <!-- <div id="buttonSteps">
             
                 <div class="divBubble" onclick="growBall(0)"><div class="innerBubble" style="display: flex;"></div></div>
@@ -177,11 +164,7 @@ crossorigin=""></script>
                 <div class="divBubble" onclick="growBall(2)"><div class="innerBubble"></div></div>
             
         </div> -->
-        <div id="buttonSteps">
-            <div class="buttonStep" onclick="growBall(0)"><div class="innerCircle" style="display: inherit;"></div></div>
-            <div class="buttonStep" onclick="growBall(1)"><div class="innerCircle"></div></div>
-            <div class="buttonStep" onclick="growBall(2)"><div class="innerCircle"></div></div>
-        </div>
+        
     </div>
     <div id="testimonial2" style="position: relative;">
         <!-- <div id="weirdLineThing2">
@@ -367,7 +350,7 @@ crossorigin=""></script>
 
             <div class="topAndBottom">
                 <div id="bbb">
-                    <div id="cornerDiv" style="bottom: 125px;">
+                    <div id="cornerDiv" style="bottom: 125px; background: none;" >
                         <h1 class="afterUnderline" style="text-align: center;">We've Got You Covered</h1>
                         <p style="padding: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quod vel pariatur sit quas distinctio animi at voluptatibus iusto sint! Veniam explicabo corporis maiores dolorum eos, illum omnis corrupti quis modi asperiores, quo ea aut!</p>
                         <button class="squareBtn" style="color: white;">Stuff</button>
@@ -415,44 +398,39 @@ crossorigin=""></script>
                 
             </div>
         </div>
-        <div id="leftWhite">
+        <!--<div id="leftWhite">
             <div class="restrictContent" style="border-left: 2px solid white; padding: 30px;">
                 <h1 class="whiteH1 afterUnderline2">Mission</h1>
             <p style="text-align: left; color: white; padding-left: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia natus? Deleniti consequuntur ea exercitationem officiis cumque tempore similique eius magni molestias, tempora, ratione nobis nam! Alias excepturi hic fuga.</p>
             <button class="squareBtn" style="color: white; border: 2px solid white;">Learn</button>
             </div>
-        </div>
+        </div> -->
     </div>
-    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)" style="z-index: 57;">
+
+    <div class="mobileNavigation" onclick="//startAnimation('.subNav', 'navigationSwipe', 5)">
         <i class="fas fa-bars bars" style="font-size: 20px;"></i>
     </div>
-    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
-        <i class="fas fa-times times" style="font-size: 20px;"></i>
-    </div>
     <div class="bigNavigation">
-        <div class="subNavigation2 subNav">
+        <div class="subNavigation2 subNav" id="doesNothing">
             <div class="backgroundLetters">
-                <p class="bgLetters">Therapy. Healing. Mobility. Strength. Remedy. Healing the body and the mind</p>
+                <p class="bgLetters">Therapy. Healing. Mobility. Strength. Recoverability. Kinesiology. Endurance. Longevity. Quality of life. Therapy. Healing. Mobility. Strength. Recovery. Kinesiology. Endurance. Longevity. Quality of life. </p>
             </div>
             <div class="sideNav">
-                <h1 style="color: var(--myPink);">Learn More</h1>
+                <h1 style="color: var(--myPink);" class="swipeInDude">Learn More</h1>
                 <a href="./index.html" class="swipeInDude">Home</a>
                 <a href="./schedule.html" class="swipeInDude">Schedule</a>
                 <a href="./about.html" class="swipeInDude">About</a>
                 <a href="./therapy.html" class="swipeInDude">Therapy</a>
                 <a href="./contact.html" class="swipeInDude">Contact</a>
-                <div class="navIcons">
-                    <button class="pillBtn" style="color: white; margin-left: -5px;">Schedule</button>
-                    <div>
+                    <div id="iconSpread">
                         <i class="fab fa-facebook-square"></i>
                         <i class="fab fa-instagram"></i>
                         <i class="fas fa-envelope"></i>
                     </div>
-                </div>
+
             </div>
         </div>
     </div>
-    
     
     <div class="footer">
         <!-- <div class="pinkDrop">
@@ -521,7 +499,7 @@ crossorigin=""></script>
         </div> -->
     </div> 
     <script src="./control.js">
-
+        
     </script>
 </body>
 </html>
