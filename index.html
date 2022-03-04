@@ -140,18 +140,18 @@
 {
     #backgroundText
     {
+        margin: 0 80px;
         font-size: 300px;
     }
 
     #slanted
     {
-        clip-path: polygon(0% 0%, 90% 0%, 50% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 40%,50% 100%, 0% 100%);
     }
     #slantedRight
     {
-        clip-path: polygon(100% 0%, 65% 90%, 100% 90%);
+        clip-path: polygon(100% 60%, 75% 90%, 100% 90%);
     }
-    
 }
 
 @media screen and (max-width: 500px)
@@ -236,7 +236,21 @@ crossorigin=""></script>
         </div>
         
     </div>-->
+    <div id="profilePage">
+            <div id="circleBub" style="margin-top: 30px;">
+
+            </div>
+            <div class="colFlex" style="margin-top: 15px;">
+                <h1 class="afterUnderline pinkH1">Biography</h1>
+                <p class="textDiv" style="color: gray;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur id quas, quibusdam tempore possimus ea numquam sit magni quae dicta quam facere qui obcaecati repellat ex molestias voluptas eveniet officiis dolorum necessitatibus modi rem, molestiae reiciendis impedit. Eos, asperiores cupiditate.</p>
+            </div>
+        
+    </div>
+    
     <div id="pictureBackground">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin: 0;" style="position: absolute; z-index: 105; top: 0; left: 0">
+            <path fill="var(--offWhite)" fill-opacity="1" d="M0,160L34.3,176C68.6,192,137,224,206,234.7C274.3,245,343,235,411,197.3C480,160,549,96,617,101.3C685.7,107,754,181,823,213.3C891.4,245,960,235,1029,224C1097.1,213,1166,203,1234,218.7C1302.9,235,1371,277,1406,298.7L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+          </svg>
         <div id="cornerDiv">
             <h1 class="afterUnderline" style="text-align: center;">We've Got You Covered</h1>
             <p style="padding: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quod vel pariatur sit quas distinctio animi at voluptatibus iusto sint! Veniam explicabo corporis maiores dolorum eos, illum omnis corrupti quis modi asperiores, quo ea aut!</p>
@@ -300,7 +314,7 @@ crossorigin=""></script>
         <div class="text"> It's who we are.</div>
     </div> -->
     <div class="mobileNavigation" onclick="//startAnimation('.subNav', 'navigationSwipe', 5)">
-        <i class="fas fa-bars bars" style="font-size: 20px;"></i>
+        <i class="fas fa-bars bars"></i>
     </div>
     <div class="bigNavigation">
         <div class="subNavigation2 subNav" id="doesNothing">
