@@ -11,7 +11,14 @@ $(document).ready(()=>
         {
             loader[counter].style.display = 'none';
         }
-    console.log('here')
+    $('#sa1').click(()=>
+    {
+        slideShow2(1, '#innerContainer2', '.slider')
+    })
+    $('#sa2').click(()=>
+    {
+        slideShow2(12, '#innerContainer2', '.slider')
+    })
     // window.addEventListener("DOMContentLoaded", function(e) {
 
     //     var stage = document.getElementById("stage");
@@ -114,6 +121,7 @@ $(document).ready(()=>
 
     function slideShow2(index, parent, slidesName)
     {
+        console.log("h1")
         let slides = document.querySelectorAll(slidesName);
         let parentNode = document.querySelector(parent);
         let tempNode;

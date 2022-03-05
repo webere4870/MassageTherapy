@@ -4235,6 +4235,9 @@ i
 
 @media screen and (max-width: 768px)
 {
+    .swipeInDude{
+        font-size: 24px;
+    }
     #backgroundText{
         font-size: 400px;
     }
@@ -4347,7 +4350,7 @@ i
 {
 
     .ic{
-        height: 70%;
+        height: 60%;
         width: 70%;
     }
     .topSplitter:after{
