@@ -111,6 +111,8 @@ button:hover
 .closeMobile{
     background: var(--myPink);
     box-shadow: 0 0 5px gray;
+    -webkit-box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 5px gray;
     position: fixed;
     top: 15px;
     right: 15px;
@@ -127,6 +129,8 @@ button:hover
 {
     background: var(--myPink);
     box-shadow: 0 0 5px gray;
+    -webkit-box-shadow: 0 0 5px gray;
+    -moz-box-shadow: 0 0 5px gray;
     position: fixed;
     top: 15px;
     right: 25px;
@@ -663,6 +667,7 @@ button:hover
     display: flex;
     flex-direction: column;
     position: relative;
+    background: var(--offWhite);
 }
 
 
@@ -1222,6 +1227,8 @@ button:hover
     background-size: cover;
     border: 2px solid white;
     box-shadow: 0 0 40px gray;
+    -webkit-box-shadow: 0 0 40px gray;
+    -moz-box-shadow: 0 0 40px gray;
 }
 
 #whiteContent
@@ -3184,7 +3191,7 @@ h1{
 
 .contactDiv
 {
-    height: 80%;
+    height: 70%;
     width: 30%;
     background: #f2f2f2;
     box-shadow: 0 0 15px gray;
@@ -3192,6 +3199,20 @@ h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.pinkSliver{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--myPink);
+    border-radius: 10px;
+    width: 100%;
+    height: 4px;
 }
 
 form
@@ -3237,10 +3258,12 @@ input
     color: white;
     padding: 5px;
     box-shadow: 0 0 5px gray;
+    -webkit-box-shadow: 0 0 5px gray;
+    -moz-box-shad: 0 0 5px gray;
     border: none;
     z-index: 5;
     font-family: var(--mainFont);
-
+    border-radius: 6px;
     padding: 5px;
     color: var(--myPink);
 }
@@ -3252,10 +3275,12 @@ textarea
     color: white;
     padding: 5px;
     box-shadow: 0 0 5px gray;
+    -webkit-box-shadow: 0 0 5px gray;
+    -moz-box-shad: 0 0 5px gray;
     background: rgba(0, 0, 0, 0);
     z-index: 5;
     font-family: var(--mainFont);
-
+    border-radius: 6px;
     padding: 5px;
     color: var(--myPink);
 }
@@ -4393,11 +4418,7 @@ i
 {
     .contactDiv
     {
-        width: 90%;
-    }
-    input, textarea{
-        background: rgba(0,0,0,.07);
-        box-shadow: none;
+        width: 80%;
     }
     input{
         height: 45px;
