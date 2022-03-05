@@ -3191,6 +3191,7 @@ h1{
 
 .contactDiv
 {
+    -webkit-appearance: none;
     height: 70%;
     width: 30%;
     background: #f2f2f2;
@@ -3260,6 +3261,7 @@ input
     box-shadow: 0 0 5px gray;
     -webkit-box-shadow: 0 0 5px gray;
     -moz-box-shad: 0 0 5px gray;
+    -webkit-appearance: none;
     border: none;
     z-index: 5;
     font-family: var(--mainFont);
@@ -4246,7 +4248,7 @@ i
     .contactDiv
     {
         width: 50%;
-        height: 75%;
+        height: 65%;
     }
     .blockLetters
     {
