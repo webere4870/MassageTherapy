@@ -31,6 +31,12 @@
         --grayGradient: rgba(44, 44, 44, .7);
     }
 
+    .mobileNavigation
+    {
+        position: absolute;
+        right: 10%;
+    }
+
     #mapClose
     {
         display: none;
@@ -96,8 +102,21 @@
         top: 0;
         right: 0;
     }
+
+    @media screen and (max-width: 1100px)
+    {
+        .mobileNavigation
+        {
+            right: 15%;
+        }
+    }
     @media screen and (max-width: 767px)
     {
+        .mobileNavigation
+        {
+            top: 1%;
+            right: 20%;
+        }
         .footerCategory
     {
         flex-direction: column;
@@ -242,16 +261,22 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/z8um0cpw3dt36n/WDXDR62SPZZK5.js'></script><!-- End Square Appointments Embed Code -->
-    <div class="animationPage">
+    <div id="iframeWrapper" style="position: relative;">
+        <div class="mobileNavigation" onclick="//startAnimation('.subNav', 'navigationSwipe', 5)">
+            <i class="fas fa-bars bars"></i>
+        </div>
+        <!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/z8um0cpw3dt36n/WDXDR62SPZZK5.js'></script><!-- End Square Appointments Embed Code -->
+    </div>
+    
+    <!-- <div class="animationPage">
         <div class="animationBox">
             <div class="animationSmallBox" id="box1"></div>
             <div class="animationSmallBox" id="box2"></div>
             <div class="animationSmallBox" id="box3"></div>
             <div class="animationSmallBox" id="box4"></div>
         </div>
-    </div>
-    
+    </div> -->
+    <!--
     <div id="scheduleContainer">
 
         <div id="overArr">
@@ -365,38 +390,31 @@ crossorigin=""></script>
                     </div>
                 </div>
             </div>
-    </div>
-   
-    <div class="mobileNavigation" onclick="startAnimation('.subNav', 'navigationSwipe', 5)">
-        <i class="fas fa-bars bars" style="font-size: 20px;"></i>
-    </div>
-    <div class="closeMobile" onclick="quitAnimation('.subNav', 'unswipeNavigation', 0)" style="display: none;">
-        <i class="fas fa-times times" style="font-size: 20px;"></i>
-    </div>
+    </div> -->
+
+
+    
     <div class="bigNavigation">
-        <div class="subNavigation2 subNav">
+        <div class="subNavigation2 subNav" id="doesNothing">
             <div class="backgroundLetters">
-                <p class="bgLetters">Therapy. Healing. Mobility. Strength. Remedy. Healing the body and the mind</p>
+                <p class="bgLetters">Therapy. Healing. Mobility. Strength. Recoverability. Kinesiology. Endurance. Longevity. Quality of life. Therapy. Healing. Mobility. Strength. Recovery. Kinesiology. Endurance. Longevity. Quality of life. </p>
             </div>
             <div class="sideNav">
-                <h1 style="color: var(--myPink);">Learn More</h1>
+                <h1 style="color: var(--myPink);" class="swipeInDude">Learn More</h1>
                 <a href="./index.html" class="swipeInDude">Home</a>
                 <a href="./schedule.html" class="swipeInDude">Schedule</a>
                 <a href="./about.html" class="swipeInDude">About</a>
                 <a href="./therapy.html" class="swipeInDude">Therapy</a>
                 <a href="./contact.html" class="swipeInDude">Contact</a>
-                <div class="navIcons">
-
-                    <div>
+                    <div id="iconSpread">
                         <i class="fab fa-facebook-square"></i>
                         <i class="fab fa-instagram"></i>
                         <i class="fas fa-envelope"></i>
                     </div>
-                </div>
+
             </div>
         </div>
     </div>
-    
     
     
     <div class="footer">
