@@ -13,7 +13,7 @@ body,html
 }
 
 body{
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('./images/bg2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('./images/Untitled\ design\ \(3\).png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,11 +36,13 @@ body{
     --darkGray: rgb(83, 83, 83);
     --darkGray2:rgb(36, 36, 36);
     --whiteGradient: rgba(255,255,255,.8);
+    --whiteGradient2: rgba(255,255,255,1);
     --lightGray: rgb(156, 156, 156);
     --grayGradient: rgba(44, 44, 44, .7);
     --grayGradient2: rgba(44, 44, 44, .8);
     --grayGradient2: rgba(44, 44, 44, .9);
     --pinkGradient: rgba(255, 0, 127, 0.7);
+    --pinkGradient2: rgba(255, 0, 127, 0.4);
     --blackGradient: rgba(0,0,0,.7);
 }
 button:hover
@@ -1395,6 +1397,15 @@ button:hover
     border-radius: 50%;
 }
 
+#sa1
+{
+    left: 30px;
+}
+#sa2
+{
+    right: 30px;
+}
+
 .ic
 {
             height: 300px;
@@ -2086,6 +2097,83 @@ p{
 .circleHead i{
     font-size: 80px;
     color: var(--myPink);
+}
+
+#newLandingPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.btnRow
+{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+#book
+{
+    background: var(--myPink);
+    color: white;
+    font-family: var(--mainFont);
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    margin: 0 10px;
+}
+
+#contactBtn
+{
+    font-family: var(--mainFont);
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    background: var(--whiteGradient2);
+}
+
+#circleLine
+{
+    position: absolute;
+    width: 50px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.outerBubble{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--eggshell);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.innerBub{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+}
+
+#selectedBub
+{
+    background: var(--myPink);
+}
+
+
+#nameTop
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: var(--cursiveFont);
+    font-weight: lighter;
 }
 
 #landingPage
@@ -2887,6 +2975,14 @@ h1{
     align-items: center;
     width: 100%;
     min-height: 100%;
+}
+#pinkCircle
+{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    opacity: .3;
+    background: var(--myPink);
 }
 
 .pinkCard
