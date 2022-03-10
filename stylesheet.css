@@ -13,14 +13,45 @@ body,html
 }
 
 body{
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('./images/Untitled\ design\ \(3\).png');
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('./images/Untitled\ design\ \(3\).png');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: scroll;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+#backSlide{
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.relative{
+    position: relative;
     height: 100vh;
     width: 100vw;
 }
+
+.relative img{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.relative img:nth-of-type(1){
+z-index: 2;
+}
+
+.relative img:nth-of-type(2){
+    z-index: 1;
+    }
 
 
 :root
@@ -897,27 +928,26 @@ button:hover
     right: 0;
     height: 100vh;
     width: 100vw;
-    clip-path: polygon(100% 0%, 70% 0%, 55% 85%, 100% 85%);
-    background: var(--pinkGradient);
+    clip-path: polygon(100% 0%, 70% 0%, 55% 75%, 100% 75%);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     animation-delay: .75s;
     animation-duration: .75s;
-    transform: translateX(45%);
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-name: slantedRight;
-    
 }
 
-#slantedRight div
+#slantedRight div{
+    width: 40%;
+}
+
+#slantedRight h1
 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
+    margin: 20px;
+    text-align: center;
 }
 
 #halfSlant
@@ -2104,21 +2134,70 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
     height: 100vh;
     width: 100vw;
 }
 
-.btnRow
+.logoFont
+{
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-left: 2px solid var(--myPink);
+    padding-left: 10px;
+    overflow-x: hidden;
+}
+
+.logoFont h2{
+    font-weight: lighter;
+    position: relative;
+}
+
+.logoFont h2 span{
+    margin-left: -100px;
+}
+
+/* .logoFont h2::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: var(--myPink);
+} */
+
+.logoPink
+{
+    color: var(--myPink);
+}
+
+#newLandingPage svg
 {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 0;
+}
+
+.btnRow{
+    z-index: 101;
+    margin: 20px 0;
+}
+
+#book, #contactBtn
+{
+    width: 200px;
+    border-radius: 20px;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: .5s;
 }
 
 #book
 {
-    background: var(--myPink);
+    background: var(--pinkGradient2);
     color: white;
     font-family: var(--mainFont);
     border: none;
@@ -2127,13 +2206,21 @@ p{
     margin: 0 10px;
 }
 
+#book:hover{
+    background: var(--myPink);
+}
+
 #contactBtn
 {
     font-family: var(--mainFont);
     border: none;
     padding: 10px 20px;
     font-size: 17px;
-    background: var(--whiteGradient2);
+    background: var(--whiteGradient);
+}
+
+#contactBtn:hover{
+    background: white;
 }
 
 #circleLine
