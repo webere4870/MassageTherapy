@@ -2,6 +2,12 @@
 
 $(document).ready(()=>
 {
+    $('.cardBtn').click((evt)=>
+    {
+        let parentCard = $(evt.currentTarget)
+        parentCard.parent().trigger('hover')
+    })
+
     let body = document.body;
         let html = document.querySelector('#fakeBoi');
         let loader = document.getElementsByClassName('animationPage');

@@ -29,6 +29,9 @@
         --lightGray: rgb(156, 156, 156);
         --grayGradient: rgba(44, 44, 44, .7);
     }
+    .pinkBack p{
+        font-size: 18px;
+    }
     #mapid {height: 300px; width: 80vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
     #mapid2 {height: 100%; width: 100%; z-index: 3;}
@@ -169,20 +172,18 @@ crossorigin=""></script>
         <div id="pinkOverCard">
             <h1 style="width: 100%; text-align: center; margin: unset;" class="pinkH1">Therapy Techniques</h1>
             <div class="pinkCard">
-                <h1 class="boldLetters">01</h1>
-                <p>Graston</p>
-                <button class="cardBtn">Read More</button>
+                <div class="pinkInner">
+                    <div class="pinkFront">
+                        <h1 class="boldLetters">01</h1>
+                        <p>Graston</p>
+                        <button class="cardBtn">Read More</button>
+                    </div>
+                    <div class="pinkBack">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora in maxime, velit vero voluptatum totam modi deleniti? Minima, unde corporis nam, facilis velit quisquam nostrum eius pariatur odio molestiae vitae!</p>
+                    </div>
+                </div>
             </div>
-            <div class="pinkCard">
-                <h1 class="boldLetters">02</h1>
-                <p>Therapeutic Massage</p>
-                <button class="cardBtn">Read More</button>
-          </div>
-          <div class="pinkCard">
-                <h1 class="boldLetters">03</h1>
-                <p>Therapy Stuff</p>
-                <button class="cardBtn">Read More</button>
-          </div>
+            
       </div>
       <div id="pinkBoy" style="position: relative;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
