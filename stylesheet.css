@@ -4523,6 +4523,8 @@ i
 {
     .cardBtn{
         display: inline;
+        bottom: 60px;
+        padding: 10px 0;
     }
     .pinkCard{
         height: 500px;
