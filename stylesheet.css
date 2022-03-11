@@ -2192,6 +2192,11 @@ p{
 .btnRow{
     z-index: 101;
     margin: 20px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #book, #contactBtn
@@ -3064,8 +3069,7 @@ h1{
 #pinkOverCard
 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -3131,6 +3135,7 @@ h1{
 .pinkBack
 {
     transform: rotateY(180deg);
+    background: #f2f2f2;
     color: gray;
 }
 
@@ -4524,7 +4529,7 @@ i
     .cardBtn{
         display: inline;
         bottom: 60px;
-        padding: 10px 0;
+        padding: 10px;
     }
     .pinkCard{
         height: 500px;

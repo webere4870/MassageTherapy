@@ -2,6 +2,12 @@
 
 $(document).ready(()=>
 {
+    let data = $('.logoFont h2 span:nth-of-type(1)')
+    let data2 = $('.logoFont h2 span:nth-of-type(2)')
+    let data3 = $('.logoFont h2 span:nth-of-type(3)')
+    data.animate({marginLeft: '0'},500)
+    data2.delay(200).animate({marginLeft: '0'},500)
+    data3.delay(400).animate({marginLeft: '0'},500)
     $('.cardBtn').click((evt)=>
     {
         let parentCard = $(evt.currentTarget)
