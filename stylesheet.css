@@ -76,6 +76,13 @@ z-index: 2;
     --pinkGradient2: rgba(255, 0, 127, 0.4);
     --blackGradient: rgba(0,0,0,.7);
 }
+
+.rowFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 button:hover
 {
     cursor: pointer;
