@@ -3083,8 +3083,8 @@ h1{
 
 .pinkCard
 {
-    width: 250px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
     border-radius: 5px;
     margin: 50px;
     transition-duration: .25s;
@@ -3174,6 +3174,7 @@ h1{
     height: 100%;
     width: 100%;
     text-align: center;
+    margin-top: 60px;
 }
 
 
@@ -4522,6 +4523,14 @@ i
 {
     .cardBtn{
         display: inline;
+    }
+    .pinkCard{
+        height: 500px;
+        width: 400px;
+    }
+    .boldLetters
+    {
+        margin-top: 120px;
     }
     .swipeInDude{
         font-size: 24px;
