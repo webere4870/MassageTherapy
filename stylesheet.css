@@ -1830,12 +1830,15 @@ button:hover
     border-radius: 10px;
 }
 
-
-
-.outsideCard i{
-    color: white;
-    font-size: 40px;
+.cardRow{
+    margin: 30px 50px;
 }
+
+.aboutRow h4{
+    font-family: var(--mainFont);
+    color: white;
+}
+
 
 ul{
     margin: 15px 0;
