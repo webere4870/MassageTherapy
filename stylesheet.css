@@ -1289,9 +1289,11 @@ button:hover
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100vw;
     min-height: 100vh;
     position: relative;
+    margin-top: 100px;
 }
 
 #triangleOverlap
@@ -1795,6 +1797,59 @@ button:hover
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+
+.therapyDiv
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.therapyDiv .colFlex
+{
+    margin: 20px 80px;
+}
+
+.aboutRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.outsideCard{
+    background: var(--myPink);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+
+.outsideCard i{
+    color: white;
+    font-size: 40px;
+}
+
+ul{
+    margin: 15px 0;
+}
+
+ul li{
+    list-style-type: disc;
+    color: white;
+    font-family: var(--mainFont);
+}
+
+.textDiv2{
+    width: 60%;
+}
 #td1
 {
 
@@ -2167,6 +2222,7 @@ p{
     border-left: 2px solid var(--myPink);
     padding-left: 10px;
     overflow-x: hidden;
+    z-index: 101;
 }
 
 .logoFont h2{
@@ -3135,17 +3191,17 @@ h1{
     border-radius: 5px;
 }
 
-.pinkCard:hover .pinkInner
+/* .pinkCard:hover .pinkInner
 {
     transform: rotateY(180deg);
-}
+}*/
 
 .pinkBack
 {
     transform: rotateY(180deg);
     background: #f2f2f2;
     color: gray;
-}
+} 
 
 .pinkBack h1{
     color: var(--myPink);
@@ -3155,19 +3211,19 @@ h1{
     font-size: unset;
     color: gray;
 }
-
-.cardBtn
-{
+.pinkCard a{
     position: absolute;
     bottom: 20px;
     width: 60%;
+}
+.cardBtn
+{
     background: var(--pinkGradient);
     border: 2px solid white;
     border-radius: 15px;
     padding: 5px 30px;
     color: white;
     font-family: var(--mainFont);
-    display: none;
 }
 
 .cardBtn:hover
