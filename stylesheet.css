@@ -1233,6 +1233,36 @@ button:hover
     z-index: 100;
 }
 
+#pinkBoy2 svg
+{
+    
+    z-index: 100;
+}
+
+
+#bottomTechnique
+{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: var(--offWhite);
+    color: gray;
+}
+
+#bottomTechnique p, #bottomTechnique h4{
+    color: gray;
+}
+
+#firstSVG{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+}
 
 .colFlex
 {
@@ -1244,10 +1274,7 @@ button:hover
 
 #pictureBackground
 {
-    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./images/massage1.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     width: 100vw;
     height: 110vh;
     position: relative;
@@ -1294,6 +1321,7 @@ button:hover
     min-height: 100vh;
     position: relative;
     margin-top: 100px;
+    padding-bottom: 150px;
 }
 
 #triangleOverlap
@@ -1469,6 +1497,7 @@ button:hover
             transition-timing-function: ease;
             transition-duration: .25s;
             box-shadow: 0 0 10px gray;
+            border-radius: 10px;
 }
         .topSplitter, .bottomSplitter
         {
@@ -1523,6 +1552,49 @@ button:hover
 
 .slideArrows :hover{
     cursor: pointer;
+}
+
+#testimonials
+{
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: var(--offWhite);
+}
+
+#transitionBubble{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--myPink);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+#transitionBubble::after
+{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 200%;
+    right: 120%;
+    background: var(--myPink);
+}
+
+
+#transitionBubble::before
+{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 200%;
+    left: 120%;
+    background: var(--myPink);
+    
 }
 
 #testimonial2
@@ -2021,7 +2093,7 @@ p{
 .slider
     {
         width: 100vw;
-        height: 100vh;
+        height: 130vh;
         animation-duration: 1s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
@@ -4651,13 +4723,7 @@ i
         background: none;
         padding: 20px;
     }
-    #pictureBackground
-    {
-        background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('./images/massage1.jpeg');
-        background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
+
     #hamburger
     {
         display: inherit;
