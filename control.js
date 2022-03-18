@@ -2,6 +2,20 @@
 
 $(document).ready(()=>
 {
+    $('#lefty').click((evt)=>
+    {
+        let parent = document.querySelector("#overSlide")
+        let copy = parent.lastElementChild
+        parent.lastElementChild.remove()
+        parent.insertBefore(copy, parent.firstElementChild)
+    })
+    $('#righty').click((evt)=>
+    {
+        let parent = document.querySelector("#overSlide")
+        let copy = parent.firstElementChild
+        parent.firstElementChild.remove()
+        parent.appendChild(copy)
+    })
     let data = $('.logoFont h2 span:nth-of-type(1)')
     let data2 = $('.logoFont h2 span:nth-of-type(2)')
     let data3 = $('.logoFont h2 span:nth-of-type(3)')
