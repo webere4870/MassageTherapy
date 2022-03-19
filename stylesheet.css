@@ -63,7 +63,7 @@ z-index: 2;
     --offWhite: #f2f2f2;
     --mainFont: 'Abel', sans-serif;
     --cursiveFont: 'Archivo Black', sans-serif;
-    --myPink: #FF007F;
+    --myPink: #F25939;
     --darkGray: rgb(83, 83, 83);
     --darkGray2:rgb(36, 36, 36);
     --whiteGradient: rgba(255,255,255,.8);
@@ -72,8 +72,8 @@ z-index: 2;
     --grayGradient: rgba(44, 44, 44, .7);
     --grayGradient2: rgba(44, 44, 44, .8);
     --grayGradient2: rgba(44, 44, 44, .9);
-    --pinkGradient: rgba(255, 0, 127, 0.7);
-    --pinkGradient2: rgba(255, 0, 127, 0.4);
+    --pinkGradient: rgba(242, 89, 57, 0.7);
+    --pinkGradient2: rgba(242, 89, 57, 0.4);
     --blackGradient: rgba(0,0,0,.7);
 }
 
@@ -1253,6 +1253,50 @@ button:hover
     color: gray;
 }
 
+#bottomTechnique .rowFlex > div{
+    margin: 50px;
+}
+
+.offImage
+{
+    height: 300px;
+    width: 400px;
+    position: relative;
+    background: linear-gradient(var(--grayGradient), var(--grayGradient)), url('./images/ss2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.offImage::before{
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 3px;
+    height: 30%;
+    border-radius: 200px;
+    background: var(--myPink);
+    content: '';
+}
+
+.offImage::after{
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 3px;
+    border-radius: 200px;
+    height: 30%;
+    background: var(--myPink);
+    content: '';
+}
+
+.offImage img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 #bottomTechnique p, #bottomTechnique h4{
     color: gray;
 }
@@ -1515,7 +1559,7 @@ button:hover
         .ic .iconCircle{
             position: absolute;
             content: '';
-            background: #FF007F;
+            background: var(--myPink);
             top: -30px;
             left: 20%;
             height: 60px;
@@ -1613,6 +1657,30 @@ button:hover
     overflow: hidden;
 }
 
+#is1
+{
+    background: linear-gradient(var(--grayGradient),var(--grayGradient)), url('./images/ss1.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#is2
+{
+    background: linear-gradient(var(--grayGradient),var(--grayGradient)), url('./images/ss2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#is3
+{
+    background: linear-gradient(var(--grayGradient),var(--grayGradient)), url('./images/ss3.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #imageSlideShow .hoverable:hover{
     cursor: pointer;
 }
@@ -1638,6 +1706,10 @@ button:hover
     height: 300px;
     position: absolute;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     animation-duration: 1s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
@@ -3371,6 +3443,7 @@ h1{
     border-radius: 5px;
 }
 
+
 /* .pinkCard:hover .pinkInner
 {
     transform: rotateY(180deg);
@@ -4964,6 +5037,21 @@ i
 
 @media screen and (max-width: 500px)
 {
+    .imageSlide, #imageSlideShow{
+        width: 300px;
+        height: 400px;
+    }
+    #imageSlideShow svg{
+        top: 80%;
+    }
+    #imageSlideShow svg:nth-of-type(1)
+    {
+        left: 100px;
+    }
+    #imageSlideShow svg:nth-of-type(2)
+    {
+        right: 100px;
+    }
     .contactDiv
     {
         width: 80%;
