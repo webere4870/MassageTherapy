@@ -1241,6 +1241,23 @@ z-index: 10;
     background: var(--offWhite);
 }
 
+#profilePage .aboutRow
+{
+    justify-content: center;
+}
+
+#profilePage h4{
+    color: gray;
+    font-weight: lighter;
+    font-size: 1.25rem;
+}
+
+#profilePage .outsideCard{
+    height: 70px;
+    width: 70px;
+}
+
+
 #pictureBackground svg{
     transform: rotate(180deg);
     position: absolute;
@@ -1378,14 +1395,17 @@ z-index: 10;
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    background: url('./images/git.jpg');
+    background-color: var(--offWhite);
+    background: url('./images/portrait.png');
     background-position: center;
     background-size: cover;
     border: 2px solid white;
     box-shadow: 0 0 40px gray;
     -webkit-box-shadow: 0 0 40px gray;
     -moz-box-shadow: 0 0 40px gray;
+    position: relative;
 }
+
 
 #whiteContent
 {
@@ -1679,8 +1699,8 @@ z-index: 10;
 
 #imageSlideShow
 {
-    height: 300px;
-    width: 400px;
+    height: 70vh;
+    width: 80vw;
     background: pink;
     position: relative;
     transition-timing-function: ease;
@@ -1734,8 +1754,8 @@ z-index: 10;
 }
 
 .imageSlide{
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     overflow-x: hidden;
     display: flex;
@@ -1787,10 +1807,10 @@ z-index: 10;
     background: var(--offWhite);
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0 0 0 30px;
 }
 
@@ -2133,6 +2153,100 @@ ul li{
 
 .textDiv2{
     width: 60%;
+}
+
+.timeline
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.date h1{
+    font-size: 1.5rem;
+}
+
+.timeline > *
+{
+    margin: unset;
+    padding: unset;
+    margin: 10px;
+}
+
+.date{
+    background: var(--myPink);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.branch
+{
+    width: 250px;
+    margin: 0 20px;
+}
+
+#b1
+{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    color: gray;
+}
+
+#b2
+{
+    position: absolute;
+    right: 100%;
+    top: 0;
+    color: gray;
+}
+
+#b3
+{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    color: gray;
+}
+
+#b4
+{
+    position: absolute;
+    right: 100%;
+    top: 0;
+    color: gray;
+}
+#b5
+{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    color: gray;
+}
+
+.branch p{
+    color: gray;
+}
+
+.line{
+    width: 3px;
+    height: 100px;
+    background: var(--myPink);
+}
+
+.timeline .textDiv2{
+    color: gray;
+    font-size: 20px;
+    border-left: 2px solid var(--myPink);
+    padding: 5px;
 }
 #td1
 {
@@ -3627,6 +3741,7 @@ h1{
 }
 @media screen and (max-width: 767px)
 {
+    
     .mobileNavigation
     {
         height: 55px;
@@ -4995,7 +5110,9 @@ i
 
 @media screen and (max-width: 630px)
 {
-
+    .branch{
+        width: 150px;
+    }
     .ic{
         height: 60%;
         width: 70%;
