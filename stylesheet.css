@@ -1640,16 +1640,6 @@ z-index: 10;
             color: white;
             opacity: 1;
         }
-        .topSplitter::after{
-            content: '';
-            position: absolute;
-            bottom: -27px;
-            left: 20%;
-            width: 60%;
-            height: 1px;
-            background: gray;
-            opacity: .6;
-        }
         .bottomSplitter p{
             padding: 15px 0;
         }
@@ -2133,6 +2123,11 @@ z-index: 10;
     align-items: center;
 }
 
+#aboutRow
+{
+    justify-content: center;
+}
+
 .outsideCard{
     background: var(--myPink);
     height: 100px;
@@ -2146,6 +2141,10 @@ z-index: 10;
 
 .cardRow{
     margin: 30px 50px;
+}
+
+#aboutRow .cardRow{
+    margin: 30px 30px;
 }
 
 .aboutRow h4{
@@ -2453,32 +2452,23 @@ p{
 
     .slider:nth-of-type(1)
     {
-        left: -200vw;
-        z-index: 3;
-    }
-    .slider:nth-of-type(2)
-    {
         left: -100vw;
         z-index: 4;
     }
-    .slider:nth-of-type(3)
+    .slider:nth-of-type(2)
     {
         left: 0;
         top: 0;
         z-index: 5;
 
     }
-    .slider:nth-of-type(4)
+    .slider:nth-of-type(3)
     {
         left: 100vw;
         z-index: 2;
         
     }
-    .slider:nth-of-type(5)
-    {
-        left: 200vw;
-        z-index: 1;
-    }
+
 
 .slide
     {
@@ -5143,7 +5133,7 @@ i
         width: 150px;
     }
     .ic{
-        height: 60%;
+        height: 40%;
         width: 70%;
     }
     .topSplitter:after{
