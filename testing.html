@@ -201,13 +201,13 @@ crossorigin=""></script>
             <li></li>
          </ul>
         <h1 style="color: var(--myPink);" class="afterUnderline">Get in touch.</h1>
-        <form class="contactDiv" method="POST" action="form.php">
+        <form class="contactDiv" method="POST" action="form.php" id="form" name="form">
             <div class="pinkSliver">
 
             </div>
             <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name">
             <input type="email" placeholder="Email: " required pattern="*-*-*" id="email" name="email">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message:" required minlength="1" id="message" name="message" form="form" method="POST"></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message:" required minlength="1"></textarea>
             <button type="submit" class="pillBtn" style="background: var(--myPink); color: white; padding: 15px 40%;">Submit</button>
         </form>
     </div>
