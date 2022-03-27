@@ -7,7 +7,7 @@ $subject = $_POST['name'];
 $message = $_POST['message'];
 $headers = "From:" . $from;
 if(mail($to,$subject,$message, $headers)) {
-    header("Location:https://www.rdmtherapy.com/index.html");
+    header("Location:https://www.rdmtherapy.com/submission.html");
 } else {
     echo "The email message was not sent.";
 }
