@@ -409,7 +409,7 @@ $(document).ready(()=>
     const tiles = L.tileLayer(tileURL, {attribution});
     tiles.addTo(mymap);
     var marker = L.marker([latitude, longitude]).addTo(mymap);
-    marker.bindPopup("Central Church of Christ<br>307 E Hardin St, Findlay, OH 45840<br>");
+    marker.bindPopup("113 East Crawford Street, Findlay, OH 45840");
     mymap.invalidateSize();
 
 
