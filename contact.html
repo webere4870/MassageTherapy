@@ -136,8 +136,7 @@ crossorigin=""></script>
                 <a href="./index.html" class="swipeInDude">Home</a>
                 <a href="./schedule.html" class="swipeInDude">Schedule</a>
                 <a href="./about.html" class="swipeInDude">About</a>
-                <a href="./therapy.html" class="swipeInDude">Therapy</a>
-                <a href="./contact.html" class="swipeInDude">Contact</a>
+                <a href="./therapy.html" class="swipeInDude">Treatments</a>
 
             </div>
         </div>
@@ -210,13 +209,14 @@ crossorigin=""></script>
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
               </svg><h1 style="color: var(--myPink); font-size: 1rem;">113 East Crawford Street, Findlay, OH 45840</h1>
          </div>
-        
+        <span id="nameSpan" class="regex"></span>
+        <span id="emailSpan" class="regex"></span>
         <form class="contactDiv" method="POST" action="form.php" id="form" name="form" target="">
             <div class="pinkSliver">
 
             </div>
             <input type="text" placeholder="Name: " required minlength="3" maxlength="25" id="name" name="name">
-            <input type="email" placeholder="Email: " required pattern="*-*-*" id="email" name="email">
+            <input type="email" placeholder="Email: " required id="email" name="email" minlength="5" maxlength="320">
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Message:" required minlength="1"></textarea>
             <button type="submit" class="pillBtn" style="background: var(--myPink); color: white; padding: 15px 40%;">Submit</button>
         </form>
@@ -251,8 +251,7 @@ crossorigin=""></script>
                     <a href="./schedule.html">Schedule</a>
                     <a href="./about.html">About</a>
                     
-                    <a href="./therapy.html">Therapy</a>
-                    <a href="./contact.html">Contact</a>
+                    <a href="./therapy.html">Treatments</a>
                 </div>
                 
                 

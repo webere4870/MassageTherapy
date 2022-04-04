@@ -2,6 +2,31 @@
 
 $(document).ready(()=>
 {
+
+    $('#form').submit((evt)=>
+    {
+        let email = $("#name").val()
+        let name = $("#email").val()
+        let message = $("#message").val()
+
+        let nameRegex = /^[A-z ]+$/;
+        let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        console.log(emailRegex.test(email))
+
+        if(nameRegex.test(name) == false)
+        {
+            evt.preventDefault();
+            $("#nameSpan").text("***Invalid name***")
+        }
+
+        if(emailRegex.test(email) == false)
+        {
+            evt.preventDefault();
+            $("#emailSpan").text("***Invalid email***")
+        }
+        
+    })
     $('#lefty').click((evt)=>
     {
         let parent = document.querySelector("#overSlide")
@@ -403,10 +428,10 @@ $(document).ready(()=>
     // Leaflet.js map initialization and display
     let latitude = 41.0355953;
     let longitude = -83.646441;
-    let mymap = L.map('mapid').setView([latitude, longitude], 13);
+    let mymap = L.map('mapid', {tap: false}).setView([latitude, longitude], 13);
     const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Open Street Map</a> contributors';
     const tileURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-    const tiles = L.tileLayer(tileURL, {attribution});
+    const tiles = L.tileLayer(tileURL, {attribution: attribution});
     tiles.addTo(mymap);
     var marker = L.marker([latitude, longitude]).addTo(mymap);
     marker.bindPopup("113 East Crawford Street, Findlay, OH 45840");

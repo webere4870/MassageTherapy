@@ -1282,6 +1282,16 @@ z-index: 10;
     width: 100vw;
 }
 
+#lastLastPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+}
+
 #pinkBoy2 svg
 {
     
@@ -1353,6 +1363,15 @@ z-index: 10;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#thirdOff
+{
+    background: linear-gradient(var(--grayGradient), var(--grayGradient)), url('./images/cupping.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .bottomTechnique p, .bottomTechnique h4{
     color: gray;
@@ -2144,7 +2163,7 @@ z-index: 10;
 }
 
 #aboutRow .cardRow{
-    margin: 30px 30px;
+    margin: 30px 50px;
 }
 
 .aboutRow h4{
@@ -3688,7 +3707,7 @@ h1{
 
 #pf5
 {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('./images/massage1.jpeg');
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('./images/cupping.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3997,6 +4016,20 @@ form
     flex-direction: column;
     justify-content: space-evenly;
     align-items: space-evenly;
+}
+
+input:invalid, textarea:invalid{
+    border: 1px solid red;
+}
+
+input:valid, textarea:valid{
+    border: 1px solid lime;
+}
+
+.regex{
+    color: red;
+    font-family: var(--mainFont);
+    margin-bottom: 5px;
 }
 
 input, textarea, form button
