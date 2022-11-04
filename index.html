@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script type="module" src="./GoogleStreetView.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeeOYEcdaJ_Mbxw3QjA1jdwT5uhPnD25Q&callback=initialize&v=weekly"
+      defer
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
 <style>
     :root
     {
@@ -179,6 +187,7 @@ crossorigin=""></script>
 <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script type="module" src="./LoadPartials.js"></script>
     <div class="animationPage">
         <div class="animationBox">
             <div class="animationSmallBox" id="box1"></div>
@@ -187,6 +196,7 @@ crossorigin=""></script>
             <div class="animationSmallBox" id="box4"></div>
         </div>
     </div>
+    
     <!-- <div id="newLandingPage">
         <h1 id="nameTop">Ryan Debalak</h1>
         <div id="pinkCircle">
@@ -260,11 +270,125 @@ crossorigin=""></script>
             </div>
         </div>
     </div> -->
-    <div id="newLandingPage">
-        <div class="logoFont">
-            <h2><span>Ryan</span> <br> <span class="logoPink">Debelak</span> <br><span>Therapy</span></h2>
+    <div id="testPage">
+        <h1 class="mainSmall">
+            Restorative Myotherapy
+        </h1>
+        <h1 class="mainFont">RDM Therapy</h1>
+        <h1 class="mainSmall">for all ages</h1>
+        <div style="margin: 20px 0; display: flex; gap: 20px;"><a href="./schedule.html"><button class="blockButton orangeBtn rowFlex">Book Appointment <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg></button></a><a href="./about.html"><button class="blockButton rowFlex blankBtn">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg></button></a></div>
+        <div id="homeImage">
+            <div class="relative ">
+                <div class="absoluteCircles">
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                    <div class="circleRow">
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                        <div class="tinyCircle"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h1 style="text-align: center; margin: 0 20px;">Physical Therapy and Massage</h1>
+    </div>
+    <div id="whiter">
+
+    </div>
+    <div id="newLandingPage">
+        
+        <!-- <div id="map"></div>
+        <div id="pano"></div> -->
+        <div class="logoFont">
+            <h2><span class="logoPink">RDM</span> <br><span>Therapy</span></h2>
+        </div>
+        <h1 style="text-align: center; margin: 0 20px;">Myotherapy and Massage</h1>
         <div class="btnRow">
             <a href="./schedule.html"><button class="book">Book Appointment</button></a>
             <a href="./about.html"><button id="contactBtn">About Me</button></a>
@@ -347,9 +471,7 @@ crossorigin=""></script>
         
         <div class="text"> It's who we are.</div>
     </div> -->
-    <div class="mobileNavigation">
-        <i class="fas fa-bars bars"></i>
-    </div>
+    
     <div class="bigNavigation">
         <div class="subNavigation2 subNav" id="doesNothing">
             <div class="backgroundLetters">
@@ -627,6 +749,7 @@ crossorigin=""></script>
             <a href="#">Contact Us</a>
         </div> -->
     </div> 
+    
     <script src="./control.js">
         jQuery(document).ready(function () {
         setInterval(()=>
