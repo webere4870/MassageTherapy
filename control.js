@@ -439,8 +439,8 @@ $(document).ready(()=>
 
 
     // Leaflet.js map initialization and display
-    let latitude = 41.037660;
-    let longitude = -83.649540;
+    let latitude = 41.036300;
+    let longitude = -83.650450;
     let mymap = L.map('mapid', {tap: false}).setView([latitude, longitude], 13);
     const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Open Street Map</a> contributors';
     const tileURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
