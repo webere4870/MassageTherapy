@@ -5125,6 +5125,7 @@ i
         width: 100%;
         justify-content: center;
         align-items: center;
+        padding: 20px;
     }
     #leftWhiter *{text-align: center;}
     #slanted
