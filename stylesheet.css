@@ -5114,10 +5114,14 @@ i
 
 @media screen and (max-width: 900px)
 {
+    .pictureCaption::after
+    {
+        content: none;
+    }
     #whiter
     {
         flex-direction: column;
-        gap: 25px;
+        gap: 75px;
         padding: 100px 0 200px 0;
     }
     #leftWhiter
