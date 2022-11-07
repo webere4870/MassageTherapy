@@ -215,7 +215,7 @@ z-index: 2;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding: 200px 0;
+    padding: 110px 0;
     gap: 10px;
 }
 
@@ -225,8 +225,93 @@ z-index: 2;
     border-radius: 20px;
   }
 
-  .splide__list{display: flex; gap: 30px;}
+  .splide__list{display: flex; justify-content: center; padding-right: 200px;}
+  .splide {
+    padding: 20px 0;
+  }
+  .splide__slide img {
+    display: block;
+    width: 400px;
+    height: 100%;
+    border-radius: 8px;
+    transition: transform 400ms;
+    transform: scale(0.9);
+    transform-origin: center center;
+  }
 
+  .splide .splide__arrow {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transform: none;
+    border-radius: unset;
+    width: 50px;
+    opacity: 0.9;
+  }
+  .splide .splide__arrow svg {
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+  }
+  .splide__arrow.splide__arrow--prev {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  .splide__arrow.splide__arrow--next {
+    right: 0;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  #image-carousel
+  {
+    transition: all .3s smooth;
+  }
+.glide__slide{
+    width: 25%;
+}
+
+.myGlide
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#glide1
+{
+    background: url('./images/20221101_095443.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#glide2
+{
+    background: url('./images/20221101_095618.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#glide3
+{
+    background: url('./images/20221101_095814.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#glide4
+{
+    background: url('./images//20221101_095724.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#glide5
+{
+    background: url('./images/20221101_095738.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .pWrap
 {
     text-align: center;
@@ -4049,6 +4134,12 @@ h1{
     grid-column: span2;
     background: wheat;
 }
+@media screen and (max-width: 800px)
+{
+    .glide__slide{
+        width: 45%;
+    }
+}
 @media screen and (max-width: 767px)
 {
     
@@ -5143,10 +5234,7 @@ i
 
 @media screen and (max-width: 900px)
 {
-    .pictureCaption::after
-    {
-        content: none;
-    }
+
     #whiter
     {
         flex-direction: column;
