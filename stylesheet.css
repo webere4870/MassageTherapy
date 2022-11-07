@@ -275,8 +275,9 @@ z-index: 2;
 {
     height: 300px;
     width: 100%;
-    border-radius: 20px;
 }
+
+.glide__slide{border-radius: 20px !important; overflow: hidden !important;}
 
 .glide{
     padding-bottom: 20px;
