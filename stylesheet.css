@@ -205,6 +205,34 @@ z-index: 2;
     gap: 100px;
 }
 
+#whiter2
+{
+    width: 100vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 200px 0;
+    gap: 10px;
+}
+
+.splide__slide img {
+    width: 400px;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .splide__list{display: flex; gap: 30px;}
+
+.pWrap
+{
+    text-align: center;
+    width: 60%;
+}
+
 #leftWhiter
 {
     display: flex;
@@ -1469,6 +1497,7 @@ z-index: 10;
 
 #profilePage
 {
+    padding: 100px 0;
     min-height: 100vh;
     width: 100vw;
     display: flex;
@@ -5121,7 +5150,7 @@ i
     #whiter
     {
         flex-direction: column;
-        gap: 75px;
+        gap: 125px;
         padding: 100px 0 200px 0;
     }
     #leftWhiter

@@ -1,190 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" id="fakeBoi">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Home</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script type="module" src="./GoogleStreetView.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeeOYEcdaJ_Mbxw3QjA1jdwT5uhPnD25Q&callback=initialize&v=weekly"
-      defer
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
-<style>
-    :root
-    {
-        --myPink: #FF007F;
-        --myPink: #F25939;
-        --darkGray: rgb(83, 83, 83);
-        --darkGray2:rgb(36, 36, 36);
-        --lightGray: rgb(156, 156, 156);
-        --grayGradient: rgba(44, 44, 44, .7);
-    }
-
-    #mapClose
-    {
-        display: none;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 30px;
-        z-index: 3000;
-    }
-    body,html
-    {
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-    div
-    {
-        max-width: 100vw;
-    }
-    #backgroundText
-    {
-        color: rgba(110, 110, 110, 0.6);
-        font-family: 'Archivo Black', sans-serif;
-        font-size: 500px;
-        position: absolute;
-        top: 0%;
-        left: 50px;
-        height: 100%;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .onDisplay
-    {
-        display: none;
-    }
-    .heavyOne
-    {
-        color: var(--darkGray);
-    }
-    @media screen and (max-width: 767px)
-    {
-        .footerCategory
-    {
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        margin-top: -10px;
-    }
-    #smallSlant
-    {
-        display: none;
-    }
-    .innerFooter
-    {
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-        width: 100vw;
-    }
-    .offDisplay
-    {
-        display: none;
-    }
-    .onDisplay
-    {
-        margin-top: 40px;
-        display: inherit;
-    }
-    }
-    .heavyOne{
-        font-size: 60px;
-        
-    }
-    #dropBtn
-    {
-    top: 85%;
-    display: none;
-    }
-    @media screen and (max-width: 950px)
-{
-    #dropBtn
-    {
-        display: flex;
-        top: calc(100% - 180px);
-    }
-
-
-    .moveBro{
-        font-size: 40px;
-    }
-
-
-    #slanted > div{
-        margin-bottom: 20px;
-    }
-
-
-}
-
-@media screen and (max-width: 600px)
-{
-    #backgroundText
-    {
-        margin: 0 80px;
-        font-size: 500px;
-    }
-
-    #slanted
-    {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 40%,50% 100%, 0% 100%);
-    }
-    #slantedRight
-    {
-        clip-path: polygon(100% 60%, 75% 90%, 100% 90%);
-    }
-}
-
-@media screen and (max-width: 500px)
-{
-    #backgroundText{
-        font-size: 500px;
-    }
-}
-
-@media screen and (max-width: 1000px)
-{
-    .keepInline
-    {
-        flex-direction: column;
-    }
-    .bottomFooter input, .bottomFooter textarea{
-        width: 400px;
-    }
-    
-}
-</style>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
-<script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script type="module" src="./LoadPartials.js"></script>
@@ -275,10 +96,10 @@ crossorigin=""></script>
             Restorative Myotherapy
         </h1>
         <h1 class="mainFont">RDM Therapy</h1>
-        <h1 class="mainSmall">for all ages</h1>
+        <h1 class="mainSmall">522 S. Main Street</h1>
         <div style="margin: 0px 0; display: flex;"><a href="./schedule.html"><button class="blockButton orangeBtn rowFlex">Book Appointment <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-          </svg></button></a><a href="./about.html"><button class="blockButton rowFlex blankBtn">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          </svg></button></a><a href="./therapy.html"><button class="blockButton rowFlex blankBtn">Treatments<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
           </svg></button></a></div>
         <div id="homeImage">

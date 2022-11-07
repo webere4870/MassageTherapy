@@ -2,19 +2,30 @@
 
 $(document).ready(()=>
 {
-    setInterval(()=>
+    
+    if(window.location.pathname == "/schedule.html" || window.location.pathname == "/about.html")
     {
-        if(window.scrollY > 0)
+        
+        $('nav').attr("class", "sticky")
+        console.log(document.querySelector('nav'))
+    }
+    else
+    {
+        setInterval(()=>
         {
-            
-            console.log("ads")
-            $('nav').attr("class", "sticky")
-        }
-        else
-        {
-            $('nav').attr("class", "")
-        }
-    }, 200)
+            if(window.scrollY > 0)
+            {
+                
+                
+                $('nav').attr("class", "sticky")
+            }
+            else
+            {
+                $('nav').attr("class", "")
+            }
+        }, 200)
+    }
+    
 
     $('#form').submit((evt)=>
     {
