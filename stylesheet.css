@@ -1587,6 +1587,8 @@ z-index: 10;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%); 
 } 
 
+
+
 #profilePage
 {
     padding: 100px 0;
@@ -1598,6 +1600,7 @@ z-index: 10;
     align-items: center;
     position: relative;
     background: var(--offWhite);
+    display: none;
 }
 
 #profilePage .aboutRow
@@ -1796,10 +1799,11 @@ z-index: 10;
     background-position: center;
     background-size: cover;
     border: 2px solid white;
-    box-shadow: 0 0 40px gray;
+    box-shadow: 0 0 20px gray;
     -webkit-box-shadow: 0 0 40px gray;
     -moz-box-shadow: 0 0 40px gray;
     position: relative;
+    margin-bottom: 40px;
 }
 
 
@@ -2550,24 +2554,12 @@ ul li{
     width: 60%;
 }
 
-.timeline
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
+
 
 .date h1{
     font-size: 1.5rem;
 }
 
-.timeline > *
-{
-    margin: unset;
-    padding: unset;
-    margin: 10px;
-}
 
 .date{
     background: var(--myPink);
@@ -2635,6 +2627,10 @@ ul li{
     width: 3px;
     height: 100px;
     background: var(--myPink);
+}
+
+#timer{
+    background: white;
 }
 
 .timeline .textDiv2{
@@ -5427,6 +5423,7 @@ i
         height: 100vh;
     }
 }
+
 #active, .menu-btn, .wrapper
     {
         display: none;

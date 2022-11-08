@@ -14,8 +14,239 @@
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <link rel="stylesheet" type="text/css" href="./glide.min.css">
     <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+        *,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
 
+:root
+{
+    --mainColor: #0F1626;
+    --accentColor: #FF533D;
+    --leather: #c9c5be;
+    --eggshell: #e2e2e2;
+    --offWhite: #f2f2f2;
+    --mainFont: 'Abel', sans-serif;
+    --mainFont: 'Roboto', sans-serif;
+    --cursiveFont: 'Archivo Black', sans-serif;
+    --mainColor: #2C2C35;
+    --secondaryColor: #ffc4718e;
+    --myPink: #F25939;
+    --darkGray: rgb(83, 83, 83);
+    --darkGray2:rgb(36, 36, 36);
+    --whiteGradient: rgba(255,255,255,.8);
+    --whiteGradient2: rgba(255,255,255,1);
+    --lightGray: rgb(156, 156, 156);
+    --grayGradient: rgba(44, 44, 44, .7);
+    --grayGradient2: rgba(44, 44, 44, .8);
+    --grayGradient2: rgba(44, 44, 44, .9);
+    --pinkGradient: rgba(242, 89, 57, 0.7);
+    --pinkGradient2: rgba(242, 89, 57, 0.4);
+    --blackGradient: rgba(0,0,0,.7);
 
+    --accentGradient: #ff543d85;
+}
+#timeline::after
+{
+    background: var(--mainColor);
+}
+.container::before, .container::after{
+    border: 1px solid var(--mainColor);
+}
+.daterrr{
+    color: var(--mainColor) !important;
+    font-family: var(--mainFont);
+}
+.container .icon{
+    color: var(--mainColor);
+}
+.container .contentt{
+    background: var(--accentGradient);
+    box-shadow: 0 0 30px rgb(203, 203, 203);
+}
+.container p{
+    font-family: var(--mainFont) !important;
+    font-weight: 300;
+}
+
+#timeline {
+  position: relative !important;
+  width: 100%;
+  width: 100vw;
+  padding: 15px 0;
+  background: white;
+  min-height: 100vh;
+  margin-left: 20px;
+}
+
+#timeline::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 2px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  margin-left: -1px !important;
+}
+
+.container {
+  padding: 15px 30px !important;
+  position: relative !important;
+  background: inherit !important;
+  width: 50% !important;
+}
+
+.container.left {
+  left: 0 !important;
+}
+
+.container.right {
+  left: 50% !important;
+}
+
+.container::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  top: calc(50% - 8px) !important;
+  right: -8px !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  z-index: 1 !important;
+}
+
+.container.right::after {
+  left: -8px !important;
+}
+
+.container::before {
+  content: '' !important;
+  position: absolute !important;
+  width: 50px !important;
+  height: 2px !important;
+  top: calc(50% - 1px) !important;
+  right: 8px !important;
+  z-index: 1 !important;
+}
+
+.container.right::before {
+  left: 8px !important;
+}
+
+.container .daterrr {
+  position: absolute !important;
+  display: inline-block !important;
+  top: calc(50% - 8px) !important;
+  text-align: center !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  z-index: 1 !important;
+}
+
+.container.left .daterrr {
+  right: -75px !important;
+}
+
+.container.right .daterrr {
+  left: -75px !important;
+}
+
+.container .icon {
+  position: absolute !important;
+  display: inline-block !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 9px 0 !important;
+  top: calc(50% - 20px) !important;
+  background: white !important;
+  border-radius: 40px !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  z-index: 1 !important;
+}
+
+.container.left .icon {
+  right: 56px !important;
+}
+
+.container.right .icon {
+  left: 56px !important;
+}
+
+.container .contentt {
+  padding: 30px 90px 30px 30px !important;
+  position: relative !important;
+  border-radius: 0 500px 500px 0 !important;
+}
+
+.container.right .contentt {
+  padding: 30px 30px 30px 90px !important;
+  border-radius: 500px 0 0 500px !important;
+}
+
+.container .contentt h2 {
+  margin: 0 0 10px 0 !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  color: white !important;
+}
+
+.container .contentt p {
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: white !important;
+}
+
+@media (max-width: 767.98px) {
+  #timeline::after {
+    left: 90px !important;
+  }
+
+  .container {
+    width: 100% !important;
+    padding-left: 120px !important;
+    padding-right: 30px !important;
+  }
+
+  .container.right {
+    left: 0% !important;
+  }
+
+  .container.left::after, 
+  .container.right::after {
+    left: 82px !important;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px !important;
+    border-color: transparent #006E51 transparent transparent !important;
+  }
+
+  .container.left .daterrr,
+  .container.right .daterrr {
+    right: auto !important;
+    left: 15px !important;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    right: auto !important;
+    left: 146px !important;
+  }
+
+  .container.left .contentt,
+  .container.right .contentt {
+    padding: 30px 30px 30px 90px !important;
+    border-radius: 500px 0 0 500px !important;
+  }
+}
     </style>
 </head>
 <body style="overflow-y: hidden;"><script type="module" src="./LoadPartials.js"></script>
@@ -31,7 +262,7 @@
         <p style="margin: -10px 0; padding: unset" class="blockFont accent bold">522 S. Main Street</p>
         <h1 style="margin: unset; padding: unset" class="mainFont main pictureCaption">Property</h1>
 
-        <div style="height: 300px; width: 100vw; display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+        <div style="height: 300px; width: 100vw; display: flex; justify-contentt: center; align-items: center; margin-top: 30px;">
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                   <ul class="glide__slides">
@@ -105,43 +336,98 @@
         <a href="#profilePage" style="z-index: 100;"><button class="book">Meet the Team</button></a>
         </div>
     </div> -->
+    <div id="overlapper" style="padding-bottom: 100px; background: white; height: min-content; width: 100vw; display: flex; justify-content: center; align-items: center; flex-direction: column;"><h1 style="margin: unset; padding: unset" class="mainFont main pictureCaption">Ryan Debelak</h1><div id="circleBub" style="margin-top: 30px;"></div>
+    
+        <div id="timeline">
+            
+            <div class="container left">
+              <div class="daterrr">2011</div>
+              <i class="icon fa fa-school"></i>
+              <div class="contentt">
+                <p>
+                    Received massage therapy license from the Ohio Medical Board
+                </p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="daterrr">2015</div>
+              <i class="icon fa fa-school"></i>
+              <div class="contentt">
+                
+                <p>
+                    Received Associate's Degree from Rhodes State College
+                </p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="daterrr">2015</div>
+              <i class="icon fa fa-user"></i>
+              <div class="contentt">
+                
+                <p>
+                    Hired by Ohio Orthopedics as a Physical Therapist Asst.
+                </p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="daterrr">2018</div>
+              <i class="icon fa fa-running"></i>
+              <div class="contentt">
+                
+                <p>
+                    Received Bachelor's of Science degree in Exercise Science and Sports conditioning from the American Military University
+                </p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="daterrr">Now</div>
+              <i class="icon fa fa-cog"></i>
+              <div class="contentt">
+                
+                <p>
+                    Continues to take course work in manual therapy, stretching, exercise and massage therapy
+                    techniques
+                </p>
+              </div>
+            </div>
 
-
+          </div>
+    </div>
     <div id="profilePage">
         
         <div id="circleBub" style="margin-top: 30px;">
 
         </div>
         <h1 class="afterUnderline pinkH1" style="margin-bottom: 30px;">Biography</h1>
-        <div class="date">
+        <div class="daterrr">
             <h1>2011</h1>
             <div class="branch" id="b1">
                 <p>Received massage therapy license from the Ohio Medical Board</p>
             </div>
         </div>
         <div class="line"></div>
-        <div class="date">
+        <div class="daterrr">
             <h1>2015</h1>
             <div class="branch" id="b2">
                 <p>Received Associate's Degree from Rhodes State College</p>
             </div>
         </div>
         <div class="line"></div>
-        <div class="date">
+        <div class="daterrr">
             <h1>2015</h1>
             <div class="branch" id="b3">
                 <p>Hired by Ohio Orthopedics as a Physical Therapist Asst.</p>
             </div>
         </div>
         <div class="line"></div>
-        <div class="date">
+        <div class="daterrr">
             <h1>2018</h1>
             <div class="branch" id="b4">
                 <p>Received Bachelor's of Science degree in Exercise Science and Sports conditioning from the American Military University</p>
             </div>
         </div>
         <div class="line"></div>
-        <div class="date">
+        <div class="daterrr">
             <h1>Now</h1>
             <div class="branch" id="b5">
                 <p>Continues to take course work in manual therapy, stretching, exercise and massage therapy
@@ -150,7 +436,7 @@
         </div>
 
         <h1 style="margin-top: 100px; color: var(--myPink);" class="afterUnderline">Certifications</h1>
-        <div class="aboutRow" id="aboutRow" style="display: flex; justify-content: center; align-items: center;">
+        <div class="aboutRow" id="aboutRow" style="display: flex; justify-contentt: center; align-items: center;">
             <div class="colFlex cardRow">
                 <div class="outsideCard">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-clock-fill" viewBox="0 0 16 16">
