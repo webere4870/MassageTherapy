@@ -182,7 +182,7 @@ z-index: 2;
 
 .mainFont
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--mainFont);
     font-weight: 500;
     font-size: 50px;
 }
@@ -190,6 +190,10 @@ z-index: 2;
 .mainSmall{
     font-family: var(--mainFont);
     font-size: 25px;
+}
+
+.light{
+    font-weight: lighter;
 }
 
 #whiter
@@ -2489,6 +2493,73 @@ z-index: 10;
     animation-fill-mode: forwards;
 }
 
+#therapyPage
+{
+    height: 90vh;
+    width: 100vw;
+    background: var(--mainColor);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#circular{
+    position: absolute;
+    bottom: 0;
+}
+
+#whiteFollow
+{
+    min-height: 60vh;
+    width: 100vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stackable
+{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:12px;
+}
+
+.stackable h1{
+    text-align: center;
+}
+
+.stackable p {
+    margin: unset;
+    padding: unset;
+}
+
+.stackableSVG
+{
+    fill: var(--accentColor);
+}
+
+#rowStrip
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    column-gap: 150px;
+    row-gap: 75px;
+    padding: 75px 20px;
+}
+
 .therapyDiv
 {
     display: flex;
@@ -2658,6 +2729,120 @@ ul li{
                 2px 2px var(--myPink), 
                 3px 3px var(--myPink);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+.accentGradient{
+    color: var(--accentGradient);
+}
+.therapyContainer {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 100vw;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.accordion-content a{
+    margin-left: 10px;
+    padding: 0;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid var(--accentGradient);
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: var(--accentGradient);
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: var(--accentGradient);
+  border: 1px solid var(--accentGradient);
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded='true'] {
+  color: var(--accentGradient);
+}
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #7288a2;
+  text-align: left;
+  padding: 25px 0;
+}
+
 
 .offH1{
     display: none;
