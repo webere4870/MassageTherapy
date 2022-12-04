@@ -408,6 +408,26 @@ button:hover
     width: 100vw;
     background: white;
 }
+#ember-application
+{
+    overflow-y: scroll;
+}
+
+.appointment-content
+{
+    min-height: 100vh;
+}
+
+.widget-toolbar-container__actions
+{
+    z-index: 1000 !important;
+}
+
+.widget-section
+{
+
+    overflow-y: scroll !important;
+}
 
 #mapid {height: 300px; width: 85vw; z-index: 100;top: 0; left: 0;
     margin: 20px 0;}
@@ -4322,6 +4342,21 @@ h1{
     grid-column: span2;
     background: wheat;
 }
+.accordionContent{
+    display: none;
+    color: #7288a2;
+
+}
+
+.accordionContent p
+{
+    color: #7288a2;
+    font-weight: 300;
+    text-align: left;
+    padding: 20px 0;
+    margin: 0;
+
+}
 @media screen and (max-width: 800px)
 {
     .glide__slide{
@@ -4333,7 +4368,10 @@ h1{
 }
 @media screen and (max-width: 767px)
 {
-    
+    #iframeWrapper
+    {
+        height: 150vh;
+    }
     .mobileNavigation
     {
         height: 55px;

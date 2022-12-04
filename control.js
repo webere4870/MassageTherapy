@@ -2,7 +2,7 @@
 
 $(document).ready(()=>
 {
-    
+
     if(window.location.pathname == "/schedule.html" || window.location.pathname == "/about.html")
     {
         
@@ -27,6 +27,10 @@ $(document).ready(()=>
     }
     
 
+    $('.myAccordionBtn').click((evt)=>
+    {
+        $(evt.currentTarget).next(".accordionContent").slideToggle(300)
+    }) 
     $('#form').submit((evt)=>
     {
         let email = $("#name").val()
