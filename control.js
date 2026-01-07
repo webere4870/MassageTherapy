@@ -11,19 +11,10 @@ $(document).ready(()=>
     }
     else
     {
-        setInterval(()=>
-        {
-            if(window.scrollY > 0)
-            {
-                
+    
                 
                 $('nav').attr("class", "sticky")
-            }
-            else
-            {
-                $('nav').attr("class", "")
-            }
-        }, 200)
+
     }
     
 

@@ -4,6 +4,7 @@ if(window.location.pathname == "/schedule.html"
 {
 nav=`
 <nav class="sticky" style="background: white">
+<a href="./index.html" class="swipeInDude"><img class="mainLogo" src="./images/MainLogo.png"/></a>
 <a href="./index.html" class="swipeInDude">Home</a>
 <a href="./schedule.html" class="swipeInDude">Schedule</a>
 <a href="./about.html" class="swipeInDude">About</a>
@@ -23,7 +24,8 @@ nav=`
 }
 else{
     nav=`
-<nav>
+<nav class="sticky">
+<a href="./index.html" class="swipeInDude"><img class="mainLogo" src="./images/MainLogo.png"/></a>
 <a href="./index.html" class="swipeInDude">Home</a>
 <a href="./schedule.html" class="swipeInDude">Schedule</a>
 <a href="./about.html" class="swipeInDude">About</a>
